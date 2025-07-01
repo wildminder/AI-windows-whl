@@ -1,8 +1,6 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a id="readme-top"></a>
-
 <!-- PROJECT LOGO -->
-<br />
+<a id="readme-top"></a>
 <div align="center">
   <h1 align="center">Windows AI Wheels</h1>
 
