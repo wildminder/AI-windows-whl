@@ -6,6 +6,8 @@
 <div align="center">
   <h1 align="center">Windows AI Wheels</h1>
 
+<img src="ai-wheels-logo.jpg" alt="Logo" width="600" height="388">
+
   <p align="center">
     A curated collection of pre-compiled Python wheels for difficult-to-install AI/ML libraries on Windows.
     <br />
