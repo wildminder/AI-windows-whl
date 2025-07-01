@@ -148,6 +148,23 @@ Another library for memory-efficient attention and other optimizations.
   | `2.1.1` | 2.7.0 | 3.10 | 12.8 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.0-cp310-cp310-win_amd64.whl) |
   | `2.1.1` | 2.8.0 | 3.12 | 12.8 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/blob/main/sageattention-2.1.1+cu128torch2.8.0-cp312-cp312-win_amd64.whl) |
 
+#### SageAttention 2.2 (SageAttention2++)
+> [!NOTE]
+> Only supports CUDA >= 12.8, therefore PyTorch >= 2.7.
+
+  | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link                                                                                                                          |
+  |-----------------|-------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+  | `2.2.0`         | 2.7.1       | 3.9        | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp39-cp39-win_amd64.whl) |
+  | `2.2.0`         | 2.7.1       | 3.10       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp310-cp310-win_amd64.whl)|
+  | `2.2.0`         | 2.7.1       | 3.11       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp311-cp311-win_amd64.whl)|
+  | `2.2.0`         | 2.7.1       | 3.12       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp312-cp312-win_amd64.whl)|
+  | `2.2.0`         | 2.7.1       | 3.13       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp313-cp313-win_amd64.whl)|
+  | `2.2.0`         | 2.8.0       | 3.9        | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp39-cp39-win_amd64.whl) |
+  | `2.2.0`         | 2.8.0       | 3.10       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp310-cp310-win_amd64.whl)|
+  | `2.2.0`         | 2.8.0       | 3.11       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp311-cp311-win_amd64.whl)|
+  | `2.2.0`         | 2.8.0       | 3.12       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp312-cp312-win_amd64.whl)|
+  | `2.2.0`         | 2.8.0       | 3.13       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp313-cp313-win_amd64.whl)|
+
 
 ### NATTEN
 Neighborhood Attention Transformer.
