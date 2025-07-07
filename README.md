@@ -207,6 +207,23 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 
 ### Other Packages
 *   **nunchaku**: [mit-han-lab/nunchaku](https://github.com/mit-han-lab/nunchaku/releases)
+
+  | Package Version | PyTorch Ver | Python Ver | Download Link                                                                                                                                  |
+  |-----------------|-------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+  | `0.3.1`         | 2.5         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.5-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.1`         | 2.5         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.5-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.1`         | 2.5         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.5-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.1`         | 2.6         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.6-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.1`         | 2.6         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.6-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.1`         | 2.6         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.6-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.1`         | 2.7         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.7-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.1`         | 2.7         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.7-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.1`         | 2.7         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.7-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.1`         | 2.8         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.1`         | 2.8         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.1`         | 2.8         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp312-cp312-win_amd64.whl)                         |
+  
+  
 *   **SpargeAttn**: [thu-ml/SpargeAttn](https://github.com/thu-ml/SpargeAttn) - (No known pre-built wheels, requires building from source).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
