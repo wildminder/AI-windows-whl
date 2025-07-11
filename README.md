@@ -98,28 +98,29 @@ High-performance attention implementation.
 
   | Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
   |---|---|---|---|---|---|
-  | `2.7.0.post2` | 2.4.0 | 3.10 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.4.0cxx11abiFALSE-cp310-cp310-win_amd64.whl) |
-  | `2.7.0.post2` | 2.4.0 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.4.0cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.0.post2` | 2.4.0 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.4.0cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.0.post2` | 2.4.1 | 3.10 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.4.1cxx11abiFALSE-cp310-cp310-win_amd64.whl) |
-  | `2.7.0.post2` | 2.4.1 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.4.1cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.0.post2` | 2.4.1 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.4.1cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.0.post2` | 2.5.0 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.5.0cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.0.post2` | 2.5.0 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.5.0cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.0.post2` | 2.5.1 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.5.1cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.0.post2` | 2.5.1 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.0.post2+cu124torch2.5.1cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.4` | 2.6.0 | 3.10 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl) |
-  | `2.7.4` | 2.6.0 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.4` | 2.6.0 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.4` | 2.6.0 | 3.10 | 12.6 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl) |
-  | `2.7.4` | 2.6.0 | 3.11 | 12.6 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.4` | 2.6.0 | 3.12 | 12.6 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.4.post1` | 2.7.0 | 3.10 | 12.8 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp310-cp310-win_amd64.whl) |
-  | `2.7.4.post1` | 2.7.0 | 3.11 | 12.8 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp311-cp311-win_amd64.whl) |
-  | `2.7.4.post1` | 2.7.0 | 3.12 | 12.8 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp312-cp312-win_amd64.whl) |
-  | `2.7.4.post1` | 2.8.0 | 3.10 | 12.8 | TRUE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/main/flash_attn-2.7.4.post1+cu128torch2.8.0cxx11abiTRUE-cp310-cp310-win_amd64.whl) |
-  | `2.7.4.post1` | 2.8.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/blob/main/flash_attn-2.7.4.post1+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl) |
-  | `2.8.0.post2` | 2.8.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/blob/main/flash_attn-2.8.0.post2+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl) |
+  | `2.7.0.post2` | 2.4.0 | 3.10 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.4.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.4.0 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.4.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.4.0 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.4.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.4.1 | 3.10 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.4.1cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.4.1 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.4.1cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.4.1 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.4.1cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.5.0 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.5.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.5.0 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.5.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.5.1 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.5.1cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.0.post2` | 2.5.1 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2+cu124torch2.5.1cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.4` | 2.6.0 | 3.10 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true) |
+  | `2.7.4` | 2.6.0 | 3.11 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.4` | 2.6.0 | 3.12 | 12.4 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.4` | 2.6.0 | 3.10 | 12.6 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true) |
+  | `2.7.4` | 2.6.0 | 3.11 | 12.6 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.4` | 2.6.0 | 3.12 | 12.6 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.4.post1` | 2.7.0 | 3.10 | 12.8 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true) |
+  | `2.7.4.post1` | 2.7.0 | 3.11 | 12.8 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true) |
+  | `2.7.4.post1` | 2.7.0 | 3.12 | 12.8 | FALSE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.7.4.post1` | 2.8.0 | 3.10 | 12.8 | TRUE | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.8.0cxx11abiTRUE-cp310-cp310-win_amd64.whl?download=true) |
+  | `2.7.4.post1` | 2.8.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.7.4.post1+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.8.0.post2` | 2.8.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.0.post2+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true) |
+  | `2.8.1` | 2.8.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.1%2Bcu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true) |
 
 
 ### xformers
@@ -143,10 +144,10 @@ Another library for memory-efficient attention and other optimizations.
   | `2.1.1` | 2.6.0 | 3.10 | 12.6 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp310-cp310-win_amd64.whl) |
   | `2.1.1` | 2.6.0 | 3.11 | 12.6 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp311-cp311-win_amd64.whl) |
   | `2.1.1` | 2.6.0 | 3.12 | 12.6 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp312-cp312-win_amd64.whl) |
-  | `2.1.1` | 2.6.0 | 3.12 | 12.6 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/blob/main/sageattention-2.1.1+cu126torch2.6.0-cp312-cp312-win_amd64.whl) |
+  | `2.1.1` | 2.6.0 | 3.12 | 12.6 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.1.1+cu126torch2.6.0-cp312-cp312-win_amd64.whl?download=true) |
   | `2.1.1` | 2.6.0 | 3.13 | 12.6 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp313-cp313-win_amd64.whl) |
   | `2.1.1` | 2.7.0 | 3.10 | 12.8 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.0-cp310-cp310-win_amd64.whl) |
-  | `2.1.1` | 2.8.0 | 3.12 | 12.8 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/blob/main/sageattention-2.1.1+cu128torch2.8.0-cp312-cp312-win_amd64.whl) |
+  | `2.1.1` | 2.8.0 | 3.12 | 12.8 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.1.1+cu128torch2.8.0-cp312-cp312-win_amd64.whl?download=true) |
 
 #### SageAttention 2.2 (SageAttention2++)
 > [!NOTE]
