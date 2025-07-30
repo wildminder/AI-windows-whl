@@ -98,9 +98,9 @@ This is the recommended version for most users.
 
 | CUDA Version | Pip Install Command                                                                                      |
 | :----------- | :------------------------------------------------------------------------------------------------------- |
-| **CUDA 12.8**  | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128`           |
-| **CUDA 12.6**  | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`           |
-| **CUDA 11.8**  | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`           |
+| **CUDA 12.8**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128`           |
+| **CUDA 12.6**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`           |
+| **CUDA 11.8**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`           |
 
 #### Nightly Versions
 Use these for access to the latest features, but expect potential instability.
@@ -108,9 +108,9 @@ Use these for access to the latest features, but expect potential instability.
 **PyTorch 2.9 (Nightly)**
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
-| **CUDA 12.9**  | `pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129` |
-| **CUDA 12.8**  | `pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128` |
-| **CUDA 12.6**  | `pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126` |
+| **CUDA 12.9**  | `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129` |
+| **CUDA 12.8**  | `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128` |
+| **CUDA 12.6**  | `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
 **PyTorch 2.8 (Nightly)**
 | CUDA Version | Pip Install Command                                                                                                      |
