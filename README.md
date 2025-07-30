@@ -91,6 +91,36 @@ Here is the list of tracked packages.
 The foundation of everything. Install this first from the official source.
 *   **Official Install Page**: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 
+For convenience, here are direct installation commands for specific versions on Linux/WSL with an NVIDIA GPU. For other configurations (CPU, macOS, ROCm), please use the official install page.
+
+#### Stable Version (2.7.1)
+This is the recommended version for most users.
+
+| CUDA Version | Pip Install Command                                                                                      |
+| :----------- | :------------------------------------------------------------------------------------------------------- |
+| **CUDA 12.8**  | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128`           |
+| **CUDA 12.6**  | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`           |
+| **CUDA 11.8**  | `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`           |
+
+#### Nightly Versions
+Use these for access to the latest features, but expect potential instability.
+
+**PyTorch 2.9 (Nightly)**
+| CUDA Version | Pip Install Command                                                                                      |
+|:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 12.9**  | `pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129` |
+| **CUDA 12.8**  | `pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128` |
+| **CUDA 12.6**  | `pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126` |
+
+**PyTorch 2.8 (Nightly)**
+| CUDA Version | Pip Install Command                                                                                                      |
+|:-------------|:-------------------------------------------------------------------------------------------------------------------------|
+| **CUDA 12.9**  | `pip install --pre "torch>=2.8.0.dev,<2.9.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129` |
+| **CUDA 12.8**  | `pip install --pre "torch>=2.8.0.dev,<2.9.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128` |
+| **CUDA 12.6**  | `pip install --pre "torch>=2.8.0.dev,<2.9.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126` |
+
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
 ### Flash Attention
 High-performance attention implementation.
 *   **Official Repo**: [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention)
@@ -124,6 +154,7 @@ High-performance attention implementation.
   | `2.8.2` | 2.8.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.2%2Bcu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true) |
   | `2.8.2` | 2.9.0 | 3.12 | 12.8 | TRUE | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.2%2Bcu128torch2.9.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true) |
 
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### xformers
 Another library for memory-efficient attention and other optimizations.
@@ -131,6 +162,8 @@ Another library for memory-efficient attention and other optimizations.
 *   **PyTorch Pre-built Index**: [https://download.pytorch.org/whl/xformers/](https://download.pytorch.org/whl/xformers/)
 > [!NOTE]
 > PyTorch provides official pre-built wheels for xformers. You can often install it with `pip install xformers` if you installed PyTorch correctly. If that fails, find your matching wheel at the index link above.
+
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### SageAttention
 *   **Official Repo**: [thu-ml/SageAttention](https://github.com/thu-ml/SageAttention)
@@ -151,6 +184,8 @@ Another library for memory-efficient attention and other optimizations.
   | `2.1.1` | 2.7.0 | 3.10 | 12.8 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.0-cp310-cp310-win_amd64.whl) |
   | `2.1.1` | 2.8.0 | 3.12 | 12.8 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.1.1+cu128torch2.8.0-cp312-cp312-win_amd64.whl?download=true) |
 
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
 #### SageAttention 2.2 (SageAttention2++)
 > [!NOTE]
 > Only supports CUDA >= 12.8, therefore PyTorch >= 2.7.
@@ -168,6 +203,7 @@ Another library for memory-efficient attention and other optimizations.
   | `2.2.0`         | 2.8.0       | 3.12       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp312-cp312-win_amd64.whl)|
   | `2.2.0`         | 2.8.0       | 3.13       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp313-cp313-win_amd64.whl)|
 
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### NATTEN
 Neighborhood Attention Transformer.
@@ -196,17 +232,22 @@ Neighborhood Attention Transformer.
   | `0.17.5` | 2.7.0 | 3.11 | 12.8 | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp311-cp311-win_amd64.whl) |
   | `0.17.5` | 2.7.0 | 3.12 | 12.8 | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp312-cp312-win_amd64.whl) |
 
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### Triton (Windows Fork)
 Triton is a language and compiler for writing highly efficient custom deep-learning primitives. Not officially supported on Windows, but a fork provides pre-built wheels.
 *   **Windows Fork**: [woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows/releases)
 *   **Installation**: `pip install -U triton-windows`
 
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
 ### bitsandbytes
 A lightweight wrapper around CUDA custom functions, particularly for 8-bit optimizers, matrix multiplication (LLM.int8()), and quantization functions.
 *   **Official Repo**: [bitsandbytes-foundation/bitsandbytes](https://github.com/bitsandbytes-foundation/bitsandbytes)
 > [!WARNING]
 > Windows support for bitsandbytes is still experimental. Community-provided wheels are often the only option. We will track reliable sources as they become available.
+
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### Other Packages
 *   **nunchaku**: [mit-han-lab/nunchaku](https://github.com/mit-han-lab/nunchaku/releases)
