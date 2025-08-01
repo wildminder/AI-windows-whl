@@ -184,7 +184,7 @@ Another library for memory-efficient attention and other optimizations.
   | `2.1.1` | 2.7.0 | 3.10 | 12.8 | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.0-cp310-cp310-win_amd64.whl) |
   | `2.1.1` | 2.8.0 | 3.12 | 12.8 | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.1.1+cu128torch2.8.0-cp312-cp312-win_amd64.whl?download=true) |
 
-▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇
 
 #### SageAttention 2.2 (SageAttention2++)
 > [!NOTE]
@@ -202,6 +202,27 @@ Another library for memory-efficient attention and other optimizations.
   | `2.2.0`         | 2.8.0       | 3.11       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp311-cp311-win_amd64.whl)|
   | `2.2.0`         | 2.8.0       | 3.12       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp312-cp312-win_amd64.whl)|
   | `2.2.0`         | 2.8.0       | 3.13       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp313-cp313-win_amd64.whl)|
+
+ABI3 version, any Python >= 3.9
+
+  | Package Version | PyTorch Ver | CUDA Ver | Download Link                                                                                                                          |
+  |-----------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+  | `2.2.0.post1`   | 2.5.1       | 12.4     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu124torch2.5.1.post1-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post1`   | 2.6.0       | 12.6     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu126torch2.6.0.post1-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post1`   | 2.7.1       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post1`   | 2.8.0       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl) |
+
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
+### SpargeAttn  
+*   **Official Repo**: [thu-ml/SpargeAttn](https://github.com/thu-ml/SpargeAttn)
+*   **Pre-built Sources**: [woct0rdho's Releases](https://github.com/woct0rdho/SpargeAttn/releases)
+
+  | Package Version | PyTorch Ver | CUDA Ver | Download Link                                                                                                                          |
+  |-----------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|  
+  | `0.1.0.post1`   | 2.7.1       | 12.8     | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl) |
+  | `0.1.0.post1`   | 2.8.0       | 12.8     | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl) |
+
 
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
@@ -267,8 +288,11 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
   | `0.3.1`         | 2.8         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp311-cp311-win_amd64.whl)                         |
   | `0.3.1`         | 2.8         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp312-cp312-win_amd64.whl)                         |
   
-  
-*   **SpargeAttn**: [thu-ml/SpargeAttn](https://github.com/thu-ml/SpargeAttn) - (No known pre-built wheels, requires building from source).
+
+### RadialAttention for ComfyUI
+*   **Nodes**: [ComfyUI-RadialAttn](https://github.com/woct0rdho/ComfyUI-RadialAttn)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
