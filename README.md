@@ -163,6 +163,14 @@ Another library for memory-efficient attention and other optimizations.
 > [!NOTE]
 > PyTorch provides official pre-built wheels for xformers. You can often install it with `pip install xformers` if you installed PyTorch correctly. If that fails, find your matching wheel at the index link above.
 
+ABI3 version, any Python 3.9-3.12
+
+  | Package Version | PyTorch Ver | CUDA Ver | Download Link                                                                                                                          |
+  |-----------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+  | `0.0.31.post1`   | 2.7.1       | 12.6     | [Link](https://download.pytorch.org/whl/cu126/xformers-0.0.31.post1-cp39-abi3-win_amd64.whl) |
+  | `0.0.31.post1`   | 2.7.1       | 12.8     | [Link](https://download.pytorch.org/whl/cu128/xformers-0.0.31.post1-cp39-abi3-win_amd64.whl) |
+ 
+
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### SageAttention
