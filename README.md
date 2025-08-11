@@ -215,10 +215,10 @@ ABI3 version, any Python >= 3.9
 
   | Package Version | PyTorch Ver | CUDA Ver | Download Link                                                                                                                          |
   |-----------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
-  | `2.2.0.post1`   | 2.5.1       | 12.4     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu124torch2.5.1.post1-cp39-abi3-win_amd64.whl) |
-  | `2.2.0.post1`   | 2.6.0       | 12.6     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu126torch2.6.0.post1-cp39-abi3-win_amd64.whl) |
-  | `2.2.0.post1`   | 2.7.1       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl) |
-  | `2.2.0.post1`   | 2.8.0       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post1/sageattention-2.2.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post2`   | 2.5.1       | 12.4     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu124torch2.5.1.post2-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post2`   | 2.6.0       | 12.6     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu126torch2.6.0.post2-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post2`   | 2.7.1       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu128torch2.7.1.post2-cp39-abi3-win_amd64.whl) |
+  | `2.2.0.post2`   | 2.8.0       | 12.8     | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu128torch2.8.0.post2-cp39-abi3-win_amd64.whl) |
 
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
