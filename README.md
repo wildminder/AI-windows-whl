@@ -93,14 +93,24 @@ The foundation of everything. Install this first from the official source.
 
 For convenience, here are direct installation commands for specific versions on Linux/WSL with an NVIDIA GPU. For other configurations (CPU, macOS, ROCm), please use the official install page.
 
-#### Stable Version (2.7.1)
+#### Stable Version (2.8.0)
 This is the recommended version for most users.
 
+| CUDA Version | Pip Install Command                                                              |
+|:-------------|:---------------------------------------------------------------------------------|
+| **CUDA 12.9**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu129`           |
+| **CUDA 12.8**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128`           |
+| **CUDA 12.6**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126`           |
+| **CPU only**   | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu`               |
+
+#### Previous Stable Version (2.7.1)
 | CUDA Version | Pip Install Command                                                                                      |
-| :----------- | :------------------------------------------------------------------------------------------------------- |
-| **CUDA 12.8**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128`           |
-| **CUDA 12.6**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`           |
-| **CUDA 11.8**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`           |
+|:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 12.8**  | `pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128` |
+| **CUDA 12.6**  | `pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu126` |
+| **CUDA 11.8**  | `pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu118` |
+| **CPU only**   | `pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cpu`      |
+
 
 #### Nightly Versions
 Use these for access to the latest features, but expect potential instability.
@@ -108,16 +118,9 @@ Use these for access to the latest features, but expect potential instability.
 **PyTorch 2.9 (Nightly)**
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
-| **CUDA 12.9**  | `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129` |
-| **CUDA 12.8**  | `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128` |
-| **CUDA 12.6**  | `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126` |
-
-**PyTorch 2.8 (Nightly)**
-| CUDA Version | Pip Install Command                                                                                                      |
-|:-------------|:-------------------------------------------------------------------------------------------------------------------------|
-| **CUDA 12.9**  | `pip install --pre "torch>=2.8.0.dev,<2.9.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu129` |
-| **CUDA 12.8**  | `pip install --pre "torch>=2.8.0.dev,<2.9.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128` |
-| **CUDA 12.6**  | `pip install --pre "torch>=2.8.0.dev,<2.9.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu126` |
+| **CUDA 12.9**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu129` |
+| **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
+| **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
