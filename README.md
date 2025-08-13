@@ -298,7 +298,7 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
   | `0.3.2`         | 2.8         | 3.10       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp310-cp310-win_amd64.whl)                         |
   | `0.3.2`         | 2.8         | 3.11       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp311-cp311-win_amd64.whl)                         |
   | `0.3.2`         | 2.8         | 3.12       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp312-cp312-win_amd64.whl)                         |
-  
+  | `0.3.2`         | 2.9         | 3.12       | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-0.3.2%2Btorch2.9-cp312-cp312-win_amd64.whl?download=true)                         |  
 
 ### RadialAttention for ComfyUI
 *   **Nodes**: [ComfyUI-RadialAttn](https://github.com/woct0rdho/ComfyUI-RadialAttn)
