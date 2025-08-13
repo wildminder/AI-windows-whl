@@ -269,7 +269,7 @@ Neighborhood Attention Transformer.
 ### Triton (Windows Fork)
 Triton is a language and compiler for writing highly efficient custom deep-learning primitives. Not officially supported on Windows, but a fork provides pre-built wheels.
 *   **Windows Fork**: [woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows/releases)
-*   **Installation**: `pip install -U triton-windows`
+*   **Installation**: `pip install -U "triton-windows<3.5"`
 
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
@@ -286,18 +286,18 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 
   | Package Version | PyTorch Ver | Python Ver | Download Link                                                                                                                                  |
   |-----------------|-------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-  | `0.3.1`         | 2.5         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.5-cp310-cp310-win_amd64.whl)                         |
-  | `0.3.1`         | 2.5         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.5-cp311-cp311-win_amd64.whl)                         |
-  | `0.3.1`         | 2.5         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.5-cp312-cp312-win_amd64.whl)                         |
-  | `0.3.1`         | 2.6         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.6-cp310-cp310-win_amd64.whl)                         |
-  | `0.3.1`         | 2.6         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.6-cp311-cp311-win_amd64.whl)                         |
-  | `0.3.1`         | 2.6         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.6-cp312-cp312-win_amd64.whl)                         |
-  | `0.3.1`         | 2.7         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.7-cp310-cp310-win_amd64.whl)                         |
-  | `0.3.1`         | 2.7         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.7-cp311-cp311-win_amd64.whl)                         |
-  | `0.3.1`         | 2.7         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.7-cp312-cp312-win_amd64.whl)                         |
-  | `0.3.1`         | 2.8         | 3.10       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp310-cp310-win_amd64.whl)                         |
-  | `0.3.1`         | 2.8         | 3.11       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp311-cp311-win_amd64.whl)                         |
-  | `0.3.1`         | 2.8         | 3.12       | [Link](https://github.com/mit-han-lab/nunchaku/releases/download/v0.3.1/nunchaku-0.3.1+torch2.8-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.2`         | 2.5         | 3.10       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.2`         | 2.5         | 3.11       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.2`         | 2.5         | 3.12       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.2`         | 2.6         | 3.10       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.6-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.2`         | 2.6         | 3.11       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.6-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.2`         | 2.6         | 3.12       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.6-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.2`         | 2.7         | 3.10       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.7-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.2`         | 2.7         | 3.11       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.7-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.2`         | 2.7         | 3.12       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.7-cp312-cp312-win_amd64.whl)                         |
+  | `0.3.2`         | 2.8         | 3.10       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp310-cp310-win_amd64.whl)                         |
+  | `0.3.2`         | 2.8         | 3.11       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp311-cp311-win_amd64.whl)                         |
+  | `0.3.2`         | 2.8         | 3.12       | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp312-cp312-win_amd64.whl)                         |
   
 
 ### RadialAttention for ComfyUI
