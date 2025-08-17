@@ -172,8 +172,8 @@ ABI3 version, any Python 3.9-3.12
 
   | Package Version | PyTorch Ver | CUDA Ver | Download Link                                                                                                                          |
   |-----------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
-  | `0.0.31.post1`   | 2.7.1       | 12.6     | [Link](https://download.pytorch.org/whl/cu126/xformers-0.0.31.post1-cp39-abi3-win_amd64.whl) |
-  | `0.0.31.post1`   | 2.7.1       | 12.8     | [Link](https://download.pytorch.org/whl/cu128/xformers-0.0.31.post1-cp39-abi3-win_amd64.whl) |
+  | `0.0.32.post2`   | 2.8.0       | 12.8     | [Link](https://download.pytorch.org/whl/cu128/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl) |
+  | `0.0.32.post2`   | 2.8.0      | 12.9     | [Link](https://download.pytorch.org/whl/cu129/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl) |
  
 
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
