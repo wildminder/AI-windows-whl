@@ -122,6 +122,12 @@ Use these for access to the latest features, but expect potential instability.
 | **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
+**Torchaudio**
+  
+  | Package Version | PyTorch Ver | CUDA Ver | Download Link                                                                                                                          |
+  |-----------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+  | `2.8.0`   | 2.9.0       | 12.8     | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.8.0a0%2Bcu128torch2.9.0cxx11abi1-cp312-cp312-win_amd64.whl?download=true) |
+
 ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
 
 ### Flash Attention
