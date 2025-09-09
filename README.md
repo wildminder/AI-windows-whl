@@ -344,10 +344,35 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 ### RadialAttention for ComfyUI
 *   **Nodes**: [ComfyUI-RadialAttn](https://github.com/woct0rdho/ComfyUI-RadialAttn)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<p align="center">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</p>
+
+<!-- DATA ACCESS -->
+## Accessing Data Programmatically (wheels.json)
+
+All wheel information in this repository is managed in the `wheels.json` file, which serves as the single source of truth. The tables in this README are automatically generated from this file.
+
+This provides a stable, structured JSON endpoint for any external tool or application that needs to access this data without parsing Markdown.
+
+### How to Use
+
+You can access the raw JSON file directly via the following URL:
+
+```
+https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/wheels.json
+```
+
+**Example using `curl`:**
+```sh
+curl -L -o wheels.json https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/wheels.json
+```
+
+The file contains a list of `packages`, each with its metadata and an array of `wheels`, where each wheel object contains version details and a direct download `url`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<p align="center">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
