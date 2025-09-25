@@ -1,0 +1,85 @@
+name: Reusable Windows Build (SageAttention)
+
+on:
+  workflow_call:
+    inputs:
+      sage-attn-version: # Note the name change here
+        description: "The Git tag/branch of SageAttention to build."
+        required: true
+        type: string
+      python-version:
+        description: "The Python version for the build environment."
+        required: true
+        type: string
+      torch-version:
+        description: "The PyTorch version to install."
+        required: true
+        type: string
+      cuda-version-full:
+        description: "The full CUDA version for the toolkit (e.g., 13.0.0)."
+        required: true
+        type: string
+      cuda-version-short:
+        description: "The short CUDA version for the build script (e.g., 13.0)."
+        required: true
+        type: string
+      tag-name:
+        description: "The git tag to upload the asset to."
+        required: true
+        type: string
+
+jobs:
+  build_job:
+    name: Build SageAttn (Py ${{ inputs.python-version }}, Torch ${{ inputs.torch-version }}, CUDA ${{ inputs.cuda-version-short }})
+    runs-on: windows-2022
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - uses: Jimver/cuda-toolkit@v0.2.24
+        with:
+          cuda: ${{ inputs.cuda-version-full }}
+
+      - uses: TheMrMilchmann/setup-msvc-dev@v3
+        with:
+          arch: x64
+
+      - name: Install build dependencies
+        shell: pwsh
+        run: python -m pip install -U setuptools wheel packaging ninja
+
+      - name: Build and Package SageAttention
+        id: build_wheel
+        shell: pwsh
+        run: |
+          # call the dedicated script for SageAttention
+          .\scripts\build_sage_attention_windows.ps1 -SageAttnVersion "${{ inputs.sage-attn-version }}" `
+                                                    -PythonVersion "${{ inputs.python-version }}" `
+                                                    -TorchVersion "${{ inputs.torch-version }}" `
+                                                    -CudaVersion "${{ inputs.cuda-version-short }}"
+          
+          # finds the built wheel in the SageAttention/dist directory
+          $wheelName = Get-ChildItem -Path "SageAttention\dist\*.whl" | Select-Object -First 1 | ForEach-Object { $_.Name }
+          echo "WHEEL_NAME=$wheelName" >> $env:GITHUB_OUTPUT
+          echo "WHEEL_PATH=SageAttention/dist/$wheelName" >> $env:GITHUB_OUTPUT
+
+      - name: Test wheel installation
+        shell: pwsh
+        run: |
+          pip install --no-cache-dir ${{ steps.build_wheel.outputs.WHEEL_PATH }}
+          # Verify that the package can be imported.
+          python -c "import sage_attn; print('Successfully imported sage_attn version:', sage_attn.__version__)"
+
+      - name: Upload Asset to Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: pwsh
+        run: |
+          $tagName = "${{ inputs.tag-name }}"
+          $wheelPath = "${{ steps.build_wheel.outputs.WHEEL_PATH }}"
+          gh release upload $tagName $wheelPath --clobber
+          Write-Host "Uploaded $wheelPath to Release $tagName"
