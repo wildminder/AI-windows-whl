@@ -118,7 +118,7 @@ Use these for access to the latest features, but expect potential instability.
 **PyTorch 2.9 (Nightly)**
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
-| **CUDA 12.9**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu129` |
+| **CUDA 12.9**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
 | **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
