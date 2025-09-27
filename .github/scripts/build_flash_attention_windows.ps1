@@ -49,6 +49,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Checking out flash-attention at ref $FlashAttnVersion..."
+git config --system core.longpaths true
 git clone https://github.com/Dao-AILab/flash-attention.git -b $FlashAttnVersion --depth 1
 
 Write-Host "Building wheels..."
