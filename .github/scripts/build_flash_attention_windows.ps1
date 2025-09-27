@@ -26,7 +26,7 @@ $MatrixCudaVersion = $CudaVersion -replace '\.', ''
 $MatrixTorchVersion = $TorchVersion -replace '^(\d+\.\d+).*', '$1'
 $env:TORCH_CUDA_VERSION = python .github/scripts/get_torch_cuda_version.py $MatrixCudaVersion $MatrixTorchVersion
 Write-Host "Installing PyTorch $TorchVersion+cu$env:TORCH_CUDA_VERSION..."
-pip install --force-reinstall --no-cache-dir torch==$TorchVersion --index-url https://download.pytorch.org/whl/cu$env:TORCH_CUDA_VERSION
+pip install --force-reinstall --no-cache-dir --pre torch torchvision torch==$TorchVersion --index-url https://download.pytorch.org/whl/cu$env:TORCH_CUDA_VERSION
 
 Write-Host "Checking out flash-attention at ref $FlashAttnVersion..."
 # The -b flag works for both tags (like "v2.5.9.post1") and branches.
