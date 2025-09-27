@@ -1,0 +1,62 @@
+name: Manual Flash Attention Builder
+
+on:
+  workflow_dispatch:
+    inputs:
+      flash_attn_version:
+        description: 'Flash Attention version (e.g., 2.5.9.post1 or "latest")'
+        required: true
+        type: string
+        default: 'latest'
+
+jobs:
+  build-wheel:
+    name: Build Flash Attention Wheel
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install CUDA Toolkit 13.0
+        uses: Jimver/cuda-toolkit@v0.2.27
+        with:
+          cuda: '13.0.0'
+          method: 'network'
+
+      - name: Setup MSVC Developer Command Prompt
+        uses: TheMrMilchmann/setup-msvc-dev@v4
+        with:
+          arch: x64
+
+      - name: Install build dependencies
+        shell: pwsh
+        run: python -m pip install -U setuptools wheel packaging ninja
+
+      - name: Build and Rename wheel
+        id: build_wheel
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .\.github\scripts\build_flash_attention_windows.ps1 -FlashAttnVersion "${{ github.event.inputs.flash_attn_version }}" `
+                                                              -PythonVersion "3.13" `
+                                                              -TorchVersion "2.9.0" `
+                                                              -CudaVersion "13.0"
+
+      - name: Test wheel installation
+        shell: pwsh
+        run: |
+          pip install --no-cache-dir ${{ steps.build_wheel.outputs.wheel_path }}
+          python -c "import flash_attn; print('Successfully imported flash_attn version:', flash_attn.__version__)"
+
+      - name: Upload wheel as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flash-attention-wheel
+          path: ${{ steps.build_wheel.outputs.wheel_path }}
