@@ -24,13 +24,15 @@ jobs:
           python-version: '3.13'
 
       - name: Install CUDA Toolkit 13.0
-        uses: Jimver/cuda-toolkit@v0.2.27
+        uses: Jimver/cuda-toolkit@master
         with:
-          cuda: '13.0.0'
+          cuda: '13.0.1'
           method: 'network'
           use-github-cache: false
-          use-local-cache: false
-          
+      - run: echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
+      - run: echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"
+      - run: nvcc -V
+
       - name: Setup MSVC Developer Command Prompt
         uses: TheMrMilchmann/setup-msvc-dev@v4
         with:
