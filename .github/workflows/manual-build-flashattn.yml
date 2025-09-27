@@ -27,7 +27,7 @@ jobs:
         #uses: Jimver/cuda-toolkit@master
         uses: N-Storm/cuda-toolkit@v0.2.27m
         with:
-          cuda: '13.0.1'
+          cuda: '13.0.0'
           method: 'network'
           use-github-cache: false
 
