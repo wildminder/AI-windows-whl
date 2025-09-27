@@ -28,7 +28,9 @@ jobs:
         with:
           cuda: '13.0.0'
           method: 'network'
-
+          use-github-cache: false
+          use-local-cache: false
+          
       - name: Setup MSVC Developer Command Prompt
         uses: TheMrMilchmann/setup-msvc-dev@v4
         with:
