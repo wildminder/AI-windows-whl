@@ -1,0 +1,64 @@
+name: Manual SageAttention Builder
+
+on:
+  workflow_dispatch:
+    inputs:
+      sage_attn_version:
+        description: 'SageAttention version (e.g., v2.2.0-windows.post2 or "latest")'
+        required: true
+        type: string
+        default: 'latest'
+
+jobs:
+  build-wheel:
+    name: Build SageAttention Wheel
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install CUDA Toolkit 13.0
+        uses: N-Storm/cuda-toolkit@v0.2.27m
+        with:
+          cuda: '13.0.0'
+          method: 'network'
+          use-github-cache: false
+          use-local-cache: false
+
+      - name: Setup MSVC Developer Command Prompt
+        uses: TheMrMilchmann/setup-msvc-dev@v4
+        with:
+          arch: x64
+
+      - name: Install build dependencies
+        shell: pwsh
+        run: python -m pip install -U setuptools wheel packaging ninja
+
+      - name: Build wheel
+        id: build_wheel
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .\.github\scripts\build_sage_attention_windows.ps1 -SageAttnVersion "${{ github.event.inputs.sage_attn_version }}" `
+                                                             -PythonVersion "3.13" `
+                                                             -TorchVersion "2.9.0" `
+                                                             -CudaVersion "13.0"
+
+      - name: Test wheel installation
+        shell: pwsh
+        run: |
+          pip install --no-cache-dir ${{ steps.build_wheel.outputs.wheel_path }}
+          python -c "import sage_attn; print('Successfully imported sage_attn version:', sage_attn.__version__)"
+
+      - name: Upload wheel as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sage-attention-wheel
+          path: ${{ steps.build_wheel.outputs.wheel_path }}
