@@ -56,6 +56,13 @@ Write-Host "Building wheels..."
 $env:DISTUTILS_USE_SDK = 1
 $env:FLASH_ATTENTION_FORCE_BUILD = "TRUE"
 
+
+$env:MAX_JOBS = "2"
+
+$env:NVCC_FLAGS = "--diag-suppress 221"
+Write-Host "Using MAX_JOBS = $env:MAX_JOBS"
+Write-Host "Using NVCC_FLAGS = $env:NVCC_FLAGS"
+
 cd flash-attention
 python setup.py bdist_wheel --dist-dir=dist
 
