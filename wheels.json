@@ -392,7 +392,23 @@
     "python_version": "3.13",
     "cuda_version": "13.0",
     "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu130torch2.10.0-cp313-cp313-win_amd64.whl?download=true"
-  },	  	  
+  },
+  {
+    "package_version": "2.2.0.post3",
+    "torch_version": "2.9.0",
+    "python_version": ">3.9",
+    "cuda_version": "12.9",
+    "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.9.0-cp313-cp313-win_amd64.whl"
+  },
+  
+  {
+    "package_version": "2.2.0.post3",
+    "torch_version": "2.8.0",
+    "python_version": ">3.9",
+    "cuda_version": "12.9",
+    "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.8.0-cp313-cp313-win_amd64.whl"
+  },  
+
         {
           "package_version": "2.1.1",
           "torch_version": "2.5.1",
