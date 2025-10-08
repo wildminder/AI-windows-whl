@@ -4,7 +4,7 @@
 <div align="center">
   <h1 align="center">Windows AI Wheels</h1>
 
-<img src="ai-wheels-logo.jpg" alt="Logo" width="600" height="388">
+<img src="https://github.com/user-attachments/assets/b5a86223-4134-4c1a-bce9-215c741be45d" alt="AI-windows-whl logo">
 
   <p align="center">
     A curated collection of pre-compiled Python wheels for difficult-to-install AI/ML libraries on Windows.
@@ -64,7 +64,7 @@ Follow these simple steps to use the wheels from this repository.
 
 ### Prerequisites
 
-1.  **Python for Windows**: Ensure you have a compatible Python version installed (PyTorch currently supports **Python 3.9 - 3.12** on Windows). You can get it from the [official Python website](https://www.python.org/downloads/windows/).
+1.  **Python for Windows**: Ensure you have a compatible Python version installed (PyTorch currently supports **Python 3.9 - 3.14** on Windows). You can get it from the [official Python website](https://www.python.org/downloads/windows/).
 
 
 ### Installation
