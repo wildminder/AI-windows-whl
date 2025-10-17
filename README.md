@@ -56,6 +56,30 @@ The goal here is to provide a centralized, up-to-date collection of direct links
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<p align="center">══════════════════════════════════</p>
+
+Beyond the code, I believe in the power of community and continuous learning. I invite you to join the 'TokenDiff AI News' and 'TokenDiff Community Hub'
+
+<table border="0" align="center" cellspacing="10" cellpadding="0">
+  <tr>
+    <td align="center" valign="top">
+      <h4>TokenDiff AI News</h4>
+      <a href="https://t.me/TokenDiff">
+        <img width="50%" alt="tokendiff-tg-qw" src="https://github.com/user-attachments/assets/e29f6b3c-52e5-4150-8088-12163a2e1e78" />
+      </a>
+      <p><sub>🗞️ AI for every home, creativity for every mind!</sub></p>
+    </td>
+    <td align="center" valign="top">
+      <h4>TokenDiff Community Hub</h4>
+      <a href="https://t.me/TokenDiff_hub">
+        <img width="50%" alt="token_hub-tg-qr" src="https://github.com/user-attachments/assets/da544121-5f5b-4e3d-a3ef-02272535929e" />
+      </a>
+      <p><sub>💬 questions, help, and thoughtful discussion.</sub> </p>
+    </td>
+  </tr>
+</table>
+
+<p align="center">══════════════════════════════════</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -451,4 +475,5 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
