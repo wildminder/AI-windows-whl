@@ -8,9 +8,9 @@ on:
         description: 'Python version to use'
         required: true
         type: string
-        default: '3.12'
+        default: '3.13'
       cuda_version:
-        description: 'CUDA version (e.g., 13.0)'
+        description: 'CUDA version (e.g., 13.0.1)'
         required: true
         type: string
         default: '13.0'
@@ -63,9 +63,12 @@ jobs:
         uses: N-Storm/cuda-toolkit@v0.2.28
         with:
           cuda: ${{ inputs.cuda_version }}
+          method: 'network'
+          use-github-cache: false		  
 
       - name: 'Set up MSVC developer command prompt'
         uses: ilammy/msvc-dev-cmd@v1
+          arch: x64		
 
       - name: 'Workaround: Remove git bash link.exe to prevent conflict with MSVC'
         run: rm -f /usr/bin/link.exe
