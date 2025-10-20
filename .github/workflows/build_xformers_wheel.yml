@@ -9,14 +9,18 @@ on:
         required: true
         type: string
         default: '3.13'
-      cuda_version:
-        description: 'CUDA version (e.g., 13.0.1)'
+      cuda_short_version:
+        description: 'CUDA version for PyTorch wheel index (e.g., 130)'
         required: true
-        type: string
-        default: '13.0'
+        type: choice
+        options:
+        - '130'
+        - '128'
+        - '126'
+        default: '130'
       torch_version:
-        description: 'PyTorch version'
-        required: false # This is now optional
+        description: 'PyTorch version (e.g., 2.3.1). Leave empty to use the latest.'
+        required: false
         type: string
         default: ''
       is_nightly:
@@ -59,17 +63,40 @@ jobs:
         with:
           python-version: ${{ inputs.python_version }}
 
+      - name: 'Map Short CUDA Version to Full Version'
+        id: map_cuda_version
+        run: |
+          SHORT_VERSION=${{ inputs.cuda_short_version }}
+          FULL_VERSION=""
+          case $SHORT_VERSION in
+            130)
+              FULL_VERSION="13.0.1"
+              ;;
+            129)
+              FULL_VERSION="12.9.0"
+              ;;
+            128)
+              FULL_VERSION="12.8.1"
+              ;;
+            *)
+              echo "::error::Unsupported CUDA version: $SHORT_VERSION"
+              exit 1
+              ;;
+          esac
+          echo "Mapped CUDA version $SHORT_VERSION to $FULL_VERSION"
+          echo "FULL_CUDA_VERSION=$FULL_VERSION" >> $GITHUB_ENV
+
       - name: 'Set up CUDA Toolkit'
         uses: N-Storm/cuda-toolkit@v0.2.28
         with:
-          cuda: ${{ inputs.cuda_version }}
+          cuda: ${{ env.FULL_CUDA_VERSION }}
           method: 'network'
-          use-github-cache: false		  
+          use-github-cache: false
 
       - name: 'Set up MSVC developer command prompt'
         uses: ilammy/msvc-dev-cmd@v1
-        with:		
-          arch: x64		
+        with:
+          arch: x64
 
       - name: 'Workaround: Remove git bash link.exe to prevent conflict with MSVC'
         run: rm -f /usr/bin/link.exe
@@ -89,7 +116,7 @@ jobs:
           fi
           
           echo "Calculating smart default SM arch list..."
-          CUDA_INT_VERSION=$(echo "${{ inputs.cuda_version }}" | sed 's/\.//' | cut -c1-3)
+          CUDA_INT_VERSION=${{ inputs.cuda_short_version }}
           
           CALCULATED_ARCHS=""
           if (( CUDA_INT_VERSION >= 130 )); then
@@ -109,24 +136,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip wheel setuptools ninja
           
-          SHORT_CUDA_VERSION=$(echo "${{ inputs.cuda_version }}" | sed 's/\.//')
-          
-          # This block implements the simplified installation logic
           if [[ "${{ inputs.is_nightly }}" == "true" ]]; then
-            echo "Installing LATEST NIGHTLY PyTorch build..."
-            python -m pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu${SHORT_CUDA_VERSION}
+            echo "Installing LATEST NIGHTLY PyTorch build for cu${{ inputs.cuda_short_version }}..."
+            python -m pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu${{ inputs.cuda_short_version }}
           elif [[ -z "${{ inputs.torch_version }}" ]]; then
-            echo "Installing LATEST STABLE PyTorch build..."
-            python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu${SHORT_CUDA_VERSION}
+            echo "Installing LATEST STABLE PyTorch build for cu${{ inputs.cuda_short_version }}..."
+            python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu${{ inputs.cuda_short_version }}
           else
-            echo "Installing SPECIFIC STABLE PyTorch version: ${{ inputs.torch_version }}"
-            python -m pip install torch==${{ inputs.torch_version }} torchvision --index-url https://download.pytorch.org/whl/cu${SHORT_CUDA_VERSION}
+            echo "Installing SPECIFIC STABLE PyTorch version: ${{ inputs.torch_version }} for cu${{ inputs.cuda_short_version }}"
+            python -m pip install torch==${{ inputs.torch_version }} torchvision --index-url https://download.pytorch.org/whl/cu${{ inputs.cuda_short_version }}
           fi
           
-          # Install other requirements from the repository
           python -m pip install -r requirements.txt
           
-          # Verify installation
           echo "--- Verifying PyTorch installation ---"
           python -c "import torch; print(f'Successfully installed torch {torch.__version__}')"
       
@@ -144,5 +166,5 @@ jobs:
       - name: 'Upload wheel artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: xformers-wheel-windows-py${{ inputs.python_version }}-cu${{ inputs.cuda_version }}
+          name: xformers-wheel-windows-py${{ inputs.python_version }}-cu${{ inputs.cuda_short_version }}
           path: dist/*.whl
