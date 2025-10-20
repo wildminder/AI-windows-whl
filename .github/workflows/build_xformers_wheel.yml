@@ -68,6 +68,7 @@ jobs:
 
       - name: 'Set up MSVC developer command prompt'
         uses: ilammy/msvc-dev-cmd@v1
+        with:		
           arch: x64		
 
       - name: 'Workaround: Remove git bash link.exe to prevent conflict with MSVC'
