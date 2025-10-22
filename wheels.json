@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2025-10-09T14:50:57.900622+00:00",
+  "last_updated_utc": "2025-10-22T20:38:47.003384+00:00",
   "packages": [
     {
       "id": "flashattention",
@@ -728,6 +728,18 @@
           "torch_version": "2.8",
           "python_version": "3.13",
           "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/blob/main/nunchaku-1.0.1%2Btorch2.9c128-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/blob/main/nunchaku-1.0.1%2Btorch2.9c130-cp313-cp313-win_amd64.whl"
         }
       ]
     },
@@ -1046,6 +1058,20 @@
           "python_version": ">3.9",
           "cuda_version": "12.9",
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.9.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post4",
+          "torch_version": ">2.9.0",
+          "python_version": "3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu128torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post4",
+          "torch_version": ">2.9.0",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu130torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
         }
       ]
     },
@@ -1077,6 +1103,12 @@
     {
       "id": "torchaudio",
       "name": "Torchaudio",
+      "sources": [
+        {
+          "name": "Wildminder's HF",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/tree/main"
+        }
+      ],
       "wheels": [
         {
           "package_version": "2.8.0",
@@ -1101,15 +1133,31 @@
       "wheels": [
         {
           "package_version": "0.0.32.post2",
+          "torch_version": "2.8",
+          "python_version": "3.9",
+          "cuda_version": "12.6",
+          "url": "https://download.pytorch.org/whl/cu126/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.32.post2",
           "torch_version": "2.8.0",
+          "python_version": "3.9",
           "cuda_version": "12.8",
           "url": "https://download.pytorch.org/whl/cu128/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl"
         },
         {
           "package_version": "0.0.32.post2",
           "torch_version": "2.8.0",
+          "python_version": "3.9",
           "cuda_version": "12.9",
           "url": "https://download.pytorch.org/whl/cu129/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.33",
+          "torch_version": ">2.8",
+          "python_version": ">3.9",
+          "cuda_version": "130",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/blob/main/xformers-0.0.33%2B00a7a5f0.d20251021-cp39-abi3-win_amd64.whl"
         }
       ]
     }
