@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2025-10-24T21:37:05.422662+00:00",
+  "last_updated_utc": "2025-10-27T22:14:29.674814+00:00",
   "packages": [
     {
       "id": "flashattention",
@@ -756,29 +756,121 @@
           "package_version": "1.0.1",
           "torch_version": "2.9",
           "python_version": "3.12",
-          "cuda_version": "12.8",
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu128torch2.9-cp312-cp312-win_amd64.whl"
         },
         {
           "package_version": "1.0.1",
           "torch_version": "2.9",
           "python_version": "3.12",
-          "cuda_version": "13.0",
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu130torch2.9-cp312-cp312-win_amd64.whl"
         },
         {
           "package_version": "1.0.1",
           "torch_version": "2.9",
           "python_version": "3.13",
-          "cuda_version": "12.8",
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu128torch2.9-cp313-cp313-win_amd64.whl"
         },
         {
           "package_version": "1.0.1",
           "torch_version": "2.9",
           "python_version": "3.13",
-          "cuda_version": "13.0",
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu130torch2.9-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp313-cp313-win_amd64.whl"
         }
       ]
     },
