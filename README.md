@@ -433,7 +433,12 @@ Neighborhood Attention Transformer.
 ### Triton (Windows Fork)
 Triton is a language and compiler for writing highly efficient custom deep-learning primitives. Not officially supported on Windows, but a fork provides pre-built wheels.
 *   **Windows Fork**: [woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows/releases)
-*   **Installation**: `pip install -U "triton-windows<3.6"`
+
+| PyTorch Ver | Installation |
+|:---:|:---:|
+| `>= 2.9` | `pip install -U "triton-windows<3.6"` |
+| `>= 2.8` | `pip install -U "triton-windows<3.5"` |
+
 
 <p align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
@@ -501,4 +506,5 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
