@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2025-10-27T22:14:29.674814+00:00",
+  "last_updated_utc": "2025-11-17T16:08:16.005434+00:00",
   "packages": [
     {
       "id": "flashattention",
@@ -292,6 +292,30 @@
           "cuda_version": "13.0",
           "cxx11_abi": true,
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.9.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.1",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.1cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.1",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu128torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.1",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl"
         }
       ]
     },

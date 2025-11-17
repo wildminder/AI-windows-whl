@@ -117,7 +117,7 @@ The foundation of everything. Install this first from the official source.
 
 For convenience, here are direct installation commands for specific versions on Linux/WSL with an NVIDIA GPU. For other configurations (CPU, macOS, ROCm), please use the official install page.
 
-#### Stable Version (2.9.0)
+#### Stable Version (2.9.1)
 This is the recommended version for most users.
 
 | CUDA Version | Pip Install Command                                                                                      |
@@ -179,6 +179,9 @@ High-performance attention implementation.
 | `2.8.3` | `2.10.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.10.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `2.8.3` | `2.10.0` | `3.12` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.10.0cxx11abiTRUE-cp312-cp312-win_amd64.whl) |
 | `2.8.3` | `2.10.0` | `3.13` | `12.8` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu128torch2.10.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
+| `2.8.3` | `2.9.1` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
+| `2.8.3` | `2.9.1` | `3.12` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.1cxx11abiTRUE-cp312-cp312-win_amd64.whl) |
+| `2.8.3` | `2.9.1` | `3.13` | `12.8` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu128torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `2.8.3` | `2.9.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.9.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `2.8.3` | `2.9.0` | `3.12` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.0cxx11abiTRUE-cp312-cp312-win_amd64.whl) |
 | `2.8.3` | `2.9.0` | `3.13` | `12.9` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu129torch2.9.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
@@ -433,12 +436,7 @@ Neighborhood Attention Transformer.
 ### Triton (Windows Fork)
 Triton is a language and compiler for writing highly efficient custom deep-learning primitives. Not officially supported on Windows, but a fork provides pre-built wheels.
 *   **Windows Fork**: [woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows/releases)
-
-| PyTorch Ver | Installation |
-|:---:|:---:|
-| `>= 2.9` | `pip install -U "triton-windows<3.6"` |
-| `>= 2.8` | `pip install -U "triton-windows<3.5"` |
-
+*   **Installation**: `pip install -U "triton-windows<3.6"`
 
 <p align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
@@ -506,5 +504,3 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
-
-
