@@ -123,6 +123,7 @@ pip install "https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/
 
 Here is the list of tracked packages.
 
+<a id="pytorch"></a>
 ### 🛠 PyTorch
 The foundation of everything. Install this first from the official source.
 *   **Official Install Page**: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
@@ -168,7 +169,7 @@ Use these for access to the latest features, but expect potential instability.
 | **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
-<p align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="torchaudio" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
 ### 🛠 Torchaudio
 <!-- START_TORCHAUDIO_TABLE -->
@@ -518,5 +519,6 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
 
