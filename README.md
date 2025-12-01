@@ -17,7 +17,6 @@
 </div>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -44,6 +43,19 @@
     </li>
   </ol>
 </details>
+
+<div align="center">
+<a href="#pytorch"><img width="120" height="52" alt="PyTorch" src="https://github.com/user-attachments/assets/aef4104c-5bc0-4741-8cc5-3e4a54efa080" /></a>
+  <a href="#torchaudio"><img width="120" height="52" alt="Torchaudio" src="https://github.com/user-attachments/assets/5af2ea45-4626-442a-bc27-e958e02c7ca9" /></a>
+  <a href="#flash-attention"><img width="120" height="52" alt="Flash Attention" src="https://github.com/user-attachments/assets/a7e8016f-ba3b-4355-b0fa-18e4d687346c" /></a>
+<a href="#xformers"><img width="120" height="52" alt="xFormers" src="https://github.com/user-attachments/assets/3dab074e-7716-4416-a9f7-265368051ad0" /></a>    
+  <a href="#sageattention"><img width="120" height="52" alt="SageAttention" src="https://github.com/user-attachments/assets/bb5d2c02-aa8c-4ddc-b239-b964dac6d542" /></a>
+  <a href="#nunchaku"><img width="120" height="52" alt="Nunchaku" src="https://github.com/user-attachments/assets/e9389c4a-f64a-436c-b1cd-1718436bca82" /></a>
+<a href="#natten"><img width="120" height="52" alt="Natten" src="https://github.com/user-attachments/assets/7e66e97e-d504-4e64-84b4-eb26faa01229" /></a>
+<a href="#triton"><img width="120" height="52" alt="triton" src="https://github.com/user-attachments/assets/e44b931c-7599-47b5-bf05-715dc2fcf7f3" /></a>
+<a href="#spargeattn"><img width="120" height="52" alt="SpargeAttn" src="https://github.com/user-attachments/assets/7aa0cdab-547d-453a-90df-f2e6e377aa8b" /></a>
+<a href="#bitsandbytes"><img width="120" height="52" alt="bitsandbytes" src="https://github.com/user-attachments/assets/3497bfa8-da3f-4dc3-a617-1a30471ca2c2" /></a>  
+</div>
 
 
 
@@ -504,3 +516,4 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
