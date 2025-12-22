@@ -438,7 +438,23 @@ Neighborhood Attention Transformer.
 ### 🛠 Triton (Windows Fork)
 Triton is a language and compiler for writing highly efficient custom deep-learning primitives. Not officially supported on Windows, but a fork provides pre-built wheels.
 *   **Windows Fork**: [woct0rdho/triton-windows](https://github.com/woct0rdho/triton-windows/releases)
-*   **Installation**: `pip install -U "triton-windows<3.6"`
+
+**Installation**:
+    
+| Package Version | PyTorch Ver | Install |
+|:---:|:---:|:---:|
+| `3.5.1.post22` | >= 2.9 | `pip install -U "triton-windows<3.6"` |
+| `3.4.0.post20` | >= 2.8 | `pip install -U "triton-windows<3.5"` |
+
+**Python libs**
+
+| Python Ver | Download |
+|:---:|:---:|
+| `3.13` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.13.2_include_libs.zip) |
+| `3.12` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.12.7_include_libs.zip) |
+| `3.11` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.11.9_include_libs.zip) |
+| `3.10` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.10.11_include_libs.zip) |
+| `3.9` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.9.13_include_libs.zip) |
 
 <p id="bitsandbytes" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
@@ -520,6 +536,7 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
 
 
