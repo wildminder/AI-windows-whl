@@ -159,15 +159,24 @@ This is the recommended version for most users.
 
 </details>
 
+---
+
 #### Nightly Versions
 Use these for access to the latest features, but expect potential instability.
 
-**PyTorch 2.10 (Nightly)**
+**PyTorch 2.11 (Nightly)**
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
 | **CUDA 13.0**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
 | **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
+
+**PyTorch 2.10 (Nightly)**
+| CUDA Version | Pip Install Command                                                                                      |
+|:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 13.0**  | `pip install --pre "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
+| **CUDA 12.8**  | `pip install --pre "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
+| **CUDA 12.6**  | `pip install --pre "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
 <p id="torchaudio" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
@@ -179,6 +188,11 @@ Use these for access to the latest features, but expect potential instability.
 | `2.8.0a0` | `2.10.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.8.0a0+cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `2.8.0` | `2.9.0` | N/A | `12.8` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.8.0a0%2Bcu128torch2.9.0cxx11abi1-cp312-cp312-win_amd64.whl?download=true) |
 <!-- END_TORCHAUDIO_TABLE -->
+
+```sh
+# Torchcodec
+pip install torchcodec
+```
 
 <p id="flash-attention" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
@@ -536,6 +550,7 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
 
 
