@@ -521,6 +521,7 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 |:---:|:---:|:---:|:---:|
 | `0.0.2.post1` | `2.11.0` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn-0.0.2.post1%2Bcu130torch2.11cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `0.0.2.post1` | `2.10.0` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn-0.0.2.post1%2Bcu130torch2.10cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
+| `0.0.2.post1` | `2.9.1` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn-0.0.2.post1%2Bcu130torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 <!-- END_SPARGEATTN_TABLE -->
 
 
@@ -578,4 +579,5 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
