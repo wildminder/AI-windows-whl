@@ -1,0 +1,1605 @@
+{
+  "last_updated_utc": "2026-01-23T16:35:22.001142+00:00",
+  "packages": [
+    {
+      "id": "flashattention",
+      "name": "Flash Attention",
+      "description": "High-performance attention implementation.",
+      "official_repo": "https://github.com/Dao-AILab/flash-attention",
+      "sources": [
+        {
+          "name": "Wildminder's HF",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/tree/main"
+        },
+        {
+          "name": "lldacing's HF",
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/tree/main"
+        },
+        {
+          "name": "mjun0812 GitHub",
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels"
+        },
+        {
+          "name": "windreamer",
+          "url": "https://github.com/windreamer/flash-attention3-wheels"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.6.0",
+          "python_version": "3.10",
+          "cuda_version": "12.4",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.6.0",
+          "python_version": "3.10",
+          "cuda_version": "12.6",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.6.0",
+          "python_version": "3.11",
+          "cuda_version": "12.4",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.6.0",
+          "python_version": "3.11",
+          "cuda_version": "12.6",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.6.0",
+          "python_version": "3.12",
+          "cuda_version": "12.4",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.6.0",
+          "python_version": "3.12",
+          "cuda_version": "12.6",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu126torch2.6.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.7.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.7.4+cu128torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.7.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.9/flash_attn-2.7.4+cu128torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.7.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.7.4+cu128torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.8.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.7.4+cu128torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.8.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.7.4+cu128torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.7.4",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.7.4+cu128torch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.7.4.post1",
+          "torch_version": "2.7.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4.post1",
+          "torch_version": "2.7.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp311-cp311-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4.post1",
+          "torch_version": "2.7.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.7.0cxx11abiFALSE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4.post1",
+          "torch_version": "2.8.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4.post1+cu128torch2.8.0cxx11abiTRUE-cp310-cp310-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.7.4.post1",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.7.4.post1+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.8.0.post2",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.0.post2+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.8.1",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.1%2Bcu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.7.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.8.2+cu128torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.7.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.8.2+cu128torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.7.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": false,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.8.2+cu128torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.8.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.8.2+cu128torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.8.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.4.10/flash_attn-2.8.2+cu128torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.2%2Bcu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.8.2",
+          "torch_version": "2.9.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.2%2Bcu128torch2.9.0cxx11abiTRUE-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.10.0",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bd20260121.cu130torch2.10.0cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.10.0",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.10.0cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu128torch2.10.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bd20260121.cu130torch2.10.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.10.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.11.0",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bd20260120.cu130torch2.11.0cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.11.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.11.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu128torch2.8.0cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu128torch2.9.0cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.0",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.0cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.0",
+          "python_version": "3.13",
+          "cuda_version": "12.9",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu129torch2.9.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3+cu130torch2.9.0cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.1",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.1cxx11abiTRUE-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.1",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu128torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.3",
+          "torch_version": "2.9.1",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/flash_attn-2.8.3%2Bcu130torch2.9.1cxx11abiTRUE-cp313-cp313-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "natten",
+      "name": "NATTEN",
+      "description": "Neighborhood Attention Transformer.",
+      "official_repo": "https://github.com/SHI-Labs/NATTEN",
+      "sources": [
+        {
+          "name": "lldacing's HF",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/tree/main"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.4.0",
+          "python_version": "3.10",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch240cu124-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.4.0",
+          "python_version": "3.11",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch240cu124-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.4.0",
+          "python_version": "3.12",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch240cu124-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.4.1",
+          "python_version": "3.10",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch241cu124-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.4.1",
+          "python_version": "3.11",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch241cu124-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.4.1",
+          "python_version": "3.12",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch241cu124-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.5.0",
+          "python_version": "3.10",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch250cu124-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.5.0",
+          "python_version": "3.11",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch250cu124-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.5.0",
+          "python_version": "3.12",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch250cu124-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.5.1",
+          "python_version": "3.10",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch251cu124-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.5.1",
+          "python_version": "3.11",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch251cu124-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.3",
+          "torch_version": "2.5.1",
+          "python_version": "3.12",
+          "cuda_version": "12.4",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch251cu124-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.5",
+          "torch_version": "2.6.0",
+          "python_version": "3.10",
+          "cuda_version": "12.6",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch260cu126-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.5",
+          "torch_version": "2.6.0",
+          "python_version": "3.11",
+          "cuda_version": "12.6",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch260cu126-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.5",
+          "torch_version": "2.6.0",
+          "python_version": "3.12",
+          "cuda_version": "12.6",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch260cu126-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.5",
+          "torch_version": "2.7.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.5",
+          "torch_version": "2.7.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.17.5",
+          "torch_version": "2.7.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp312-cp312-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "nunchaku",
+      "name": "Nunchaku",
+      "official_repo": "https://github.com/mit-han-lab/nunchaku/releases",
+      "sources": [
+        {
+          "name": "JusteLeo",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.5",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.5",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.5",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.6",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.6-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.6",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.6-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.6",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.6-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.7",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.7",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.7",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.8",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.8",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.8",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.3.2",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-0.3.2%2Btorch2.9-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.5",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.5-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.5",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.5-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.5",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.5-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.6",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.6-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.6",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.6-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.6",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.6-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.6",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.6-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.7-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.9",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.9-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.9",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.9-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.9-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.9-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.10",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.10-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.10",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.10-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.10",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.10-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.10",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.10-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.5",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.5-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.5",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.5-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.5",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.5-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.6",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.6-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.6",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.6-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.6",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.6-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.6",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.6-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.7",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.7",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.7",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.7",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.7-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.8",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.8",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.8",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.8",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.8",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.1/nunchaku-1.0.1+torch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu128torch2.9-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu130torch2.9-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu128torch2.9-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.1",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/nunchaku-1.0.1%2Bcu130torch2.9-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.10",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.10-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.7",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.7-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.8",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.2",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.2/nunchaku-1.0.2+torch2.9-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.11",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.11",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.11",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.11",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.7",
+          "python_version": "3.11",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels/resolve/main/nunchaku-1.2.0%2Btorch2.7-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.7",
+          "python_version": "3.12",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels/resolve/main/nunchaku-1.2.0%2Btorch2.7-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.7",
+          "python_version": "3.13",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels/resolve/main/nunchaku-1.2.0%2Btorch2.7-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.8",
+          "python_version": "3.11",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels/resolve/main/nunchaku-1.2.0%2Btorch2.8-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.8",
+          "python_version": "3.12",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels/resolve/main/nunchaku-1.2.0%2Btorch2.8-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.8",
+          "python_version": "3.13",
+          "url": "https://huggingface.co/JusteLeo/Nunchaku-Zimage-Win-Wheels/resolve/main/nunchaku-1.2.0%2Btorch2.8-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.9",
+          "python_version": "3.10",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.9-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.9",
+          "python_version": "3.11",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.9-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.9",
+          "python_version": "3.12",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.9-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.2.0",
+          "torch_version": "2.9",
+          "python_version": "3.13",
+          "url": "https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.9-cp313-cp313-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "sageattention",
+      "name": "SageAttention",
+      "official_repo": "https://github.com/thu-ml/SageAttention",
+      "sources": [
+        {
+          "name": "Wildminder's HF",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/tree/main"
+        },
+        {
+          "name": "woct0rdho's Releases",
+          "url": "https://github.com/woct0rdho/SageAttention/releases"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.5.1",
+          "python_version": "3.10",
+          "cuda_version": "12.4",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu124torch2.5.1-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.5.1",
+          "python_version": "3.11",
+          "cuda_version": "12.4",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu124torch2.5.1-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.5.1",
+          "python_version": "3.12",
+          "cuda_version": "12.4",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu124torch2.5.1-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.5.1",
+          "python_version": "3.9",
+          "cuda_version": "12.4",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu124torch2.5.1-cp39-cp39-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.6.0",
+          "python_version": "3.10",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.6.0",
+          "python_version": "3.11",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.6.0",
+          "python_version": "3.12",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.6.0",
+          "python_version": "3.12",
+          "cuda_version": "12.6",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.1.1+cu126torch2.6.0-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.6.0",
+          "python_version": "3.13",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.6.0",
+          "python_version": "3.9",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp39-cp39-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.7.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.0-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.1.1",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.1.1+cu128torch2.8.0-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp39-cp39-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.10",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp310-cp310-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.8.0-cp39-cp39-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post2",
+          "torch_version": "2.5.1",
+          "python_version": ">3.9",
+          "cuda_version": "12.4",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu124torch2.5.1.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post2",
+          "torch_version": "2.6.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu126torch2.6.0.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post2",
+          "torch_version": "2.7.1",
+          "python_version": ">3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu128torch2.7.1.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post2",
+          "torch_version": "2.8.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post2/sageattention-2.2.0+cu128torch2.8.0.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post2",
+          "torch_version": "2.9.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0%2Bcu128torch2.9.0cxx11abi1-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.10.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu128torch2.10.0-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.10.0",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu130torch2.10.0-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu128torch2.10.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu130torch2.10.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.5.1",
+          "python_version": ">3.9",
+          "cuda_version": "12.4",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post3/sageattention-2.2.0+cu124torch2.5.1.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.6.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.6",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post3/sageattention-2.2.0+cu126torch2.6.0.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.7.1",
+          "python_version": ">3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post3/sageattention-2.2.0+cu128torch2.7.1.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.8.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu128torch2.8.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.8.0",
+          "python_version": "3.13",
+          "cuda_version": "12.9",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.8.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.8.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post3/sageattention-2.2.0+cu128torch2.8.0.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.8.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.9",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.8.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.9.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu128torch2.9.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.9.0",
+          "python_version": "3.13",
+          "cuda_version": "12.9",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.9.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.9.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu130torch2.9.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.9.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post3/sageattention-2.2.0+cu128torch2.9.0.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post3",
+          "torch_version": "2.9.0",
+          "python_version": ">3.9",
+          "cuda_version": "12.9",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu129torch2.9.0-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post4",
+          "torch_version": ">2.9.0",
+          "python_version": "3.9",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu128torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post4",
+          "torch_version": ">2.9.0",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu130torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "spargeattn",
+      "name": "SpargeAttn",
+      "official_repo": "https://github.com/thu-ml/SpargeAttn",
+      "sources": [
+        {
+          "name": "woct0rdho's Releases",
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "0.1.0.post1",
+          "torch_version": "2.7.1",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post1",
+          "torch_version": "2.8.0",
+          "cuda_version": "12.8",
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "torchaudio",
+      "name": "Torchaudio",
+      "sources": [
+        {
+          "name": "Wildminder's HF",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/tree/main"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": "2.10.0",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.11.0a0%2Bd20260121.cu130torch2.10.0cxx11abi1-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.11.0a0+cu128torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.11.0a0%2Bd20260121.cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.11.0a0+cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": "2.11.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.11.0a0+cu130torch2.11.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.8.0",
+          "torch_version": "2.9.0",
+          "cuda_version": "12.8",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.8.0a0%2Bcu128torch2.9.0cxx11abi1-cp312-cp312-win_amd64.whl?download=true"
+        },
+        {
+          "package_version": "2.8.0a0",
+          "torch_version": "2.10.0",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio-2.8.0a0+cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "flash-attn-3",
+      "name": "flash-attn-3",
+      "sources": [
+        {
+          "name": "windreamer",
+          "url": "https://github.com/windreamer/flash-attention3-wheels"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "3.0.0b1",
+          "torch_version": "2.9.0",
+          "python_version": "3.9",
+          "cuda_version": "12.8",
+          "cxx11_abi": true,
+          "url": "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.01.19-8b0dc47/flash_attn_3-3.0.0b1+20260119.cu128torch290cxx11abitrue.100fa1-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "3.0.0b1",
+          "torch_version": "2.9.0",
+          "python_version": "3.9",
+          "cuda_version": "12.9",
+          "cxx11_abi": true,
+          "url": "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.01.19-8b0dc47/flash_attn_3-3.0.0b1+20260119.cu129torch290cxx11abitrue.100fa1-cp39-abi3-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "sageattn3",
+      "name": "sageattn3",
+      "sources": [
+        {
+          "name": "mengqin",
+          "url": "https://github.com/mengqin/SageAttention"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.7.1",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.11",
+          "cuda_version": "12.8",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp311-cp311-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.12",
+          "cuda_version": "12.8",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.8.0",
+          "python_version": "3.13",
+          "cuda_version": "12.8",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.9.1",
+          "python_version": "3.12",
+          "cuda_version": "13.0",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "1.0.0",
+          "torch_version": "2.9.1",
+          "python_version": "3.13",
+          "cuda_version": "13.0",
+          "url": "https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp313-cp313-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "xformers",
+      "name": "xformers",
+      "description": "Another library for memory-efficient attention and other optimizations.",
+      "official_repo": "https://github.com/facebookresearch/xformers/releases",
+      "wheels": [
+        {
+          "package_version": "0.0.32.post2",
+          "torch_version": "2.8.0",
+          "python_version": "3.9",
+          "cuda_version": "12.6",
+          "url": "https://download.pytorch.org/whl/cu126/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.32.post2",
+          "torch_version": "2.8.0",
+          "python_version": "3.9",
+          "cuda_version": "12.8",
+          "url": "https://download.pytorch.org/whl/cu128/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.32.post2",
+          "torch_version": "2.8.0",
+          "python_version": "3.9",
+          "cuda_version": "12.9",
+          "url": "https://download.pytorch.org/whl/cu129/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.33",
+          "torch_version": "2.10",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.33%2Bcu130torch2.10-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.33",
+          "torch_version": "2.9",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.33%2Bcu130torch2.9-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.34",
+          "torch_version": "2.10",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.34%2Bd20260123.cu130torch2.10-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.34",
+          "torch_version": "2.10",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.34+torch2.10cu130-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.0.34",
+          "torch_version": "2.11",
+          "python_version": "3.9",
+          "cuda_version": "13.0",
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.34+torch2.11cu130-cp39-abi3-win_amd64.whl"
+        }
+      ]
+    }
+  ]
+}
