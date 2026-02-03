@@ -70,23 +70,16 @@ The goal here is to provide a centralized, up-to-date collection of direct links
 
 <p align="center">══════════════════════════════════</p>
 
-Beyond the code, I believe in the power of community and continuous learning. I invite you to join the 'TokenDiff AI News' and 'TokenDiff Community Hub'
+Beyond the code, I believe in the power of community and continuous learning. I invite you to join the 'TokenDiff'
 
 <table border="0" align="center" cellspacing="10" cellpadding="0">
   <tr>
     <td align="center" valign="top">
-      <h4>TokenDiff AI News</h4>
+      <h4>TokenDiff AI</h4>
       <a href="https://t.me/TokenDiff">
-        <img width="50%" alt="tokendiff-tg-qw" src="https://github.com/user-attachments/assets/e29f6b3c-52e5-4150-8088-12163a2e1e78" />
-      </a>
-      <p><sub>AI for every home, creativity for every mind!</sub></p>
-    </td>
-    <td align="center" valign="top">
-      <h4>TokenDiff Community Hub</h4>
-      <a href="https://t.me/TokenDiff_hub">
-        <img width="50%" alt="token_hub-tg-qr" src="https://github.com/user-attachments/assets/da544121-5f5b-4e3d-a3ef-02272535929e" />
-      </a>
-      <p><sub>Questions, help, and thoughtful discussion.</sub> </p>
+        <img width="20%" alt="tokendiff-tg-qw" src="https://github.com/user-attachments/assets/e29f6b3c-52e5-4150-8088-12163a2e1e78" />
+      </a>      
+      <p>AI for every home, creativity for every mind!</p>
     </td>
   </tr>
 </table>
@@ -130,7 +123,7 @@ The foundation of everything. Install this first from the official source.
 
 For convenience, here are direct installation commands for specific versions on Linux/WSL with an NVIDIA GPU. For other configurations (CPU, macOS, ROCm), please use the official install page.
 
-#### Stable Version (2.9.1)
+#### Stable Version (2.10.0)
 This is the recommended version for most users.
 
 | CUDA Version | Pip Install Command                                                                                      |
@@ -141,6 +134,15 @@ This is the recommended version for most users.
 
 <details>
   <summary>Previous Stable Version 2.7.1, 2.8.0</summary>
+
+#### Previous Version (2.9.1)
+This is the recommended version for most users.
+
+| CUDA Version | Pip Install Command                                                                                      |
+|:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 13.0**  | `pip install "torch>=2.9.0.dev,<2.10.0" torchvision --index-url https://download.pytorch.org/whl/cu130` |
+| **CUDA 12.8**  | `pip install "torch>=2.9.0.dev,<2.10.0" torchvision --index-url https://download.pytorch.org/whl/cu128` |
+| **CUDA 12.6**  | `pip install "torch>=2.9.0.dev,<2.10.0" torchvision --index-url https://download.pytorch.org/whl/cu126` |
 
 ##### Previous Stable Version (2.8.0)  
 | CUDA Version | Pip Install Command                                                              |
@@ -170,13 +172,6 @@ Use these for access to the latest features, but expect potential instability.
 | **CUDA 13.0**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
 | **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
-
-**PyTorch 2.10 (Nightly)**
-| CUDA Version | Pip Install Command                                                                                      |
-|:-------------|:---------------------------------------------------------------------------------------------------------|
-| **CUDA 13.0**  | `pip install --pre "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
-| **CUDA 12.8**  | `pip install --pre "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
-| **CUDA 12.6**  | `pip install --pre "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
 <p id="torchaudio" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
@@ -579,5 +574,6 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
 
