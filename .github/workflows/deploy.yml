@@ -1,0 +1,58 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - 'web/src/**'
+      - 'web/package.json'
+      - 'web/vite.config.ts'
+      - 'web/index.html'
+      - 'web/tailwind.config.js'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./web
+        run: npm ci
+
+      - name: Run linter
+        working-directory: ./web
+        run: npm run lint
+
+      - name: Type check
+        working-directory: ./web
+        run: npm run typecheck
+
+      - name: Build
+        working-directory: ./web
+        run: npm run build
+
+      - name: Commit built files
+        run: |
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          git add docs/
+          git commit -m "Build: Update docs from gh-pages branch [$(date -u +%Y-%m-%d)]" || echo "No changes to commit"
+          git push
