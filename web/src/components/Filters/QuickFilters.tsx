@@ -23,7 +23,14 @@ interface FilterChipProps {
   color: string;
 }
 
-function FilterChip({ icon: Icon, label, options, value, onChange, color }: FilterChipProps): JSX.Element {
+function FilterChip({
+  icon: Icon,
+  label,
+  options,
+  value,
+  onChange,
+  color,
+}: FilterChipProps): JSX.Element {
   return (
     <div className="relative group">
       <div className="flex items-center gap-2 px-3 py-2 bg-surface border border-border rounded-lg">
@@ -33,10 +40,16 @@ function FilterChip({ icon: Icon, label, options, value, onChange, color }: Filt
           onChange={(e) => onChange(e.target.value || null)}
           className="bg-transparent text-sm font-mono text-text-primary focus:outline-none cursor-pointer min-w-[100px]"
         >
-          <option key={`${label}-any`} value="" className="bg-surface text-text-muted">Any {label}</option>
-          {options.filter(opt => opt && opt.trim() !== '').map((opt, idx) => (
-            <option key={`${label}-${opt}-${idx}`} value={opt} className="bg-surface">{opt}</option>
-          ))}
+          <option key={`${label}-any`} value="" className="bg-surface text-text-muted">
+            Any {label}
+          </option>
+          {options
+            .filter((opt) => opt && opt.trim() !== '')
+            .map((opt, idx) => (
+              <option key={`${label}-${opt}-${idx}`} value={opt} className="bg-surface">
+                {opt}
+              </option>
+            ))}
         </select>
       </div>
       {value && (
@@ -66,13 +79,13 @@ export function QuickFilters({
   const hasFilters = selectedPython || selectedTorch || selectedCuda;
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       className="flex flex-wrap items-center gap-3 p-4 bg-surface/50 border border-border rounded-xl backdrop-blur-sm"
     >
       <span className="text-sm font-medium text-text-secondary mr-2">I need:</span>
-      
+
       <FilterChip
         icon={Cpu}
         label="Python"
@@ -81,7 +94,7 @@ export function QuickFilters({
         onChange={onPythonChange}
         color="text-primary"
       />
-      
+
       <FilterChip
         icon={Zap}
         label="PyTorch"
@@ -90,7 +103,7 @@ export function QuickFilters({
         onChange={onTorchChange}
         color="text-secondary"
       />
-      
+
       <FilterChip
         icon={Box}
         label="CUDA"

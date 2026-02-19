@@ -17,9 +17,9 @@ describe('SearchBar', () => {
   it('calls onChange when typing', () => {
     render(<SearchBar value="" onChange={mockOnChange} />);
     const input = screen.getByPlaceholderText('Search packages...');
-    
+
     fireEvent.change(input, { target: { value: 'flash' } });
-    
+
     expect(mockOnChange).toHaveBeenCalledWith('flash');
   });
 
@@ -36,9 +36,9 @@ describe('SearchBar', () => {
   it('clears value when clear button clicked', () => {
     render(<SearchBar value="test" onChange={mockOnChange} />);
     const clearButton = screen.getByLabelText('Clear search');
-    
+
     fireEvent.click(clearButton);
-    
+
     expect(mockOnChange).toHaveBeenCalledWith('');
   });
 

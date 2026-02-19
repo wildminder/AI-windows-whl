@@ -15,12 +15,15 @@ export function Footer({ data }: FooterProps): JSX.Element {
   const footerContent = (
     <>
       {/* Glow line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent" aria-hidden="true" />
-      
+      <div
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent"
+        aria-hidden="true"
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Left side - Made with love */}
-          <motion.div 
+          <motion.div
             className="flex items-center gap-2 text-sm text-text-muted"
             whileHover={animationsEnabled ? { scale: 1.02 } : {}}
           >
@@ -38,16 +41,19 @@ export function Footer({ data }: FooterProps): JSX.Element {
             )}
             <span className="font-mono">for the Windows AI community</span>
           </motion.div>
-          
+
           {/* Right side - Last updated */}
           {lastUpdated && (
             <div className="flex items-center gap-2 text-xs font-mono text-text-muted">
-              <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" aria-hidden="true" />
+              <span
+                className="w-2 h-2 rounded-full bg-accent-green animate-pulse"
+                aria-hidden="true"
+              />
               <span>Data updated: {formatDate(lastUpdated)}</span>
             </div>
           )}
         </div>
-        
+
         {/* Bottom text */}
         <div className="mt-4 pt-4 border-t border-border/30 text-center">
           <p className="text-2xs font-mono text-text-muted/60">
@@ -60,7 +66,11 @@ export function Footer({ data }: FooterProps): JSX.Element {
 
   if (!animationsEnabled) {
     return (
-      <footer className="relative z-10 mt-auto border-t border-border backdrop-blur-sm bg-background/50" role="contentinfo" aria-label="Site footer">
+      <footer
+        className="relative z-10 mt-auto border-t border-border backdrop-blur-sm bg-background/50"
+        role="contentinfo"
+        aria-label="Site footer"
+      >
         {footerContent}
       </footer>
     );

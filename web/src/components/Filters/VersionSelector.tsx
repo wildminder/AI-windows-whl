@@ -94,7 +94,9 @@ export function VersionSelector({
               {label}
             </span>
             <div className="flex items-center gap-2">
-              <span className={`font-display font-semibold ${value ? 'text-text-primary' : 'text-text-muted'}`}>
+              <span
+                className={`font-display font-semibold ${value ? 'text-text-primary' : 'text-text-muted'}`}
+              >
                 {value || `Any ${label}`}
               </span>
               {value && (

@@ -31,7 +31,7 @@ describe('PackageCard', () => {
         cudaVersion={null}
         isActive={true}
         matchingCount={1}
-      />
+      />,
     );
 
     expect(screen.getByText('Flash Attention')).toBeInTheDocument();
@@ -47,7 +47,7 @@ describe('PackageCard', () => {
         cudaVersion={null}
         isActive={true}
         matchingCount={1}
-      />
+      />,
     );
 
     expect(screen.getByText('v2.7.4')).toBeInTheDocument();
@@ -62,7 +62,7 @@ describe('PackageCard', () => {
         cudaVersion={null}
         isActive={true}
         matchingCount={1}
-      />
+      />,
     );
 
     expect(screen.getByText(/1.*wheel/)).toBeInTheDocument();
@@ -77,7 +77,7 @@ describe('PackageCard', () => {
         cudaVersion={null}
         isActive={true}
         matchingCount={1}
-      />
+      />,
     );
 
     const link = screen.getByLabelText('View official repository');
@@ -93,7 +93,7 @@ describe('PackageCard', () => {
         cudaVersion={null}
         isActive={false}
         matchingCount={0}
-      />
+      />,
     );
 
     expect(screen.getByText('Flash Attention')).toBeInTheDocument();

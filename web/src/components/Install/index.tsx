@@ -34,10 +34,12 @@ export function InstallCommand({ wheel }: InstallCommandProps): JSX.Element {
       >
         <Terminal className="w-4 h-4 text-primary" />
         <span className="font-mono text-2xs text-primary">Copy</span>
-        
+
         {/* Glow effect on hover */}
-        <div className="absolute inset-0 rounded-lg bg-primary/5 opacity-0 group-hover:opacity-100 
-                       blur-md transition-opacity duration-200" />
+        <div
+          className="absolute inset-0 rounded-lg bg-primary/5 opacity-0 group-hover:opacity-100 
+                       blur-md transition-opacity duration-200"
+        />
       </motion.button>
 
       {/* Success indicator */}
@@ -88,21 +90,11 @@ export function CopyButton({ text, className = '' }: CopyButtonProps): JSX.Eleme
     >
       <AnimatePresence mode="wait">
         {copied ? (
-          <motion.div
-            key="check"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-          >
+          <motion.div key="check" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
             <Check className="w-4 h-4 text-accent-green" />
           </motion.div>
         ) : (
-          <motion.div
-            key="copy"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-          >
+          <motion.div key="copy" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
             <Copy className="w-4 h-4" />
           </motion.div>
         )}

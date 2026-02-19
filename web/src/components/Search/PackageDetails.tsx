@@ -1,8 +1,25 @@
 import { motion } from 'framer-motion';
-import { X, Terminal, Copy, Check, Package, Cpu, Zap, Box, AlertCircle, Download } from 'lucide-react';
+import {
+  X,
+  Terminal,
+  Copy,
+  Check,
+  Package,
+  Cpu,
+  Zap,
+  Box,
+  AlertCircle,
+  Download,
+} from 'lucide-react';
 import { useState, useMemo, useEffect } from 'react';
 import type { Package as PackageType, Wheel, VersionRange } from '@/types';
-import { generateInstallCommand, sortVersions, normalizeVersion, formatVersion, versionMatchesFilter } from '@/utils';
+import {
+  generateInstallCommand,
+  sortVersions,
+  normalizeVersion,
+  formatVersion,
+  versionMatchesFilter,
+} from '@/utils';
 
 interface PackageDetailsProps {
   package: PackageType;
@@ -13,16 +30,22 @@ interface PackageDetailsProps {
 }
 
 // Parse version string into comparable components
-function parseVersion(version: string): { major: number; minor: number; patch: number; suffix: string; suffixNum: number } {
+function parseVersion(version: string): {
+  major: number;
+  minor: number;
+  patch: number;
+  suffix: string;
+  suffixNum: number;
+} {
   const cleanVersion = version.replace(/^v/, '');
   const parts = cleanVersion.split('.');
-  
+
   const major = parseInt(parts[0]) || 0;
   const minor = parseInt(parts[1]) || 0;
   let patch = parseInt(parts[2]) || 0;
   let suffix = '';
   let suffixNum = 0;
-  
+
   for (let i = 3; i < parts.length; i++) {
     const part = parts[i].toLowerCase();
     if (part.includes('post')) {
@@ -41,24 +64,24 @@ function parseVersion(version: string): { major: number; minor: number; patch: n
       patch = patch * 1000 + parseInt(part);
     }
   }
-  
+
   return { major, minor, patch, suffix, suffixNum };
 }
 
 function compareVersions(a: string, b: string): number {
   const va = parseVersion(a);
   const vb = parseVersion(b);
-  
+
   if (va.major !== vb.major) return vb.major - va.major;
   if (va.minor !== vb.minor) return vb.minor - va.minor;
   if (va.patch !== vb.patch) return vb.patch - va.patch;
-  
-  const suffixPriority: Record<string, number> = { 'post': 5, '': 4, 'rc': 3, 'beta': 2, 'alpha': 1 };
+
+  const suffixPriority: Record<string, number> = { post: 5, '': 4, rc: 3, beta: 2, alpha: 1 };
   const pa = suffixPriority[va.suffix] || 0;
   const pb = suffixPriority[vb.suffix] || 0;
-  
+
   if (pa !== pb) return pb - pa;
-  
+
   if (va.suffix === 'post') {
     return vb.suffixNum - va.suffixNum;
   } else {
@@ -69,13 +92,13 @@ function compareVersions(a: string, b: string): number {
 // Extract a string version from VersionRange for sorting purposes
 function getVersionString(version: VersionRange | null | undefined): string {
   if (!version) return '0';
-  
+
   if (typeof version === 'string') {
     return normalizeVersion(version);
   }
-  
+
   if (!Array.isArray(version)) return '0';
-  
+
   // For ranges, use the minimum version for sorting
   const [min, max] = version;
   if (min !== null && min !== undefined) return normalizeVersion(min);
@@ -86,17 +109,26 @@ function getVersionString(version: VersionRange | null | undefined): string {
 function sortWheelsByLatest(wheels: Wheel[]): Wheel[] {
   return [...wheels].sort((a, b) => {
     // First compare package version
-    const packageCompare = compareVersions(a.package_version || '0.0.0', b.package_version || '0.0.0');
+    const packageCompare = compareVersions(
+      a.package_version || '0.0.0',
+      b.package_version || '0.0.0',
+    );
     if (packageCompare !== 0) return packageCompare;
-    
+
     // If package versions are equal, compare Python version (higher first)
-    const pythonCompare = compareVersions(getVersionString(a.python_version), getVersionString(b.python_version));
+    const pythonCompare = compareVersions(
+      getVersionString(a.python_version),
+      getVersionString(b.python_version),
+    );
     if (pythonCompare !== 0) return pythonCompare;
-    
+
     // If Python versions are equal, compare PyTorch version (higher first)
-    const torchCompare = compareVersions(getVersionString(a.torch_version), getVersionString(b.torch_version));
+    const torchCompare = compareVersions(
+      getVersionString(a.torch_version),
+      getVersionString(b.torch_version),
+    );
     if (torchCompare !== 0) return torchCompare;
-    
+
     // If PyTorch versions are equal, compare CUDA version (higher first)
     return compareVersions(getVersionString(a.cuda_version), getVersionString(b.cuda_version));
   });
@@ -105,11 +137,11 @@ function sortWheelsByLatest(wheels: Wheel[]): Wheel[] {
 // Extract concrete version numbers from a VersionRange for filter buttons
 function extractUniqueValues(wheels: Wheel[], key: keyof Wheel): string[] {
   const values = new Set<string>();
-  
-  wheels.forEach(w => {
+
+  wheels.forEach((w) => {
     const version = w[key] as VersionRange;
     if (!version) return;
-    
+
     if (typeof version === 'string') {
       const v = normalizeVersion(version);
       if (v && !v.startsWith('>')) {
@@ -124,7 +156,7 @@ function extractUniqueValues(wheels: Wheel[], key: keyof Wheel): string[] {
       if (max !== null && max !== undefined) values.add(normalizeVersion(max));
     }
   });
-  
+
   return sortVersions(Array.from(values));
 }
 
@@ -140,43 +172,56 @@ interface SelectorPillProps {
   'aria-label'?: string;
 }
 
-function SelectorPill({ 
-  label, 
-  icon: Icon, 
-  options, 
-  value, 
-  onChange, 
+function SelectorPill({
+  label,
+  icon: Icon,
+  options,
+  value,
+  onChange,
   accentColor,
   glowColor,
   availableSet,
   'aria-label': ariaLabel,
 }: SelectorPillProps): JSX.Element {
   return (
-    <div className="flex flex-col gap-1.5" role="group" aria-label={ariaLabel || `${label} version selector`}>
+    <div
+      className="flex flex-col gap-1.5"
+      role="group"
+      aria-label={ariaLabel || `${label} version selector`}
+    >
       <label className={`text-2xs font-mono uppercase flex items-center gap-1.5 ${accentColor}`}>
         <Icon className="w-3 h-3" aria-hidden="true" />
         {label}
       </label>
-      <div className="flex flex-wrap gap-1.5" role="radiogroup" aria-label={`Select ${label} version`}>
-        {options.map(opt => {
+      <div
+        className="flex flex-wrap gap-1.5"
+        role="radiogroup"
+        aria-label={`Select ${label} version`}
+      >
+        {options.map((opt) => {
           const isAvailable = !availableSet || availableSet.has(opt);
           const isSelected = value === opt;
-          
+
           return (
             <button
               key={opt}
               onClick={() => isAvailable && onChange(opt === value ? null : opt)}
               disabled={!isAvailable}
               className={`select-none px-2 py-1 text-xs font-mono rounded border transition-all focus:outline-none focus:ring-2 focus:ring-current ${
-                isSelected 
-                  ? `${accentColor} ${glowColor} border-current shadow-[0_0_10px_currentColor]` 
+                isSelected
+                  ? `${accentColor} ${glowColor} border-current shadow-[0_0_10px_currentColor]`
                   : isAvailable
                     ? 'bg-surface border-border text-text-secondary hover:border-text-secondary'
                     : 'bg-surface/30 border-border/30 text-text-muted/40 cursor-not-allowed opacity-50'
               }`}
-              style={!isAvailable ? {
-                backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255,255,255,0.02) 4px, rgba(255,255,255,0.02) 8px)',
-              } : undefined}
+              style={
+                !isAvailable
+                  ? {
+                      backgroundImage:
+                        'repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255,255,255,0.02) 4px, rgba(255,255,255,0.02) 8px)',
+                    }
+                  : undefined
+              }
               role="radio"
               aria-checked={isSelected}
               aria-disabled={!isAvailable}
@@ -191,56 +236,71 @@ function SelectorPill({
   );
 }
 
-export function PackageDetails({ package: pkg, onClose, initialPython, initialTorch, initialCuda }: PackageDetailsProps): JSX.Element {
+export function PackageDetails({
+  package: pkg,
+  onClose,
+  initialPython,
+  initialTorch,
+  initialCuda,
+}: PackageDetailsProps): JSX.Element {
   // Initialize from props (main page filters) - no auto-select
-  const [selectedPython, setSelectedPython] = useState<string | null>(initialPython ? normalizeVersion(initialPython) : null);
-  const [selectedTorch, setSelectedTorch] = useState<string | null>(initialTorch ? normalizeVersion(initialTorch) : null);
-  const [selectedCuda, setSelectedCuda] = useState<string | null>(initialCuda ? normalizeVersion(initialCuda) : null);
+  const [selectedPython, setSelectedPython] = useState<string | null>(
+    initialPython ? normalizeVersion(initialPython) : null,
+  );
+  const [selectedTorch, setSelectedTorch] = useState<string | null>(
+    initialTorch ? normalizeVersion(initialTorch) : null,
+  );
+  const [selectedCuda, setSelectedCuda] = useState<string | null>(
+    initialCuda ? normalizeVersion(initialCuda) : null,
+  );
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
-  
+
   const sortedWheels = useMemo(() => sortWheelsByLatest(pkg.wheels), [pkg.wheels]);
-  
+
   // Calculate available versions based on current selections (cascading filter)
   // Python versions are always shown (base filter)
-  const pythonVersions = useMemo(() => extractUniqueValues(sortedWheels, 'python_version'), [sortedWheels]);
-  
+  const pythonVersions = useMemo(
+    () => extractUniqueValues(sortedWheels, 'python_version'),
+    [sortedWheels],
+  );
+
   // PyTorch versions available for selected Python AND CUDA
   const torchVersions = useMemo(() => {
     let wheels = sortedWheels;
     if (selectedPython) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.python_version, selectedPython));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.python_version, selectedPython));
     }
     if (selectedCuda) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.cuda_version, selectedCuda));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.cuda_version, selectedCuda));
     }
     return extractUniqueValues(wheels, 'torch_version');
   }, [sortedWheels, selectedPython, selectedCuda]);
-  
+
   // CUDA versions available for selected Python AND PyTorch
   const cudaVersions = useMemo(() => {
     let wheels = sortedWheels;
     if (selectedPython) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.python_version, selectedPython));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.python_version, selectedPython));
     }
     if (selectedTorch) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.torch_version, selectedTorch));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.torch_version, selectedTorch));
     }
     return extractUniqueValues(wheels, 'cuda_version');
   }, [sortedWheels, selectedPython, selectedTorch]);
-  
+
   // Check which versions have matches (for disabling unavailable buttons)
   const availableTorchForPython = useMemo(() => {
     let wheels = sortedWheels;
     if (selectedPython) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.python_version, selectedPython));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.python_version, selectedPython));
     }
     if (selectedCuda) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.cuda_version, selectedCuda));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.cuda_version, selectedCuda));
     }
     // Extract concrete versions for the Set
     const versions = new Set<string>();
-    wheels.forEach(w => {
+    wheels.forEach((w) => {
       const v = w.torch_version;
       if (typeof v === 'string') {
         const nv = normalizeVersion(v);
@@ -253,17 +313,17 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
     });
     return versions;
   }, [sortedWheels, selectedPython, selectedCuda]);
-  
+
   const availableCudaForSelections = useMemo(() => {
     let wheels = sortedWheels;
     if (selectedPython) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.python_version, selectedPython));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.python_version, selectedPython));
     }
     if (selectedTorch) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.torch_version, selectedTorch));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.torch_version, selectedTorch));
     }
     const versions = new Set<string>();
-    wheels.forEach(w => {
+    wheels.forEach((w) => {
       const v = w.cuda_version;
       if (typeof v === 'string') {
         const nv = normalizeVersion(v);
@@ -276,17 +336,17 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
     });
     return versions;
   }, [sortedWheels, selectedPython, selectedTorch]);
-  
+
   const availablePythonForSelections = useMemo(() => {
     let wheels = sortedWheels;
     if (selectedTorch) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.torch_version, selectedTorch));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.torch_version, selectedTorch));
     }
     if (selectedCuda) {
-      wheels = wheels.filter(w => versionMatchesFilter(w.cuda_version, selectedCuda));
+      wheels = wheels.filter((w) => versionMatchesFilter(w.cuda_version, selectedCuda));
     }
     const versions = new Set<string>();
-    wheels.forEach(w => {
+    wheels.forEach((w) => {
       const v = w.python_version;
       if (typeof v === 'string') {
         const nv = normalizeVersion(v);
@@ -299,14 +359,14 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
     });
     return versions;
   }, [sortedWheels, selectedTorch, selectedCuda]);
-  
+
   // Prevent background scroll when modal is open (position: fixed approach)
   useEffect(() => {
     const scrollY = window.scrollY;
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollY}px`;
     document.body.style.width = '100%';
-    
+
     return () => {
       document.body.style.position = '';
       document.body.style.top = '';
@@ -314,15 +374,15 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
       window.scrollTo(0, scrollY);
     };
   }, []);
-  
+
   // Version change handlers
   const handlePythonChange = (val: string | null) => setSelectedPython(val);
   const handleTorchChange = (val: string | null) => setSelectedTorch(val);
   const handleCudaChange = (val: string | null) => setSelectedCuda(val);
-  
+
   // Filter wheels based on all selections
   const filteredWheels = useMemo(() => {
-    return sortedWheels.filter(w => {
+    return sortedWheels.filter((w) => {
       if (selectedPython && !versionMatchesFilter(w.python_version, selectedPython)) return false;
       if (selectedTorch && !versionMatchesFilter(w.torch_version, selectedTorch)) return false;
       if (selectedCuda && !versionMatchesFilter(w.cuda_version, selectedCuda)) return false;
@@ -352,10 +412,10 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
   };
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4" 
-      role="dialog" 
-      aria-modal="true" 
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
       aria-label={`${pkg.name} package details`}
     >
       {/* Backdrop */}
@@ -367,7 +427,7 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
         className="absolute inset-0 bg-background/80 backdrop-blur-sm"
         aria-hidden="true"
       />
-      
+
       {/* Modal */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -382,7 +442,10 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
             <div className="p-1.5 bg-primary/10 rounded-md" aria-hidden="true">
               <Package className="w-4 h-4 text-primary" />
             </div>
-            <h2 className="font-display font-bold text-base text-text-primary" id="package-details-title">
+            <h2
+              className="font-display font-bold text-base text-text-primary"
+              id="package-details-title"
+            >
               {pkg.name}
             </h2>
           </div>
@@ -403,7 +466,7 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
               <Terminal className="w-4 h-4 text-primary" aria-hidden="true" />
               <span>Configure Your Environment</span>
             </div>
-            
+
             <fieldset className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 bg-background rounded-xl border border-border/50">
               <legend className="sr-only">Environment Version Selectors</legend>
               <SelectorPill
@@ -445,10 +508,16 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
           {/* Results */}
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-text-secondary" role="status" aria-live="polite">
-                {filteredWheels.length === 0 ? 'No matching wheels' : 
-                 filteredWheels.length === 1 ? '1 matching wheel' : 
-                 `${filteredWheels.length} matching wheels`}
+              <span
+                className="text-sm font-medium text-text-secondary"
+                role="status"
+                aria-live="polite"
+              >
+                {filteredWheels.length === 0
+                  ? 'No matching wheels'
+                  : filteredWheels.length === 1
+                    ? '1 matching wheel'
+                    : `${filteredWheels.length} matching wheels`}
               </span>
               {filteredWheels.length > 0 && (
                 <span className="text-2xs font-mono text-accent-green">
@@ -472,8 +541,8 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.05 }}
                     className={`flex items-center justify-between p-4 rounded-xl border transition-all ${
-                      idx === 0 
-                        ? 'bg-accent-green/5 border-accent-green/30' 
+                      idx === 0
+                        ? 'bg-accent-green/5 border-accent-green/30'
                         : 'bg-surface-light border-border hover:border-primary/30'
                     }`}
                   >
@@ -484,13 +553,27 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
                         </span>
                       )}
                       <div className="flex items-center gap-3 text-sm">
-                        <span className="font-mono font-semibold text-text-primary">v{wheel.package_version}</span>
-                        <span className="text-text-muted" aria-hidden="true">•</span>
-                        <span className="font-mono text-primary">{formatVersion(wheel.python_version)}</span>
-                        <span className="text-text-muted" aria-hidden="true">•</span>
-                        <span className="font-mono text-secondary">{formatVersion(wheel.torch_version)}</span>
-                        <span className="text-text-muted" aria-hidden="true">•</span>
-                        <span className="font-mono text-accent-yellow">{formatVersion(wheel.cuda_version)}</span>
+                        <span className="font-mono font-semibold text-text-primary">
+                          v{wheel.package_version}
+                        </span>
+                        <span className="text-text-muted" aria-hidden="true">
+                          •
+                        </span>
+                        <span className="font-mono text-primary">
+                          {formatVersion(wheel.python_version)}
+                        </span>
+                        <span className="text-text-muted" aria-hidden="true">
+                          •
+                        </span>
+                        <span className="font-mono text-secondary">
+                          {formatVersion(wheel.torch_version)}
+                        </span>
+                        <span className="text-text-muted" aria-hidden="true">
+                          •
+                        </span>
+                        <span className="font-mono text-accent-yellow">
+                          {formatVersion(wheel.cuda_version)}
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -498,10 +581,10 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
                         onClick={() => handleCopyUrl(wheel)}
                         className={`select-none flex items-center gap-1.5 px-3 py-2 rounded-lg border transition-all 
                                     focus:outline-none focus:ring-2 focus:ring-primary/50 ${
-                          copiedUrl === wheel.url
-                            ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                            : 'bg-surface border-border text-text-secondary hover:bg-surface-light hover:text-text-primary'
-                        }`}
+                                      copiedUrl === wheel.url
+                                        ? 'bg-accent-green/20 border-accent-green text-accent-green'
+                                        : 'bg-surface border-border text-text-secondary hover:bg-surface-light hover:text-text-primary'
+                                    }`}
                         aria-label={copiedUrl === wheel.url ? 'URL copied' : `Copy wheel URL`}
                         aria-live="polite"
                       >
@@ -521,11 +604,15 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
                         onClick={() => handleCopy(wheel)}
                         className={`select-none flex items-center gap-1.5 px-3 py-2 rounded-lg border transition-all 
                                     focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                                      copiedCommand === wheel.url
+                                        ? 'bg-accent-green/20 border-accent-green text-accent-green'
+                                        : 'bg-primary/10 border-primary/30 text-primary hover:bg-primary/20'
+                                    }`}
+                        aria-label={
                           copiedCommand === wheel.url
-                            ? 'bg-accent-green/20 border-accent-green text-accent-green'
-                            : 'bg-primary/10 border-primary/30 text-primary hover:bg-primary/20'
-                        }`}
-                        aria-label={copiedCommand === wheel.url ? 'Command copied' : `Copy pip install command`}
+                            ? 'Command copied'
+                            : `Copy pip install command`
+                        }
                         aria-live="polite"
                       >
                         {copiedCommand === wheel.url ? (
@@ -557,7 +644,7 @@ export function PackageDetails({ package: pkg, onClose, initialPython, initialTo
             <div className="mt-6 pt-6 border-t border-border">
               <h4 className="text-xs font-mono text-text-muted uppercase mb-3">Sources</h4>
               <ul className="flex flex-wrap gap-2" role="list" aria-label="Package sources">
-                {pkg.sources.map(source => (
+                {pkg.sources.map((source) => (
                   <li key={source.name}>
                     <a
                       href={source.url}

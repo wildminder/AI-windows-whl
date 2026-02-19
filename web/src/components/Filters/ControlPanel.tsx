@@ -80,11 +80,17 @@ function OverflowPanel({
       role="dialog"
       aria-label={`${label} version selector`}
     >
-      <div className={`text-xs font-mono ${accentColor} uppercase tracking-wider mb-2 flex items-center gap-2`}>
+      <div
+        className={`text-xs font-mono ${accentColor} uppercase tracking-wider mb-2 flex items-center gap-2`}
+      >
         <span>{label}</span>
         <span className="text-text-muted">({options.length} versions)</span>
       </div>
-      <div className="flex flex-wrap gap-1.5 max-w-[300px] max-h-[300px] overflow-y-auto" role="radiogroup" aria-label={`Available ${label} versions`}>
+      <div
+        className="flex flex-wrap gap-1.5 max-w-[300px] max-h-[300px] overflow-y-auto"
+        role="radiogroup"
+        aria-label={`Available ${label} versions`}
+      >
         {options.map((opt) => (
           <motion.button
             key={opt}
@@ -128,21 +134,32 @@ function VersionSection({
   const moreButtonRef = useRef<HTMLButtonElement>(null);
 
   // Filter options (already sorted by utils: special tags first, then descending)
-  const filteredOptions = options.filter(opt => opt && opt.trim() !== '');
-  
+  const filteredOptions = options.filter((opt) => opt && opt.trim() !== '');
+
   // Split into visible and overflow
   const visibleOptions = filteredOptions.slice(0, visibleCount);
   const overflowOptions = filteredOptions.slice(visibleCount);
   const hasOverflow = overflowOptions.length > 0;
 
   return (
-    <fieldset className="flex-1 min-w-[200px]" role="group" aria-label={ariaLabel || `${label} version selector`}>
-      <legend className={`flex items-center gap-2 text-xs font-mono ${accentColor} uppercase tracking-wider mb-2`}>
+    <fieldset
+      className="flex-1 min-w-[200px]"
+      role="group"
+      aria-label={ariaLabel || `${label} version selector`}
+    >
+      <legend
+        className={`flex items-center gap-2 text-xs font-mono ${accentColor} uppercase tracking-wider mb-2`}
+      >
         <Icon className="w-4 h-4" aria-hidden="true" />
         <span>{label}</span>
       </legend>
-      
-      <div ref={containerRef} className="flex flex-wrap gap-1.5 items-center" role="radiogroup" aria-label={`Select ${label} version`}>
+
+      <div
+        ref={containerRef}
+        className="flex flex-wrap gap-1.5 items-center"
+        role="radiogroup"
+        aria-label={`Select ${label} version`}
+      >
         {/* Any button */}
         <motion.button
           whileHover={animationsEnabled ? { scale: 1.05 } : {}}
@@ -197,7 +214,10 @@ function VersionSection({
               aria-expanded={showOverflow}
             >
               <span>+{overflowOptions.length}</span>
-              <ChevronDown className={`w-3 h-3 transition-transform ${showOverflow ? 'rotate-180' : ''}`} aria-hidden="true" />
+              <ChevronDown
+                className={`w-3 h-3 transition-transform ${showOverflow ? 'rotate-180' : ''}`}
+                aria-hidden="true"
+              />
             </motion.button>
 
             <AnimatePresence>
@@ -255,7 +275,10 @@ export function ControlPanel({
   const visibleCount = getVisibleCount();
 
   return (
-    <section className="w-full bg-surface border border-border rounded-xl p-4" aria-label="Environment version filters">
+    <section
+      className="w-full bg-surface border border-border rounded-xl p-4"
+      aria-label="Environment version filters"
+    >
       {/* Header - PEP wheel filename style, only showing selected versions */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
@@ -265,9 +288,7 @@ export function ControlPanel({
               {selectedCuda && (
                 <span className="text-accent-yellow">cu{selectedCuda.replace('.', '')}</span>
               )}
-              {selectedTorch && (
-                <span className="text-secondary">torch{selectedTorch}</span>
-              )}
+              {selectedTorch && <span className="text-secondary">torch{selectedTorch}</span>}
               {selectedPython && (
                 <span className="text-primary">-cp{selectedPython.replace('.', '')}</span>
               )}

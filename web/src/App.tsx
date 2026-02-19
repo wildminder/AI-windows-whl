@@ -27,14 +27,16 @@ export function App(): JSX.Element {
   const filteredPackages = useMemo(() => {
     if (!debouncedQuery) return packages;
     const query = debouncedQuery.toLowerCase();
-    return packages.filter(pkg => 
-      pkg.name?.toLowerCase().includes(query) ||
-      pkg.description?.toLowerCase().includes(query) ||
-      pkg.wheels.some(w => 
-        w.package_version?.includes(query) ||
-        w.torch_version?.includes(query) ||
-        w.cuda_version?.includes(query)
-      )
+    return packages.filter(
+      (pkg) =>
+        pkg.name?.toLowerCase().includes(query) ||
+        pkg.description?.toLowerCase().includes(query) ||
+        pkg.wheels.some(
+          (w) =>
+            w.package_version?.includes(query) ||
+            w.torch_version?.includes(query) ||
+            w.cuda_version?.includes(query),
+        ),
     );
   }, [packages, debouncedQuery]);
 
@@ -47,11 +49,19 @@ export function App(): JSX.Element {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center" role="status" aria-live="polite" aria-label="Loading application">
+      <div
+        className="min-h-screen bg-background flex items-center justify-center"
+        role="status"
+        aria-live="polite"
+        aria-label="Loading application"
+      >
         <Background />
         <AsciiBackground />
         <div className="relative z-10 flex flex-col items-center gap-4">
-          <div className="w-16 h-16 border-2 border-primary/20 border-t-primary rounded-full animate-spin" aria-hidden="true" />
+          <div
+            className="w-16 h-16 border-2 border-primary/20 border-t-primary rounded-full animate-spin"
+            aria-hidden="true"
+          />
           <p className="font-mono text-sm text-text-secondary animate-pulse">
             Loading wheel data...
           </p>
@@ -62,7 +72,11 @@ export function App(): JSX.Element {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center" role="alert" aria-live="assertive">
+      <div
+        className="min-h-screen bg-background flex items-center justify-center"
+        role="alert"
+        aria-live="assertive"
+      >
         <Background />
         <AsciiBackground />
         <motion.div
@@ -98,11 +112,15 @@ export function App(): JSX.Element {
       <AsciiBackground />
       <Header />
 
-      <main id="main-content" className="relative z-10 flex-1 w-full px-4 sm:px-6 lg:px-8 py-6" role="main" aria-label="Windows AI Wheels Package Browser">
+      <main
+        id="main-content"
+        className="relative z-10 flex-1 w-full px-4 sm:px-6 lg:px-8 py-6"
+        role="main"
+        aria-label="Windows AI Wheels Package Browser"
+      >
         <div className="max-w-6xl mx-auto space-y-6">
-          
           {/* Hero Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center space-y-4"
@@ -115,9 +133,9 @@ export function App(): JSX.Element {
               Quick-search pre-compiled Python packages for your environment
             </p>
             <div className="max-w-xl mx-auto">
-              <SearchBar 
-                value={query} 
-                onChange={setQuery} 
+              <SearchBar
+                value={query}
+                onChange={setQuery}
                 placeholder="Search packages (e.g., flash attention, torch, cuda...)"
                 aria-label="Search for Python wheel packages"
               />
@@ -152,7 +170,8 @@ export function App(): JSX.Element {
             <div className="flex items-center gap-2">
               <Package className="w-4 h-4 text-primary" aria-hidden="true" />
               <span className="font-mono text-sm text-text-secondary">
-                <span className="text-text-primary font-semibold">{filteredPackages.length}</span> package
+                <span className="text-text-primary font-semibold">{filteredPackages.length}</span>{' '}
+                package
                 {filteredPackages.length !== 1 ? 's' : ''} available
               </span>
             </div>
@@ -173,22 +192,29 @@ export function App(): JSX.Element {
                 role="status"
               >
                 <Search className="w-12 h-12 text-text-muted mx-auto mb-4" aria-hidden="true" />
-                <p className="text-text-secondary">
-                  No packages found matching "{debouncedQuery}"
-                </p>
+                <p className="text-text-secondary">No packages found matching "{debouncedQuery}"</p>
               </motion.div>
             ) : (
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4" role="list" aria-label="Python wheel packages">
+              <ul
+                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                role="list"
+                aria-label="Python wheel packages"
+              >
                 {filteredPackages
-                  .map(pkg => {
+                  .map((pkg) => {
                     // Calculate matching wheels for each package
-                    const matchingWheels = pkg.wheels.filter(w => {
-                      if (selectedPython && !w.python_version?.includes(selectedPython)) return false;
+                    const matchingWheels = pkg.wheels.filter((w) => {
+                      if (selectedPython && !w.python_version?.includes(selectedPython))
+                        return false;
                       if (selectedTorch && !w.torch_version?.includes(selectedTorch)) return false;
                       if (selectedCuda && !w.cuda_version?.includes(selectedCuda)) return false;
                       return true;
                     });
-                    return { pkg, matchingCount: matchingWheels.length, isActive: matchingWheels.length > 0 };
+                    return {
+                      pkg,
+                      matchingCount: matchingWheels.length,
+                      isActive: matchingWheels.length > 0,
+                    };
                   })
                   .sort((a, b) => (b.isActive ? 1 : 0) - (a.isActive ? 1 : 0)) // Active first
                   .map(({ pkg, matchingCount, isActive }, idx) => (

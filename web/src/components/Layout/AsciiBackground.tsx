@@ -18,7 +18,7 @@ export function AsciiBackground(): JSX.Element | null {
   const initParticles = useCallback((width: number, height: number) => {
     const particleCount = Math.min(80, Math.floor((width * height) / 15000));
     particlesRef.current = [];
-    
+
     for (let i = 0; i < particleCount; i++) {
       particlesRef.current.push({
         x: Math.random() * width,

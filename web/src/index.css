@@ -6,16 +6,16 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-text-primary antialiased;
     font-family: 'Rajdhani', sans-serif;
   }
-  
+
   ::selection {
     @apply bg-primary/30 text-text-primary;
   }
@@ -27,19 +27,19 @@
     width: 8px;
     height: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     @apply bg-surface;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     @apply bg-surface-lighter rounded-full;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary/30;
   }
-  
+
   /* Line clamp utilities */
   .line-clamp-2 {
     display: -webkit-box;
@@ -47,17 +47,20 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
+
   /* Custom animations */
   @keyframes glow-pulse {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
     }
     50% {
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), 0 0 40px rgba(0, 240, 255, 0.4);
+      box-shadow:
+        0 0 20px rgba(0, 240, 255, 0.8),
+        0 0 40px rgba(0, 240, 255, 0.4);
     }
   }
-  
+
   .animate-glow {
     animation: glow-pulse 2s ease-in-out infinite;
   }

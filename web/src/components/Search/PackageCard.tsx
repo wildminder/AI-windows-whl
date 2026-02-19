@@ -16,14 +16,54 @@ interface PackageCardProps {
 
 // Color themes for different packages
 const packageColors = [
-  { primary: 'text-cyan-400', bg: 'bg-cyan-400/10', border: 'border-cyan-400/30', glow: 'rgba(34, 211, 238, 0.15)' },
-  { primary: 'text-purple-400', bg: 'bg-purple-400/10', border: 'border-purple-400/30', glow: 'rgba(192, 132, 252, 0.15)' },
-  { primary: 'text-emerald-400', bg: 'bg-emerald-400/10', border: 'border-emerald-400/30', glow: 'rgba(52, 211, 153, 0.15)' },
-  { primary: 'text-amber-400', bg: 'bg-amber-400/10', border: 'border-amber-400/30', glow: 'rgba(251, 191, 36, 0.15)' },
-  { primary: 'text-rose-400', bg: 'bg-rose-400/10', border: 'border-rose-400/30', glow: 'rgba(251, 113, 133, 0.15)' },
-  { primary: 'text-blue-400', bg: 'bg-blue-400/10', border: 'border-blue-400/30', glow: 'rgba(96, 165, 250, 0.15)' },
-  { primary: 'text-orange-400', bg: 'bg-orange-400/10', border: 'border-orange-400/30', glow: 'rgba(251, 146, 60, 0.15)' },
-  { primary: 'text-teal-400', bg: 'bg-teal-400/10', border: 'border-teal-400/30', glow: 'rgba(45, 212, 191, 0.15)' },
+  {
+    primary: 'text-cyan-400',
+    bg: 'bg-cyan-400/10',
+    border: 'border-cyan-400/30',
+    glow: 'rgba(34, 211, 238, 0.15)',
+  },
+  {
+    primary: 'text-purple-400',
+    bg: 'bg-purple-400/10',
+    border: 'border-purple-400/30',
+    glow: 'rgba(192, 132, 252, 0.15)',
+  },
+  {
+    primary: 'text-emerald-400',
+    bg: 'bg-emerald-400/10',
+    border: 'border-emerald-400/30',
+    glow: 'rgba(52, 211, 153, 0.15)',
+  },
+  {
+    primary: 'text-amber-400',
+    bg: 'bg-amber-400/10',
+    border: 'border-amber-400/30',
+    glow: 'rgba(251, 191, 36, 0.15)',
+  },
+  {
+    primary: 'text-rose-400',
+    bg: 'bg-rose-400/10',
+    border: 'border-rose-400/30',
+    glow: 'rgba(251, 113, 133, 0.15)',
+  },
+  {
+    primary: 'text-blue-400',
+    bg: 'bg-blue-400/10',
+    border: 'border-blue-400/30',
+    glow: 'rgba(96, 165, 250, 0.15)',
+  },
+  {
+    primary: 'text-orange-400',
+    bg: 'bg-orange-400/10',
+    border: 'border-orange-400/30',
+    glow: 'rgba(251, 146, 60, 0.15)',
+  },
+  {
+    primary: 'text-teal-400',
+    bg: 'bg-teal-400/10',
+    border: 'border-teal-400/30',
+    glow: 'rgba(45, 212, 191, 0.15)',
+  },
 ];
 
 function getPackageColor(packageId: string) {
@@ -35,17 +75,23 @@ function getPackageColor(packageId: string) {
   return packageColors[index];
 }
 
-function parseVersion(version: string): { major: number; minor: number; patch: number; suffix: string; suffixNum: number } {
+function parseVersion(version: string): {
+  major: number;
+  minor: number;
+  patch: number;
+  suffix: string;
+  suffixNum: number;
+} {
   // Remove 'v' prefix and '>' prefix (for range versions like ">3.9")
   const cleanVersion = version.replace(/^v/, '').replace(/^>/, '');
   const parts = cleanVersion.split('.');
-  
+
   const major = parseInt(parts[0]) || 0;
   const minor = parseInt(parts[1]) || 0;
   let patch = parseInt(parts[2]) || 0;
   let suffix = '';
   let suffixNum = 0;
-  
+
   for (let i = 3; i < parts.length; i++) {
     const part = parts[i].toLowerCase();
     if (part.includes('post')) {
@@ -64,24 +110,24 @@ function parseVersion(version: string): { major: number; minor: number; patch: n
       patch = patch * 1000 + parseInt(part);
     }
   }
-  
+
   return { major, minor, patch, suffix, suffixNum };
 }
 
 function compareVersions(a: string, b: string): number {
   const va = parseVersion(a);
   const vb = parseVersion(b);
-  
+
   if (va.major !== vb.major) return vb.major - va.major;
   if (va.minor !== vb.minor) return vb.minor - va.minor;
   if (va.patch !== vb.patch) return vb.patch - va.patch;
-  
-  const suffixPriority: Record<string, number> = { 'post': 5, '': 4, 'rc': 3, 'beta': 2, 'alpha': 1 };
+
+  const suffixPriority: Record<string, number> = { post: 5, '': 4, rc: 3, beta: 2, alpha: 1 };
   const pa = suffixPriority[va.suffix] || 0;
   const pb = suffixPriority[vb.suffix] || 0;
-  
+
   if (pa !== pb) return pb - pa;
-  
+
   if (va.suffix === 'post') {
     return vb.suffixNum - va.suffixNum;
   } else {
@@ -91,17 +137,19 @@ function compareVersions(a: string, b: string): number {
 
 function getLatestVersion(wheels: Wheel[]) {
   if (wheels.length === 0) return '';
-  const sorted = [...wheels].sort((a, b) => compareVersions(a.package_version || '0.0.0', b.package_version || '0.0.0'));
+  const sorted = [...wheels].sort((a, b) =>
+    compareVersions(a.package_version || '0.0.0', b.package_version || '0.0.0'),
+  );
   return sorted[0]?.package_version || '';
 }
 
-export function PackageCard({ 
-  package: pkg, 
-  pythonVersion, 
-  torchVersion, 
-  cudaVersion, 
+export function PackageCard({
+  package: pkg,
+  pythonVersion,
+  torchVersion,
+  cudaVersion,
   isActive,
-  matchingCount 
+  matchingCount,
 }: PackageCardProps): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(false);
   const { animationsEnabled } = usePerformance();
@@ -117,9 +165,7 @@ export function PackageCard({
             <Package className={`w-4 h-4 ${colorScheme.primary}`} />
           </div>
           <div>
-            <h3 className={`font-display font-semibold ${colorScheme.primary}`}>
-              {pkg.name}
-            </h3>
+            <h3 className={`font-display font-semibold ${colorScheme.primary}`}>{pkg.name}</h3>
             <div className="flex items-center gap-2 mt-0.5">
               <AlertCircle className="w-3 h-3 text-text-muted" aria-hidden="true" />
               <span className="text-xs font-mono text-text-muted">
@@ -149,7 +195,8 @@ export function PackageCard({
             layout
             className={`relative bg-surface/50 border ${colorScheme.border} rounded-xl overflow-hidden transition-all opacity-60 hover:opacity-80`}
             style={{
-              backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px)',
+              backgroundImage:
+                'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px)',
             }}
           >
             {inactiveCardContent}
@@ -158,7 +205,8 @@ export function PackageCard({
           <div
             className={`relative bg-surface/50 border ${colorScheme.border} rounded-xl overflow-hidden transition-all opacity-60 hover:opacity-80`}
             style={{
-              backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px)',
+              backgroundImage:
+                'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px)',
             }}
           >
             {inactiveCardContent}
@@ -182,20 +230,24 @@ export function PackageCard({
 
   // Active card content
   const activeCardContent = (
-    <article className="p-5" aria-label={`${pkg.name} - ${matchingCount} matching wheels available`}>
+    <article
+      className="p-5"
+      aria-label={`${pkg.name} - ${matchingCount} matching wheels available`}
+    >
       {/* Header */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className={`p-2.5 ${colorScheme.bg} rounded-lg transition-colors`} aria-hidden="true">
+          <div
+            className={`p-2.5 ${colorScheme.bg} rounded-lg transition-colors`}
+            aria-hidden="true"
+          >
             <Package className={`w-5 h-5 ${colorScheme.primary}`} />
           </div>
           <div>
             <h3 className={`font-display font-bold text-lg ${colorScheme.primary} leading-tight`}>
               {pkg.name}
             </h3>
-            <p className="text-sm text-text-secondary mt-0.5 line-clamp-1">
-              {pkg.description}
-            </p>
+            <p className="text-sm text-text-secondary mt-0.5 line-clamp-1">{pkg.description}</p>
           </div>
         </div>
         <a
@@ -217,30 +269,34 @@ export function PackageCard({
         {/* Latest Version Badge */}
         <div className="flex items-center gap-2">
           <span className="text-2xs font-mono text-text-muted uppercase">Latest</span>
-          <span className={`px-2 py-0.5 ${colorScheme.bg} ${colorScheme.primary} font-mono text-sm font-semibold rounded`}>
+          <span
+            className={`px-2 py-0.5 ${colorScheme.bg} ${colorScheme.primary} font-mono text-sm font-semibold rounded`}
+          >
             v{latestVersion}
           </span>
         </div>
-        
+
         {/* Divider */}
         <div className="w-px h-4 bg-border" aria-hidden="true" />
-        
+
         {/* Matching Configurations */}
         <div className="flex items-center gap-2">
           <span className="text-2xs font-mono text-text-muted uppercase">Matches</span>
           <span className="font-mono text-sm">
-            <span className={`${colorScheme.primary} font-semibold`}>{matchingCount} wheel{matchingCount !== 1 ? 's' : ''}</span>
+            <span className={`${colorScheme.primary} font-semibold`}>
+              {matchingCount} wheel{matchingCount !== 1 ? 's' : ''}
+            </span>
           </span>
         </div>
 
         {/* Expand Indicator */}
-        <div className={`ml-auto flex items-center gap-2 ${colorScheme.primary}`} aria-hidden="true">
+        <div
+          className={`ml-auto flex items-center gap-2 ${colorScheme.primary}`}
+          aria-hidden="true"
+        >
           <span className="text-xs font-medium">Select</span>
           {animationsEnabled ? (
-            <motion.div
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
+            <motion.div animate={{ x: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
               <ChevronDown className="w-4 h-4 rotate-[-90deg]" />
             </motion.div>
           ) : (

@@ -9,11 +9,11 @@ interface SearchBarProps {
   'aria-label'?: string;
 }
 
-export function SearchBar({ 
-  value, 
-  onChange, 
+export function SearchBar({
+  value,
+  onChange,
   placeholder = 'Search packages...',
-  'aria-label': ariaLabel = 'Search packages'
+  'aria-label': ariaLabel = 'Search packages',
 }: SearchBarProps): JSX.Element {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -41,11 +41,11 @@ export function SearchBar({
         transition={{ duration: 0.2 }}
         aria-hidden="true"
       />
-      
-      <div 
+
+      <div
         className={`relative flex items-center w-full bg-surface border rounded-xl overflow-hidden transition-all duration-200 ${
-          isFocused 
-            ? 'border-primary shadow-[0_0_20px_rgba(0,240,255,0.15)]' 
+          isFocused
+            ? 'border-primary shadow-[0_0_20px_rgba(0,240,255,0.15)]'
             : 'border-border hover:border-primary/30'
         }`}
       >
@@ -53,7 +53,7 @@ export function SearchBar({
         <div className="flex items-center justify-center w-12 h-12 text-text-muted">
           <Search className="w-5 h-5" aria-hidden="true" />
         </div>
-        
+
         {/* Input */}
         <input
           type="search"
@@ -72,7 +72,7 @@ export function SearchBar({
                      focus:outline-none font-body text-base"
           data-testid="search-input"
         />
-        
+
         {/* Clear button */}
         {value && (
           <motion.button

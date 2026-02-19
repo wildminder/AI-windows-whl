@@ -17,7 +17,7 @@ export function useWheels(): UseWheelsReturn {
   const fetchData = useCallback(async () => {
     setLoading(true);
     setError(null);
-    
+
     try {
       const wheelsData = await loadWheelsData();
       setData(wheelsData);

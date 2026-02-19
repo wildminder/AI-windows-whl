@@ -72,10 +72,7 @@ export function FilterPanel({
               Clear
             </motion.button>
           )}
-          <motion.div
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
+          <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
             <ChevronDown className="w-5 h-5 text-text-muted" />
           </motion.div>
         </div>
