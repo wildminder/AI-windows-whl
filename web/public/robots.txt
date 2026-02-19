@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://wildminder.github.io/AI-windows-whl/sitemap.xml
+
+# Crawl rate optimization
+Crawl-delay: 1
+
+# Block common bad bots (optional security)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
