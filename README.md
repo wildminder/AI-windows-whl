@@ -66,25 +66,16 @@ This repository was created to address a common pain point for AI enthusiasts an
 
 The goal here is to provide a centralized, up-to-date collection of direct links to pre-compiled `.whl` files for these libraries, primarily for the **ComfyUI** community and other PyTorch users on Windows. This saves you time and lets you focus on what's important: creating amazing things with AI.
 
+### Find Windows AI Wheels
+To make life even easier, you can use this page **[Find Windows AI Wheels](https://wildminder.github.io/AI-windows-whl/)** for quick searches of the required packages. 
+<div align="center">
+<a  href="https://wildminder.github.io/AI-windows-whl/">
+<img width="70%" alt="image" src="https://github.com/user-attachments/assets/1ee65a8c-c9c1-4e17-8a49-d685bae3f5f2" />
+</a>  
+</div>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="center">══════════════════════════════════</p>
-
-Beyond the code, I believe in the power of community and continuous learning. I invite you to join the 'TokenDiff'
-
-<table border="0" align="center" cellspacing="10" cellpadding="0">
-  <tr>
-    <td align="center" valign="top">
-      <h4>TokenDiff AI</h4>
-      <a href="https://t.me/TokenDiff">
-        <img width="20%" alt="tokendiff-tg-qw" src="https://github.com/user-attachments/assets/e29f6b3c-52e5-4150-8088-12163a2e1e78" />
-      </a>      
-      <p>AI for every home, creativity for every mind!</p>
-    </td>
-  </tr>
-</table>
-
-<p align="center">══════════════════════════════════</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -574,6 +565,7 @@ This repository is simply a collection of links. Huge thanks to the individuals 
 [stars-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/stargazers
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/Windows-AI-Wheels.svg?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/Windows-AI-Wheels/issues
+
 
 
 
