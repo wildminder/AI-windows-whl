@@ -1,6 +1,8 @@
-# Windows AI Wheels
+# Windows AI Wheels Page
 
 A web application for browsing and installing pre-compiled Python wheel packages for AI/ML libraries on Windows.
+
+**The main repo with all data is here [AI-windows-whl](https://github.com/wildminder/AI-windows-whl)**
 
 ## Overview
 
@@ -156,3 +158,4 @@ This project is provided under the Apache License 2.0.
 ## Author
 
 **wildminder** - [GitHub](https://github.com/wildminder) | [HuggingFace](https://huggingface.co/Wildminder)
+
