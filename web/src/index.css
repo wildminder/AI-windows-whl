@@ -9,6 +9,8 @@
 
   html {
     scroll-behavior: smooth;
+    /* Reserve scrollbar space to prevent layout shift when modal opens */
+    scrollbar-gutter: stable;
   }
 
   body {
@@ -38,6 +40,17 @@
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary/30;
+  }
+
+  /* Striped background for inactive cards */
+  .bg-stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(255, 255, 255, 0.03) 20px
+    );
   }
 
   /* Line clamp utilities */

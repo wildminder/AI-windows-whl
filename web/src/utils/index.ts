@@ -3,19 +3,104 @@ import type { Package, Wheel, WheelsData, FilterOptions, VersionRange } from '@/
 const GITHUB_WHEELS_URL =
   'https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/wheels.json';
 const LOCAL_WHEELS_PATH = './wheels.json';
+const LOCAL_VERSION_PATH = './version.txt';
+const GITHUB_VERSION_URL =
+  'https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/version.txt';
+
+// Cache for version timestamp to avoid multiple fetches
+let cachedVersionTimestamp: string | null | undefined = undefined;
+
+/**
+ * Fetch version timestamp from version.txt (cached)
+ * Returns null if file doesn't exist or on error
+ * The version.txt contains a Unix timestamp that changes when wheels.json is updated
+ */
+async function fetchVersionTimestamp(): Promise<string | null> {
+  // Return cached value if already fetched
+  if (cachedVersionTimestamp !== undefined) {
+    return cachedVersionTimestamp;
+  }
+
+  // Try local version.txt first
+  try {
+    const localResponse = await fetch(LOCAL_VERSION_PATH);
+    if (localResponse.ok) {
+      // Check content-type to ensure we got the actual file, not index.html (SPA fallback)
+      const contentType = localResponse.headers.get('content-type') || '';
+      if (contentType.includes('text/plain')) {
+        const timestamp = await localResponse.text();
+        const trimmed = timestamp.trim();
+        // Validate it's a numeric timestamp
+        if (trimmed && /^\d+$/.test(trimmed)) {
+          console.log('[Wheels] Using local version.txt:', trimmed);
+          cachedVersionTimestamp = trimmed;
+          return trimmed;
+        }
+      }
+    }
+  } catch {
+    // Ignore fetch errors
+  }
+
+  // Fallback to GitHub
+  try {
+    const githubResponse = await fetch(GITHUB_VERSION_URL);
+    if (githubResponse.ok) {
+      const contentType = githubResponse.headers.get('content-type') || '';
+      if (contentType.includes('text/plain')) {
+        const timestamp = await githubResponse.text();
+        const trimmed = timestamp.trim();
+        if (trimmed && /^\d+$/.test(trimmed)) {
+          console.log('[Wheels] Using GitHub version.txt:', trimmed);
+          cachedVersionTimestamp = trimmed;
+          return trimmed;
+        }
+      }
+    }
+  } catch {
+    // Ignore fetch errors
+  }
+
+  // Cache the null result to avoid repeated fetch attempts
+  console.log('[Wheels] No version.txt found, loading without cache busting');
+  cachedVersionTimestamp = null;
+  return null;
+}
+
+/**
+ * Add version query parameter to URL if timestamp is available
+ */
+function addVersionParam(baseUrl: string, timestamp: string | null): string {
+  if (timestamp) {
+    const separator = baseUrl.includes('?') ? '&' : '?';
+    return `${baseUrl}${separator}_v=${timestamp}`;
+  }
+  return baseUrl;
+}
+
+/**
+ * Validate that a response is actually JSON (not HTML from SPA fallback)
+ * GitHub raw content returns text/plain, so we check for both content-types
+ */
+function isValidJsonResponse(response: Response): boolean {
+  const contentType = response.headers.get('content-type') || '';
+  // GitHub raw content returns text/plain, not application/json
+  // We need to exclude text/html (SPA fallback)
+  return contentType.includes('application/json') || 
+         (contentType.includes('text/plain') && !contentType.includes('text/html'));
+}
 
 export async function loadWheelsData(): Promise<WheelsData> {
-  // First, try to load from local/root folder
-  try {
-    const localResponse = await fetch(LOCAL_WHEELS_PATH, {
-      method: 'GET',
-      cache: 'no-cache', // Always check for updates
-    });
+  // Fetch version timestamp once (cached for subsequent calls)
+  const timestamp = await fetchVersionTimestamp();
 
-    if (localResponse.ok) {
+  // First, try to load from local/root folder
+  const localUrl = addVersionParam(LOCAL_WHEELS_PATH, timestamp);
+  try {
+    const localResponse = await fetch(localUrl);
+    if (localResponse.ok && isValidJsonResponse(localResponse)) {
       console.log('[Wheels] Loading from local file');
-      const data = await localResponse.json();
-      return data;
+      return localResponse.json();
     }
   } catch (error) {
     console.log('[Wheels] Local file not found or error:', error);
@@ -23,9 +108,10 @@ export async function loadWheelsData(): Promise<WheelsData> {
 
   // Fallback: fetch from GitHub main branch
   console.log('[Wheels] Fetching from GitHub...');
-  const response = await fetch(GITHUB_WHEELS_URL);
+  const githubUrl = addVersionParam(GITHUB_WHEELS_URL, timestamp);
+  const response = await fetch(githubUrl);
 
-  if (!response.ok) {
+  if (!response.ok || !isValidJsonResponse(response)) {
     throw new Error(`Failed to fetch wheels data: ${response.status} ${response.statusText}`);
   }
 

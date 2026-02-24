@@ -190,28 +190,12 @@ export function PackageCard({
     // Inactive card - minimized with stripes
     return (
       <>
-        {animationsEnabled ? (
-          <motion.div
-            layout
-            className={`relative bg-surface/50 border ${colorScheme.border} rounded-xl overflow-hidden transition-all opacity-60 hover:opacity-80`}
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px)',
-            }}
-          >
-            {inactiveCardContent}
-          </motion.div>
-        ) : (
-          <div
-            className={`relative bg-surface/50 border ${colorScheme.border} rounded-xl overflow-hidden transition-all opacity-60 hover:opacity-80`}
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px)',
-            }}
-          >
-            {inactiveCardContent}
-          </div>
-        )}
+        <div
+          className={`relative bg-surface/50 border ${colorScheme.border} rounded-xl overflow-hidden bg-stripes
+                     transition-all duration-300 ease-out opacity-60 hover:opacity-80`}
+        >
+          {inactiveCardContent}
+        </div>
 
         <AnimatePresence>
           {isExpanded && (
@@ -312,7 +296,6 @@ export function PackageCard({
     <>
       {animationsEnabled ? (
         <motion.div
-          layout
           className={`bg-surface border ${colorScheme.border} rounded-xl overflow-hidden transition-all cursor-pointer group
                      focus:outline-none focus:ring-2 focus:ring-primary/50`}
           style={{ boxShadow: `0 0 20px ${colorScheme.glow}` }}

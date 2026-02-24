@@ -45,6 +45,13 @@ jobs:
         working-directory: ./web
         run: npm run typecheck
 
+      - name: Download wheels.json and version.txt from main branch
+        run: |
+          curl -L -o web/public/wheels.json \
+            "https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/wheels.json"
+          curl -L -o web/public/version.txt \
+            "https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/version.txt" || true
+
       - name: Build
         working-directory: ./web
         run: npm run build

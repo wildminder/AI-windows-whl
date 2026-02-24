@@ -4,7 +4,21 @@ import path from 'path';
 
 export default defineConfig({
   base: '/AI-windows-whl/',
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Handle inline styles in HTML for Vite 7 compatibility
+    {
+      name: 'html-inline-css-workaround',
+      enforce: 'pre',
+      resolveId(id) {
+        // Intercept HTML proxy CSS requests
+        if (id.includes('html-proxy') && id.includes('inline-css')) {
+          return { id, external: false };
+        }
+        return null;
+      },
+    },
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

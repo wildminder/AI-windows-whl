@@ -2,6 +2,9 @@ import { useState, useEffect, useCallback } from 'react';
 import type { WheelsData, Package } from '@/types';
 import { loadWheelsData, filterWheels } from '@/utils';
 
+// Re-export usePerformance from separate file
+export { usePerformance, PerformanceProvider } from './usePerformance';
+
 interface UseWheelsReturn {
   data: WheelsData | null;
   loading: boolean;

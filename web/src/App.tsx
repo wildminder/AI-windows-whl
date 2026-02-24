@@ -195,7 +195,7 @@ export function App(): JSX.Element {
                 <p className="text-text-secondary">No packages found matching "{debouncedQuery}"</p>
               </motion.div>
             ) : (
-              <ul
+              <motion.ul
                 className="grid grid-cols-1 md:grid-cols-2 gap-4"
                 role="list"
                 aria-label="Python wheel packages"
@@ -217,25 +217,23 @@ export function App(): JSX.Element {
                     };
                   })
                   .sort((a, b) => (b.isActive ? 1 : 0) - (a.isActive ? 1 : 0)) // Active first
-                  .map(({ pkg, matchingCount, isActive }, idx) => (
-                    <li key={pkg.id}>
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.05 }}
-                      >
-                        <PackageCard
-                          package={pkg}
-                          pythonVersion={selectedPython}
-                          torchVersion={selectedTorch}
-                          cudaVersion={selectedCuda}
-                          isActive={isActive}
-                          matchingCount={matchingCount}
-                        />
-                      </motion.div>
-                    </li>
+                  .map(({ pkg, matchingCount, isActive }) => (
+                    <motion.li
+                      key={pkg.id}
+                      layout
+                      transition={{ duration: 0.3, ease: 'easeOut' }}
+                    >
+                      <PackageCard
+                        package={pkg}
+                        pythonVersion={selectedPython}
+                        torchVersion={selectedTorch}
+                        cudaVersion={selectedCuda}
+                        isActive={isActive}
+                        matchingCount={matchingCount}
+                      />
+                    </motion.li>
                   ))}
-              </ul>
+              </motion.ul>
             )}
           </section>
         </div>
