@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-02-23T17:35:11.910272+00:00",
+  "last_updated_utc": "2026-02-24T21:24:23.216085+00:00",
   "packages": [
     {
       "id": "deepspeed",
@@ -757,6 +757,53 @@
       ]
     },
     {
+      "id": "flash-attn-3",
+      "name": "Flash Attention 3",
+      "official_repo": "https://github.com/Dao-AILab/flash-attention",
+      "sources": [
+        {
+          "name": "windreamer",
+          "url": "https://github.com/windreamer/flash-attention3-wheels"
+        }
+      ],
+      "wheels": [
+        {
+          "package_version": "3.0.0b1",
+          "torch_version": [
+            "2.9.0",
+            "2.9.0"
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.8",
+            "12.8"
+          ],
+          "cxx11_abi": true,
+          "url": "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.01.19-8b0dc47/flash_attn_3-3.0.0b1+20260119.cu128torch290cxx11abitrue.100fa1-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "3.0.0b1",
+          "torch_version": [
+            "2.9.0",
+            "2.9.0"
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.9",
+            "12.9"
+          ],
+          "cxx11_abi": true,
+          "url": "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.01.19-8b0dc47/flash_attn_3-3.0.0b1+20260119.cu129torch290cxx11abitrue.100fa1-cp39-abi3-win_amd64.whl"
+        }
+      ]
+    },
+    {
       "id": "natten",
       "name": "NATTEN",
       "description": "Neighborhood Attention Transformer.",
@@ -1061,7 +1108,7 @@
     {
       "id": "nunchaku",
       "name": "Nunchaku",
-      "official_repo": "https://github.com/mit-han-lab/nunchaku/releases",
+      "official_repo": "https://github.com/mit-han-lab/nunchaku",
       "sources": [
         {
           "name": "JusteLeo",
@@ -2601,22 +2648,6 @@
         {
           "package_version": "2.2.0.post3",
           "torch_version": [
-            "2.10.0",
-            "2.10.0"
-          ],
-          "python_version": [
-            "3.13",
-            "3.13"
-          ],
-          "cuda_version": [
-            "13.0",
-            "13.0"
-          ],
-          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu130torch2.10.0-cp313-cp313-win_amd64.whl"
-        },
-        {
-          "package_version": "2.2.0.post3",
-          "torch_version": [
             "2.5.1",
             "2.5.1"
           ],
@@ -3020,6 +3051,8 @@
     {
       "id": "torchaudio",
       "name": "Torchaudio",
+      "description": "Data manipulation and transformation for audio signal processing, powered by PyTorch",
+      "official_repo": "https://github.com/pytorch/audio",
       "sources": [
         {
           "name": "Wildminder's HF",
@@ -3138,57 +3171,10 @@
       ]
     },
     {
-      "id": "flash-attn-3",
-      "name": "flash-attn-3",
-      "official_repo": "https://github.com/Dao-AILab/flash-attention",
-      "sources": [
-        {
-          "name": "windreamer",
-          "url": "https://github.com/windreamer/flash-attention3-wheels"
-        }
-      ],
-      "wheels": [
-        {
-          "package_version": "3.0.0b1",
-          "torch_version": [
-            "2.9.0",
-            "2.9.0"
-          ],
-          "python_version": [
-            "3.9",
-            null
-          ],
-          "cuda_version": [
-            "12.8",
-            "12.8"
-          ],
-          "cxx11_abi": true,
-          "url": "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.01.19-8b0dc47/flash_attn_3-3.0.0b1+20260119.cu128torch290cxx11abitrue.100fa1-cp39-abi3-win_amd64.whl"
-        },
-        {
-          "package_version": "3.0.0b1",
-          "torch_version": [
-            "2.9.0",
-            "2.9.0"
-          ],
-          "python_version": [
-            "3.9",
-            null
-          ],
-          "cuda_version": [
-            "12.9",
-            "12.9"
-          ],
-          "cxx11_abi": true,
-          "url": "https://github.com/windreamer/flash-attention3-wheels/releases/download/2026.01.19-8b0dc47/flash_attn_3-3.0.0b1+20260119.cu129torch290cxx11abitrue.100fa1-cp39-abi3-win_amd64.whl"
-        }
-      ]
-    },
-    {
       "id": "xformers",
       "name": "xformers",
       "description": "Another library for memory-efficient attention and other optimizations.",
-      "official_repo": "https://github.com/facebookresearch/xformers/releases",
+      "official_repo": "https://github.com/facebookresearch/xformers/",
       "wheels": [
         {
           "package_version": "0.0.32.post2",
