@@ -1,0 +1,69 @@
+# Workflow for the MAIN branch
+# This file should be copied to the main branch at .github/workflows/update-wheels.yml
+#
+# Purpose: When wheels.json is pushed to main branch:
+# 1. Extract last_updated_utc timestamp from wheels.json
+# 2. Create/update version.txt with Unix timestamp
+# 3. Push both files to gh-pages/docs/ directory
+
+name: Update Wheels Data
+
+on:
+  push:
+    branches: [main]
+    paths: ['wheels.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract timestamp from wheels.json
+        id: extract
+        run: |
+          # Read last_updated_utc from wheels.json
+          TIMESTAMP=$(jq -r '.last_updated_utc' wheels.json)
+          
+          # Convert ISO timestamp to Unix timestamp
+          # Handle both ISO format (2026-02-24T12:00:00Z) and existing Unix timestamp
+          if [[ "$TIMESTAMP" =~ ^[0-9]+$ ]]; then
+            # Already a Unix timestamp
+            UNIX_TS="$TIMESTAMP"
+          else
+            # Convert ISO to Unix timestamp
+            UNIX_TS=$(date -d "$TIMESTAMP" +%s 2>/dev/null || echo "$(date +%s)")
+          fi
+          
+          echo "timestamp=$UNIX_TS" >> $GITHUB_OUTPUT
+          echo "$UNIX_TS" > version.txt
+          echo "Generated version.txt with timestamp: $UNIX_TS"
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: gh-pages-dir
+
+      - name: Copy files to gh-pages/docs
+        run: |
+          cp wheels.json gh-pages-dir/docs/
+          cp version.txt gh-pages-dir/docs/
+
+      - name: Commit and push to gh-pages
+        working-directory: gh-pages-dir
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/wheels.json docs/version.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: Update wheels.json and version.txt [${{ steps.extract.outputs.timestamp }}]"
+          git push
