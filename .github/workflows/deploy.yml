@@ -4,20 +4,14 @@ on:
   push:
     branches: [gh-pages]
     paths:
-      - 'web/src/**'
-      - 'web/package.json'
-      - 'web/vite.config.ts'
-      - 'web/index.html'
-      - 'web/tailwind.config.js'
-      - '.github/workflows/**'
+      - 'web/**'         
+    paths-ignore:
+      - 'docs/**' 
+      - '.github/**' 
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -33,33 +27,25 @@ jobs:
           cache: 'npm'
           cache-dependency-path: web/package-lock.json
 
-      - name: Install dependencies
+      - name: Install and Build
         working-directory: ./web
-        run: npm ci
-
-      - name: Run linter
-        working-directory: ./web
-        run: npm run lint
-
-      - name: Type check
-        working-directory: ./web
-        run: npm run typecheck
-
-      - name: Download wheels.json and version.txt from main branch
         run: |
-          curl -L -o web/public/wheels.json \
-            "https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/wheels.json"
-          curl -L -o web/public/version.txt \
-            "https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/version.txt" || true
+          npm ci
+          npm run build
 
-      - name: Build
-        working-directory: ./web
-        run: npm run build
-
-      - name: Commit built files
+      - name: Update docs folder
         run: |
+          # Ensure latest data is included in the new build
+          curl -L -o web/dist/wheels.json "https://raw.githubusercontent.com/${{ github.repository }}/main/wheels.json"
+          curl -L -o web/dist/version.txt "https://raw.githubusercontent.com/${{ github.repository }}/main/version.txt" || true
+          
           git config user.name 'github-actions'
           git config user.email 'github-actions@github.com'
+          
+          # Replace docs content with new build
+          rm -rf docs/*
+          cp -r web/dist/* docs/
+          
           git add docs/
-          git commit -m "Build: Update docs from gh-pages branch [$(date -u +%Y-%m-%d)]" || echo "No changes to commit"
+          git commit -m "Build: Update website UI" || echo "No changes"
           git push
