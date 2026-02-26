@@ -4,10 +4,8 @@ on:
   push:
     branches: [gh-pages]
     paths:
-      - 'web/**'         
-    paths-ignore:
-      - 'docs/**' 
-      - '.github/**' 
+      - 'web/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
