@@ -26,6 +26,7 @@ export default defineConfig({
   },
   build: {
     outDir: '../docs',
+    emptyOutDir: true,
     sourcemap: true,
     minify: 'terser',
     cssMinify: true,
