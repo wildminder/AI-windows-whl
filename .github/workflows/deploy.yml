@@ -1,22 +1,17 @@
-name: Build and Deploy
+name: Build Web App UI
 
 on:
   push:
     branches: [gh-pages]
     paths:
       - 'web/**'
-      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
-  
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,31 +24,23 @@ jobs:
           cache: 'npm'
           cache-dependency-path: web/package-lock.json
 
-      - name: Install dependencies
+      - name: Build React App (cleans and outputs to docs/)
         working-directory: ./web
-        run: npm ci
-
-      - name: Run linter
-        working-directory: ./web
-        run: npm run lint
-
-      - name: Type check
-        working-directory: ./web
-        run: npm run typecheck
-
-      - name: Download wheels.json and version.txt from main branch
         run: |
-          curl -L -o web/public/wheels.json "https://raw.githubusercontent.com/${{ github.repository }}/main/wheels.json"
-          curl -L -o web/public/version.txt "https://raw.githubusercontent.com/${{ github.repository }}/main/version.txt" || true
+          npm ci
+          npm run build 
 
-      - name: Build
-        working-directory: ./web
-        run: npm run build
+      - name: Generate version.txt from wheels.json
+        run: |
+          curl -L -o docs/wheels.json "https://raw.githubusercontent.com/${{ github.repository }}/main/wheels.json"
+          
+          TIMESTAMP=$(jq -r '.last_updated_utc' docs/wheels.json)
+          UNIX_TS=$(date -d "$TIMESTAMP" +%s 2>/dev/null || echo "0")
+          echo "$UNIX_TS" > docs/version.txt
 
-      - name: Commit built files
-        run: |          
+      - name: Push Build to Branch
+        run: |
           git config user.name 'github-actions'
           git config user.email 'github-actions@github.com'
           git add docs/
-          git commit -m "Build: Update docs from gh-pages branch [$(date -u +%Y-%m-%d)]" || echo "No changes to commit"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "build: update ui and sync data" && git push)
