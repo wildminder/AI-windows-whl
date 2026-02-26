@@ -6,7 +6,7 @@
 # 2. Create/update version.txt with Unix timestamp
 # 3. Push both files to gh-pages/docs/ directory
 
-name: Update Wheels Data
+name: Data Sync to Website
 
 on:
   push:
@@ -18,60 +18,34 @@ permissions:
   contents: write
 
 jobs:
-  update-version:
+  sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
+      - name: Checkout main branch content
         uses: actions/checkout@v4
         with:
-          ref: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          path: main-branch
 
-      - name: Extract timestamp from wheels.json
-        id: extract
-        run: |
-          # Read last_updated_utc from wheels.json
-          TIMESTAMP=$(jq -r '.last_updated_utc' wheels.json)
-          
-          # Convert ISO timestamp to Unix timestamp
-          # Handle both ISO format (2026-02-24T12:00:00Z) and existing Unix timestamp
-          if [[ "$TIMESTAMP" =~ ^[0-9]+$ ]]; then
-            # Already a Unix timestamp
-            UNIX_TS="$TIMESTAMP"
-          else
-            # Convert ISO to Unix timestamp
-            UNIX_TS=$(date -d "$TIMESTAMP" +%s 2>/dev/null || echo "$(date +%s)")
-          fi
-          
-          echo "timestamp=$UNIX_TS" >> $GITHUB_OUTPUT
-          echo "$UNIX_TS" > version.txt
-          echo "Generated version.txt with timestamp: $UNIX_TS"
-
-      - name: Commit version.txt to main branch
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add version.txt
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: Update version.txt [${{ steps.extract.outputs.timestamp }}]"
-          git push
-
-      - name: Checkout gh-pages branch
+      - name: Checkout gh-pages branch content
         uses: actions/checkout@v4
         with:
           ref: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: gh-pages-dir
+          path: gh-pages-branch
 
-      - name: Copy files to gh-pages/docs
+      - name: Prepare and Copy Data
         run: |
-          cp wheels.json gh-pages-dir/docs/
-          cp version.txt gh-pages-dir/docs/
+          # Calculate Version from main branch's wheels.json
+          TIMESTAMP=$(jq -r '.last_updated_utc' main-branch/wheels.json)
+          UNIX_TS=$(date -d "$TIMESTAMP" +%s 2>/dev/null || echo "$TIMESTAMP")
+          
+          # Copy to the docs folder inside the gh-pages checkout
+          cp main-branch/wheels.json gh-pages-branch/docs/
+          echo "$UNIX_TS" > gh-pages-branch/docs/version.txt
 
-      - name: Commit and push to gh-pages
-        working-directory: gh-pages-dir
+      - name: Commit to gh-pages branch
+        working-directory: gh-pages-branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add docs/wheels.json docs/version.txt
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: Update wheels.json and version.txt [${{ steps.extract.outputs.timestamp }}]"
-          git push
+          git add docs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "data: update wheels.json and version.txt" && git push)
