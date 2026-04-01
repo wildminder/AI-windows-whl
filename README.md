@@ -389,6 +389,24 @@ ABI3 version, any Python 3.9-3.12
 | `2.2.0` | `2.7.1` | `3.9` | `12.8` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp39-cp39-win_amd64.whl) |
 <!-- END_SAGEATTENTION22_TABLE -->
 
+
+##### 🛠 SageAttention 3
+[![GitHub](https://img.shields.io/badge/mengqin-green?style=flat)](https://github.com/mengqin/SageAttention)
+
+<!-- START_SAGEATTN3_TABLE -->
+<!-- This table is auto-generated. Do not edit manually. -->
+| Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
+|:---:|:---:|:---:|:---:|:---:|
+| `1.0.0` | `2.9.1` | `3.13` | `13.0` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp313-cp313-win_amd64.whl) |
+| `1.0.0` | `2.9.1` | `3.12` | `13.0` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp312-cp312-win_amd64.whl) |
+| `1.0.0` | `2.8.0` | `3.13` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp313-cp313-win_amd64.whl) |
+| `1.0.0` | `2.8.0` | `3.12` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp312-cp312-win_amd64.whl) |
+| `1.0.0` | `2.8.0` | `3.11` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp311-cp311-win_amd64.whl) |
+| `1.0.0` | `2.7.1` | `3.13` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp313-cp313-win_amd64.whl) |
+| `1.0.0` | `2.7.1` | `3.12` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp312-cp312-win_amd64.whl) |
+| `1.0.0` | `2.7.1` | `3.11` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp311-cp311-win_amd64.whl) |
+<!-- END_SAGEATTN3_TABLE -->
+
 <p id="nunchaku" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
 ### 🛠 Nunchaku
@@ -622,23 +640,17 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 | `0.12.2` | `3.13` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/fairseq/fairseq-0.12.2-cp313-cp313-win_amd64.whl) |
 <!-- END_FAIRSEQ_TABLE -->
 
-<p id="sageattn3" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="causalconv1d" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
 
-### 🛠 SageAttention 3
-[![mengqin](https://github.com/mengqin/SageAttention)](https://github.com/mengqin/SageAttention)
-<!-- START_SAGEATTN3_TABLE -->
+### 🛠 causal_conv1d
+<!-- START_CAUSALCONV1D_TABLE -->
 <!-- This table is auto-generated. Do not edit manually. -->
-| Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
-|:---:|:---:|:---:|:---:|:---:|
-| `1.0.0` | `2.9.1` | `3.13` | `13.0` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp313-cp313-win_amd64.whl) |
-| `1.0.0` | `2.9.1` | `3.12` | `13.0` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp312-cp312-win_amd64.whl) |
-| `1.0.0` | `2.8.0` | `3.13` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp313-cp313-win_amd64.whl) |
-| `1.0.0` | `2.8.0` | `3.12` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp312-cp312-win_amd64.whl) |
-| `1.0.0` | `2.8.0` | `3.11` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp311-cp311-win_amd64.whl) |
-| `1.0.0` | `2.7.1` | `3.13` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp313-cp313-win_amd64.whl) |
-| `1.0.0` | `2.7.1` | `3.12` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp312-cp312-win_amd64.whl) |
-| `1.0.0` | `2.7.1` | `3.11` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp311-cp311-win_amd64.whl) |
-<!-- END_SAGEATTN3_TABLE -->
+| Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| `1.6.1` | `2.11.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `1.6.1` | `2.11.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+| `1.6.1` | `2.10.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+<!-- END_CAUSALCONV1D_TABLE -->
 
 
 
