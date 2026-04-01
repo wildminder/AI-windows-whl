@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-03-31T20:37:15.644032+00:00",
+  "last_updated_utc": "2026-04-01T17:52:57.589953+00:00",
   "packages": [
     {
       "id": "blocksparseattn",
@@ -3401,6 +3401,63 @@
             "12.8"
           ],
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.8.0a0+cu128torch2.9.0cxx11abi1-cp312-cp312-win_amd64.whl"
+        }
+      ]
+    },
+    {
+      "id": "causalconv1d",
+      "name": "causal_conv1d",
+      "wheels": [
+        {
+          "package_version": "1.6.1",
+          "torch_version": [
+            "2.10.0",
+            "2.10.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.1",
+          "torch_version": [
+            "2.11.0",
+            "2.11.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.1",
+          "torch_version": [
+            "2.11.0",
+            "2.11.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp314-cp314-win_amd64.whl"
         }
       ]
     },
