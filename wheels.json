@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-04-01T17:52:57.589953+00:00",
+  "last_updated_utc": "2026-06-09T14:43:34.883786+00:00",
   "packages": [
     {
       "id": "blocksparseattn",
@@ -1300,6 +1300,102 @@
             "12.8"
           ],
           "url": "https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp312-cp312-win_amd64.whl"
+        },
+        {
+          "package_version": "0.21.6",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "0.21.6",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "0.21.6",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "0.21.6",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "0.21.6",
+          "torch_version": [
+            "2.13.0.",
+            "2.13.0."
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.13.0.dev20260525cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "0.21.6",
+          "torch_version": [
+            "2.13.0.",
+            "2.13.0."
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.13.0.dev20260528cxx11abi1-cp314-cp314-win_amd64.whl"
         }
       ]
     },
@@ -3361,6 +3457,38 @@
             "2.12.0"
           ],
           "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
             "3.14",
             "3.14"
           ],
@@ -3369,6 +3497,70 @@
             "13.0"
           ],
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260219.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": [
+            "2.13.0",
+            "2.13.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "2.11.0a0",
+          "torch_version": [
+            "2.13.0",
+            "2.13.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl"
         },
         {
           "package_version": "2.8.0a0",
@@ -3458,6 +3650,108 @@
           ],
           "cxx11_abi": true,
           "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.2.post1",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.2.post1",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.13",
+            "3.13"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.2.post1",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.2.post1",
+          "torch_version": [
+            "2.12.0",
+            "2.12.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.2.post1",
+          "torch_version": [
+            "2.13.0",
+            "2.13.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl"
+        },
+        {
+          "package_version": "1.6.2.post1",
+          "torch_version": [
+            "2.13.0",
+            "2.13.0"
+          ],
+          "python_version": [
+            "3.14",
+            "3.14"
+          ],
+          "cuda_version": [
+            "13.2",
+            "13.2"
+          ],
+          "cxx11_abi": true,
+          "url": "https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl"
         }
       ]
     },
