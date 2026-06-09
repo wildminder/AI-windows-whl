@@ -114,20 +114,27 @@ The foundation of everything. Install this first from the official source.
 
 For convenience, here are direct installation commands for specific versions on Linux/WSL with an NVIDIA GPU. For other configurations (CPU, macOS, ROCm), please use the official install page.
 
-#### Stable Version (2.11.0)
+#### Stable Version (2.12.0)
 This is the recommended version for most users.
 
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 13.2**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu132` |
 | **CUDA 13.0**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130` |
-| **CUDA 12.8**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128` |
 | **CUDA 12.6**  | `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126` |
 
 <details>
   <summary>Previous Stable Version</summary>
 
+#### Stable Version (2.11.0)
+
+| CUDA Version | Pip Install Command                                                                                      |
+|:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 13.0**  | `pip install "torch>=2.11.0.dev,<2.12.0" torchvision --index-url https://download.pytorch.org/whl/cu130` |
+| **CUDA 12.8**  | `pip install "torch>=2.11.0.dev,<2.12.0" torchvision --index-url https://download.pytorch.org/whl/cu128` |
+| **CUDA 12.6**  | `pip install "torch>=2.11.0.dev,<2.12.0" torchvision --index-url https://download.pytorch.org/whl/cu126` |
+
 #### Stable Version (2.10.0)
-This is the recommended version for most users.
 
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
@@ -144,6 +151,7 @@ This is the recommended version for most users.
 | **CUDA 12.6**  | `pip install "torch>=2.9.0.dev,<2.10.0" torchvision --index-url https://download.pytorch.org/whl/cu126` |
 
 ##### Previous Stable Version (2.8.0)  
+
 | CUDA Version | Pip Install Command                                                              |
 |:-------------|:---------------------------------------------------------------------------------|
 | **CUDA 12.9**  | `pip install "torch>=2.8.0.dev,<2.9.0" torchvision --index-url https://download.pytorch.org/whl/cu129`           |
@@ -151,6 +159,7 @@ This is the recommended version for most users.
 | **CUDA 12.6**  | `pip install "torch>=2.8.0.dev,<2.9.0" torchvision --index-url https://download.pytorch.org/whl/cu126`           |
 
 ##### Previous Stable Version (2.7.1)
+
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
 | **CUDA 12.8**  | `pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128` |
@@ -165,11 +174,11 @@ This is the recommended version for most users.
 #### Nightly Versions
 Use these for access to the latest features, but expect potential instability.
 
-**PyTorch 2.12 (Nightly)**
+**PyTorch 2.13 (Nightly)**
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
+| **CUDA 13.2**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu132` |
 | **CUDA 13.0**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
-| **CUDA 12.8**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
 <p id="torchaudio" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
@@ -179,8 +188,14 @@ Use these for access to the latest features, but expect potential instability.
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
+| `2.11.0a0` | `2.13.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `2.11.0a0` | `2.13.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `2.11.0a0` | `2.12.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `2.11.0a0` | `2.12.0` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `2.11.0a0` | `2.12.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260219.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `2.11.0a0` | `2.12.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `2.11.0a0` | `2.12.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260219.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+| `2.11.0a0` | `2.12.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `2.11.0a0` | `2.11.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260219.cu130torch2.11.0cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `2.11.0a0` | `2.11.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260219.cu130torch2.11.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `2.11.0a0` | `2.10.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260121.cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl) |
@@ -389,7 +404,6 @@ ABI3 version, any Python 3.9-3.12
 | `2.2.0` | `2.7.1` | `3.9` | `12.8` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp39-cp39-win_amd64.whl) |
 <!-- END_SAGEATTENTION22_TABLE -->
 
-
 ##### 🛠 SageAttention 3
 [![GitHub](https://img.shields.io/badge/mengqin-green?style=flat)](https://github.com/mengqin/SageAttention)
 
@@ -515,6 +529,12 @@ Neighborhood Attention Transformer.
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
+| `0.21.6` | `2.12.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.21.6` | `2.12.0` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+| `0.21.6` | `2.12.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.21.6` | `2.12.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+| `0.21.6` | `2.13.0.` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.13.0.dev20260528cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.21.6` | `2.13.0.` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.13.0.dev20260525cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `0.17.5` | `2.7.0` | `3.12` | `12.8` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp312-cp312-win_amd64.whl) |
 | `0.17.5` | `2.7.0` | `3.11` | `12.8` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp311-cp311-win_amd64.whl) |
 | `0.17.5` | `2.7.0` | `3.10` | `12.8` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp310-cp310-win_amd64.whl) |
@@ -647,6 +667,12 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
 |:---:|:---:|:---:|:---:|:---:|:---:|
+| `1.6.2.post1` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `1.6.2.post1` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `1.6.2.post1` | `2.12.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `1.6.2.post1` | `2.12.0` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+| `1.6.2.post1` | `2.12.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `1.6.2.post1` | `2.12.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `1.6.1` | `2.11.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `1.6.1` | `2.11.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.11.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `1.6.1` | `2.10.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.1+d20260310.cu130torch2.10.0cxx11abi1-cp313-cp313-win_amd64.whl) |
