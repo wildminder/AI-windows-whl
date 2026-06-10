@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <a id="readme-top"></a>
 <div align="center">
-  <h1 align="center">Windows AI Wheels</h1>
+  <h1 align="center">⟪ Windows AI Wheels ⟫</h1>
 
 <img src="https://github.com/user-attachments/assets/b5a86223-4134-4c1a-bce9-215c741be45d" alt="AI-windows-whl logo">
 
@@ -58,15 +58,14 @@
 </div>
 
 
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## ❯ About The Project
 
 This repository was created to address a common pain point for AI enthusiasts and developers on the Windows platform: **building complex Python packages from source.** Libraries like `flash-attention`, `xformers` are essential for high-performance AI tasks but often lack official pre-built wheels for Windows, forcing users into a complicated and error-prone compilation process.
 
 The goal here is to provide a centralized, up-to-date collection of direct links to pre-compiled `.whl` files for these libraries, primarily for the **ComfyUI** community and other PyTorch users on Windows. This saves you time and lets you focus on what's important: creating amazing things with AI.
 
-### Find Windows AI Wheels
+### ⌬ Find Windows AI Wheels
 To make life even easier, you can use this page **[Find Windows AI Wheels](https://wildminder.github.io/AI-windows-whl/)** for quick searches of the required packages. 
 <div align="center">
 <a  href="https://wildminder.github.io/AI-windows-whl/">
@@ -78,16 +77,16 @@ To make life even easier, you can use this page **[Find Windows AI Wheels](https
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## ❯ Getting Started
 
 Follow these simple steps to use the wheels from this repository.
 
-### Prerequisites
+### ⌬ Prerequisites
 
 1.  **Python for Windows**: Ensure you have a compatible Python version installed (PyTorch currently supports **Python 3.9 - 3.14** on Windows). You can get it from the [official Python website](https://www.python.org/downloads/windows/).
 
 
-### Installation
+### ⌬ Installation
 
 To install a wheel, use `pip` with the direct URL to the `.whl` file. Make sure to enclose the URL in quotes.
 
@@ -103,18 +102,18 @@ pip install "https://huggingface.co/lldacing/flash-attention-windows-wheel/blob/
 
 
 <!-- AVAILABLE WHEELS -->
-## Available Wheels
+## ❯ Available Wheels
 
 Here is the list of tracked packages.
 
 <a id="pytorch"></a>
-### 🛠 PyTorch
+### ⌬ PyTorch
 The foundation of everything. Install this first from the official source.
 *   **Official Install Page**: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 
 For convenience, here are direct installation commands for specific versions on Linux/WSL with an NVIDIA GPU. For other configurations (CPU, macOS, ROCm), please use the official install page.
 
-#### Stable Version (2.12.0)
+#### ⌗ Stable Version (2.12.0)
 This is the recommended version for most users.
 
 | CUDA Version | Pip Install Command                                                                                      |
@@ -126,7 +125,7 @@ This is the recommended version for most users.
 <details>
   <summary>Previous Stable Version</summary>
 
-#### Stable Version (2.11.0)
+#### ⌗ Stable Version (2.11.0)
 
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
@@ -134,7 +133,7 @@ This is the recommended version for most users.
 | **CUDA 12.8**  | `pip install "torch>=2.11.0.dev,<2.12.0" torchvision --index-url https://download.pytorch.org/whl/cu128` |
 | **CUDA 12.6**  | `pip install "torch>=2.11.0.dev,<2.12.0" torchvision --index-url https://download.pytorch.org/whl/cu126` |
 
-#### Stable Version (2.10.0)
+#### ⌗ Stable Version (2.10.0)
 
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
@@ -142,7 +141,7 @@ This is the recommended version for most users.
 | **CUDA 12.8**  | `pip install "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/cu128` |
 | **CUDA 12.6**  | `pip install "torch>=2.10.0.dev,<2.11.0" torchvision --index-url https://download.pytorch.org/whl/cu126` |
 
-#### Previous Version (2.9.1)
+#### ⌗ Previous Version (2.9.1)
 
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
@@ -150,7 +149,7 @@ This is the recommended version for most users.
 | **CUDA 12.8**  | `pip install "torch>=2.9.0.dev,<2.10.0" torchvision --index-url https://download.pytorch.org/whl/cu128` |
 | **CUDA 12.6**  | `pip install "torch>=2.9.0.dev,<2.10.0" torchvision --index-url https://download.pytorch.org/whl/cu126` |
 
-##### Previous Stable Version (2.8.0)  
+##### ⌗ Previous Stable Version (2.8.0)  
 
 | CUDA Version | Pip Install Command                                                              |
 |:-------------|:---------------------------------------------------------------------------------|
@@ -158,7 +157,7 @@ This is the recommended version for most users.
 | **CUDA 12.8**  | `pip install "torch>=2.8.0.dev,<2.9.0" torchvision --index-url https://download.pytorch.org/whl/cu128`           |
 | **CUDA 12.6**  | `pip install "torch>=2.8.0.dev,<2.9.0" torchvision --index-url https://download.pytorch.org/whl/cu126`           |
 
-##### Previous Stable Version (2.7.1)
+##### ⌗ Previous Stable Version (2.7.1)
 
 | CUDA Version | Pip Install Command                                                                                      |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
@@ -171,7 +170,7 @@ This is the recommended version for most users.
 
 ---
 
-#### Nightly Versions
+#### ⌗ Nightly Versions
 Use these for access to the latest features, but expect potential instability.
 
 **PyTorch 2.13 (Nightly)**
@@ -181,9 +180,9 @@ Use these for access to the latest features, but expect potential instability.
 | **CUDA 13.0**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu130` |
 | **CUDA 12.6**  | `pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu126` |
 
-<p id="torchaudio" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="torchaudio" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Torchaudio
+### ⌬ Torchaudio
 <!-- START_TORCHAUDIO_TABLE -->
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
@@ -210,9 +209,9 @@ Use these for access to the latest features, but expect potential instability.
 pip install torchcodec
 ```
 
-<p id="flash-attention" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="flash-attention" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Flash Attention
+### ⌬ Flash Attention
 High-performance attention implementation.
 
 [![GitHub](https://img.shields.io/badge/Dao--AILab-flash--attention-blue?style=flat)](https://github.com/Dao-AILab/flash-attention)
@@ -271,9 +270,9 @@ High-performance attention implementation.
 | `2.7.4` | `2.6.0` | `3.10` | `12.4` | ✗ | [Link](https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.4+cu124torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl?download=true) |
 <!-- END_FLASHATTENTION_TABLE -->
 
-<p id="flash-attention-3" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="flash-attention-3" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Flash Attention 3
+### ⌬ Flash Attention 3
 Next-generation Flash Attention with improved performance and features.
 
 [![GitHub](https://img.shields.io/badge/windreamer-FA3%20Wheels-blue?style=flat)](https://github.com/windreamer/flash-attention-3-wheels-windows)
@@ -291,9 +290,9 @@ Next-generation Flash Attention with improved performance and features.
 | `3.0.0` | `2.9` | `3.9+` | `12.8` | ✓ | [Link](https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.9.3/flash_attn_3-3.0.0+cu128torch2.9gite2743ab-cp39-abi3-win_amd64.whl) |
 <!-- END_FLASHATTENTION3_TABLE -->
 
-<p id="flash-attention-4" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="flash-attention-4" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Flash Attention 4
+### ⌬ Flash Attention 4
 Latest Flash Attention implementation with cutting-edge optimizations.
 
 <!-- START_FLASHATTENTION4_TABLE -->
@@ -301,9 +300,9 @@ Latest Flash Attention implementation with cutting-edge optimizations.
 *(No wheels available - package not tracked)*
 <!-- END_FLASHATTENTION4_TABLE -->
 
-<p id="xformers" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="xformers" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 xformers
+### ⌬ xformers
 Another library for memory-efficient attention and other optimizations.
 
 [![GitHub](https://img.shields.io/badge/facebookresearch-xformers-blue?style=flat)](https://github.com/facebookresearch/xformers/releases)
@@ -334,9 +333,9 @@ ABI3 version, any Python 3.9-3.12
 | `0.0.32.post2` | `2.8.0` | `3.9+` | `12.6` | [Link](https://download.pytorch.org/whl/cu126/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl) |
 <!-- END_XFORMERS_TABLE --> 
 
-<p id="sageattention" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="sageattention" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 SageAttention
+### ⌬ SageAttention
 
 [![GitHub](https://img.shields.io/badge/thu--ml-SageAttention-blue?style=flat)](https://github.com/thu-ml/SageAttention)
 [![GitHub](https://img.shields.io/badge/woct0rdho-Wheels-green?style=flat)](https://github.com/woct0rdho/SageAttention/releases)
@@ -362,7 +361,7 @@ ABI3 version, any Python 3.9-3.12
 
 ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇
 
-#### 🛠 SageAttention 2.2 (SageAttention2++)
+#### ⌗ SageAttention 2.2 (SageAttention2++)
 > [!NOTE]
 > Only supports CUDA >= 12.8, therefore PyTorch >= 2.7.
 
@@ -404,7 +403,7 @@ ABI3 version, any Python 3.9-3.12
 | `2.2.0` | `2.7.1` | `3.9` | `12.8` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows/sageattention-2.2.0+cu128torch2.7.1-cp39-cp39-win_amd64.whl) |
 <!-- END_SAGEATTENTION22_TABLE -->
 
-##### 🛠 SageAttention 3
+##### ⌗ SageAttention 3
 [![GitHub](https://img.shields.io/badge/mengqin-green?style=flat)](https://github.com/mengqin/SageAttention)
 
 <!-- START_SAGEATTN3_TABLE -->
@@ -421,14 +420,42 @@ ABI3 version, any Python 3.9-3.12
 | `1.0.0` | `2.7.1` | `3.11` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch271-cp311-cp311-win_amd64.whl) |
 <!-- END_SAGEATTN3_TABLE -->
 
-<p id="nunchaku" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="nunchaku" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Nunchaku
+### ⌬ Nunchaku
 *   **Official Repo**: : [mit-han-lab/nunchaku](https://github.com/mit-han-lab/nunchaku/releases)
 <!-- START_NUNCHAKU_TABLE -->
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | Download Link |
 |:---:|:---:|:---:|:---:|
+| `1.2.1` | `2.11` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.11-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.11-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.11-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.11-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.11-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.11-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.11-cp310-cp310-win_amd64.whl) |
+| `1.2.1` | `2.11` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.11-cp310-cp310-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.10-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.10-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.10-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.10-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.10-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.10-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.10-cp310-cp310-win_amd64.whl) |
+| `1.2.1` | `2.10` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.10-cp310-cp310-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.9-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.9-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.9-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.9-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.9-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.9-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.9-cp310-cp310-win_amd64.whl) |
+| `1.2.1` | `2.9` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu13.0torch2.9-cp310-cp310-win_amd64.whl) |
+| `1.2.1` | `2.8` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.8-cp313-cp313-win_amd64.whl) |
+| `1.2.1` | `2.8` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.8-cp312-cp312-win_amd64.whl) |
+| `1.2.1` | `2.8` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.8-cp311-cp311-win_amd64.whl) |
+| `1.2.1` | `2.8` | `3.10` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.1/nunchaku-1.2.1+cu12.8torch2.8-cp310-cp310-win_amd64.whl) |
 | `1.2.0` | `2.11` | `3.13` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp313-cp313-win_amd64.whl) |
 | `1.2.0` | `2.11` | `3.12` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp312-cp312-win_amd64.whl) |
 | `1.2.0` | `2.11` | `3.11` | [Link](https://github.com/nunchaku-ai/nunchaku/releases/download/v1.2.0/nunchaku-1.2.0+torch2.11-cp311-cp311-win_amd64.whl) |
@@ -517,9 +544,9 @@ ABI3 version, any Python 3.9-3.12
 | `0.3.2` | `2.5` | `3.10` | [Link](https://github.com/nunchaku-tech/nunchaku/releases/download/v0.3.2/nunchaku-0.3.2+torch2.5-cp310-cp310-win_amd64.whl) |
 <!-- END_NUNCHAKU_TABLE -->
   
-<p id="natten" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="natten" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 NATTEN
+### ⌬ NATTEN
 Neighborhood Attention Transformer.
 
 [![GitHub](https://img.shields.io/badge/SHI--Labs-NATTEN-blue?style=flat)](https://github.com/SHI-Labs/NATTEN)
@@ -529,12 +556,12 @@ Neighborhood Attention Transformer.
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
+| `0.21.6` | `2.13.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.13.0.dev20260528cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.21.6` | `2.13.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.13.0.dev20260525cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `0.21.6` | `2.12.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `0.21.6` | `2.12.0` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
 | `0.21.6` | `2.12.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `0.21.6` | `2.12.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
-| `0.21.6` | `2.13.0.` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260529.cu132torch2.13.0.dev20260528cxx11abi1-cp314-cp314-win_amd64.whl) |
-| `0.21.6` | `2.13.0.` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/natten/natten-0.21.6+d20260509.cu130torch2.13.0.dev20260525cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `0.17.5` | `2.7.0` | `3.12` | `12.8` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp312-cp312-win_amd64.whl) |
 | `0.17.5` | `2.7.0` | `3.11` | `12.8` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp311-cp311-win_amd64.whl) |
 | `0.17.5` | `2.7.0` | `3.10` | `12.8` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.5+torch270cu128-cp310-cp310-win_amd64.whl) |
@@ -554,9 +581,9 @@ Neighborhood Attention Transformer.
 | `0.17.3` | `2.4.0` | `3.11` | `12.4` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch240cu124-cp311-cp311-win_amd64.whl) |
 | `0.17.3` | `2.4.0` | `3.10` | `12.4` | [Link](https://huggingface.co/lldacing/NATTEN-windows/blob/main/natten-0.17.3+torch240cu124-cp310-cp310-win_amd64.whl) |
 <!-- END_NATTEN_TABLE -->
-<p id="triton" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="triton" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Triton (Windows Fork)
+### ⌬ Triton (Windows Fork)
 Triton is a language and compiler for writing highly efficient custom deep-learning primitives. Not officially supported on Windows, but a fork provides pre-built wheels.
 
 [![GitHub](https://img.shields.io/badge/triton--lang-triton--windows-blue?style=flat)](https://github.com/triton-lang/triton-windows)
@@ -592,24 +619,24 @@ Triton is a language and compiler for writing highly efficient custom deep-learn
 | `3.10` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.10.11_include_libs.zip) |
 | `3.9` | [Link](https://github.com/woct0rdho/triton-windows/releases/download/v3.0.0-windows.post1/python_3.9.13_include_libs.zip) |
 
-<p id="bitsandbytes" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="bitsandbytes" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 bitsandbytes
+### ⌬ bitsandbytes
 A lightweight wrapper around CUDA custom functions, particularly for 8-bit optimizers, matrix multiplication (LLM.int8()), and quantization functions.
 
 [![GitHub](https://img.shields.io/badge/bitsandbytes--foundation-bitsandbytes-blue?style=flat)](https://github.com/bitsandbytes-foundation/bitsandbytes)
 
-<p align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 RadialAttention for ComfyUI
+### ⌬ RadialAttention for ComfyUI
 
 [![GitHub](https://img.shields.io/badge/woct0rdho-ComfyUI--RadialAttn-blue?style=flat)](https://github.com/woct0rdho/ComfyUI-RadialAttn)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p id="spargeattn" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="spargeattn" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 SpargeAttn
+### ⌬ SpargeAttn
 
 [![GitHub](https://img.shields.io/badge/thu--ml-SpargeAttn-blue?style=flat)](https://github.com/thu-ml/SpargeAttn)
 [![GitHub](https://img.shields.io/badge/woct0rdho-Wheels-green?style=flat)](https://github.com/woct0rdho/SpargeAttn/releases)
@@ -621,9 +648,9 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 | `0.1.0.post1` | `2.7.1` | `12.8` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl) |
 <!-- END_SPARGEATTN_TABLE -->
 
-<p id="block_sparse_attn" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
+<p id="block_sparse_attn" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
-### 🛠 Block Sparse Attention
+### ⌬ Block Sparse Attention
 
 [![GitHub](https://img.shields.io/badge/mit--han--lab-Block%20Sparse-blue?style=flat)](https://github.com/mit-han-lab/Block-Sparse-Attention/)
 [![HuggingFace](https://img.shields.io/badge/Wildminder-HF%20Wheels-orange?style=flat)](https://huggingface.co/Wildminder/AI-windows-whl/tree/main)
@@ -681,16 +708,16 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 
 
 
-<p align="center">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</p>
+<p align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
 <!-- DATA ACCESS -->
-## 🌐 Accessing Data Programmatically (wheels.json)
+## ❯ Accessing Data Programmatically (wheels.json)
 
 All wheel information in this repository is managed in the `wheels.json` file, which serves as the single source of truth. The tables in this README are automatically generated from this file.
 
 This provides a stable, structured JSON endpoint for any external tool or application that needs to access this data without parsing Markdown.
 
-### ➤ How to Use
+### ⌬ How to Use
 
 You can access the raw JSON file directly via the following URL:
 
@@ -707,10 +734,10 @@ The file contains a list of `packages`, each with its metadata and an array of `
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="center">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</p>
+<p align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
 
 <!-- CONTRIBUTING -->
-## ➤ Contributing
+## ❯ Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -720,7 +747,7 @@ If you have found a new pre-built wheel or a reliable source, please fork the re
 
 
 <!-- ACKNOWLEDGMENTS -->
-## ➤ Acknowledgments
+## ❯ Acknowledgments
 
 This repository is simply a collection of links. Huge thanks to the individuals and groups who do the hard work of building and hosting these wheels for the community:
 
