@@ -603,9 +603,13 @@ Triton is a language and compiler for writing highly efficient custom deep-learn
 
 | Package Version | PyTorch Ver | Compute Capability | Install |
 |:---:|:---:|:---:|:---|
-| `3.6.x` | >= 2.9 | SM 8.9+ | `pip install -U "triton-windows<3.7"` |
+| `3.7.x` | >= 2.12 | SM 8.9+ | `pip install -U "triton-windows<3.8"` |
+| `3.6.x` | >= 2.10 | SM 8.9+ | `pip install -U "triton-windows<3.7"` |
 | `3.5.x` | >= 2.9 | SM 8.0+ | `pip install -U "triton-windows<3.6"` |
 | `3.4.x` | >= 2.8 | SM 7.5+ | `pip install -U "triton-windows<3.5"` |
+| `3.3.x` | >= 2.7 | SM 7.5+ | `pip install -U "triton-windows<3.4"` |
+| `3.2.x` | >= 2.6 | SM 7.5+ | `pip install -U "triton-windows<3.3"` |
+| `3.1.x` | >= 2.4 | SM 7.5+ | `pip install -U "triton-windows<3.2"` |
 
 **Python libs**:
 > [!IMPORTANT]
