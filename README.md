@@ -674,9 +674,14 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 * **Official Repo**: [https://github.com/deepspeedai/DeepSpeed](https://github.com/deepspeedai/DeepSpeed)
 <!-- START_DEEPSPEED_TABLE -->
 <!-- This table is auto-generated. Do not edit manually. -->
-| Package Version | Python Ver | Download Link |
-|:---:|:---:|:---:|
-| `0.18.6` | `3.13` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.18.6+0ccb2bb6-cp313-cp313-win_amd64.whl) |
+| Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| `0.19.2` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.2+d20260610.cu132torch2.13.0.dev20260610cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.19.2` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.2+d20260610.cu130torch2.13.0.dev20260610cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.19.2` | `2.12.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.2+d20260610.cu132torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.19.2` | `2.12.0` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.2+d20260610.cu132torch2.12.0cxx11abi1-cp313-cp313-win_amd64.whl) |
+| `0.19.2` | `2.12.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.2+d20260610.cu130torch2.12.0cxx11abi1-cp314-cp314-win_amd64.whl) |
+| `0.18.6` | `N/A` | `3.13` | `N/A` | ✗ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.18.6+0ccb2bb6-cp313-cp313-win_amd64.whl) |
 <!-- END_DEEPSPEED_TABLE -->
 
 <p id="fairseq" align="center">▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲</p>
