@@ -336,14 +336,15 @@ ABI3 version, any Python 3.9-3.12
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
+| `0.0.35` | `2.13.0` | `3.9+` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers/xformers-0.0.35+d20260715.cu132torch2.13.0cxx11abi1-py39-none-win_amd64.whl) |
+| `0.0.35` | `2.13.0` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers/xformers-0.0.35+d20260715.cu130torch2.13.0cxx11abi1-py39-none-win_amd64.whl) |
+| `0.0.35` | `2.12.1` | `3.9+` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers/xformers-0.0.35+d20260715.cu132torch2.12.1cxx11abi1-py39-none-win_amd64.whl) |
+| `0.0.35` | `2.12.1` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers/xformers-0.0.35+d20260715.cu130torch2.12.1cxx11abi1-py39-none-win_amd64.whl) |
 | `0.0.34` | `2.11` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.34+torch2.11cu130-cp39-abi3-win_amd64.whl) |
 | `0.0.34` | `2.10` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.34%2Bd20260123.cu130torch2.10-cp39-abi3-win_amd64.whl) |
 | `0.0.34` | `2.10` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.34+torch2.10cu130-cp39-abi3-win_amd64.whl) |
 | `0.0.33` | `2.10` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.33%2Bcu130torch2.10-cp39-abi3-win_amd64.whl) |
 | `0.0.33` | `2.9` | `3.9+` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/xformers-0.0.33%2Bcu130torch2.9-cp39-abi3-win_amd64.whl) |
-| `0.0.32.post2` | `2.8.0` | `3.9+` | `12.9` | [Link](https://download.pytorch.org/whl/cu129/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl) |
-| `0.0.32.post2` | `2.8.0` | `3.9+` | `12.8` | [Link](https://download.pytorch.org/whl/cu128/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl) |
-| `0.0.32.post2` | `2.8.0` | `3.9+` | `12.6` | [Link](https://download.pytorch.org/whl/cu126/xformers-0.0.32.post2-cp39-abi3-win_amd64.whl) |
 <!-- END_XFORMERS_TABLE --> 
 
 <p id="sageattention" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
@@ -681,6 +682,12 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
 |:---:|:---:|:---:|:---:|:---:|:---:|
+| `0.0.2.post2` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.0.2.post2` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu130torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.0.2.post2` | `2.12.1` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.0.2.post2` | `2.12.1` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.12.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
+| `0.0.2.post2` | `2.12.1` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu130torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.0.2.post2` | `2.12.1` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu130torch2.12.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `0.0.2.post1` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post1+d20260117.cu132torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `0.0.2.post1` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post1+d20260117.cu130torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `0.0.2.post1` | `2.12.1` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post1+d20260117.cu132torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
