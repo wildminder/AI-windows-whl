@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-07-27T11:12:49.754375+00:00",
+  "last_updated_utc": "2026-07-31T10:05:27.331899+00:00",
   "packages": [
     {
       "id": "blocksparseattn",
@@ -3988,6 +3988,70 @@
             "13.0"
           ],
           "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu130torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post6",
+          "torch_version": [
+            "2.10.0",
+            null
+          ],
+          "python_version": [
+            "3.10",
+            null
+          ],
+          "cuda_version": [
+            "12.8",
+            "12.8"
+          ],
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu128torch2.10.0andhigher.post6-cp310-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post6",
+          "torch_version": [
+            "2.10.0",
+            null
+          ],
+          "python_version": [
+            "3.10",
+            null
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu130torch2.10.0andhigher.post6-cp310-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post6",
+          "torch_version": [
+            "2.9.1",
+            "2.9.1"
+          ],
+          "python_version": [
+            "3.10",
+            null
+          ],
+          "cuda_version": [
+            "12.8",
+            "12.8"
+          ],
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu128torch2.9.1.post6-cp310-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "2.2.0.post6",
+          "torch_version": [
+            "2.9.1",
+            "2.9.1"
+          ],
+          "python_version": [
+            "3.10",
+            null
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu130torch2.9.1.post6-cp310-abi3-win_amd64.whl"
         }
       ]
     },
