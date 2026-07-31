@@ -1,7 +1,11 @@
-import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import type { Package } from '@/types';
 import { PackageCard } from './PackageCard';
+import { PerformanceProvider } from '@/hooks/usePerformance';
+
+function renderWithProvider(ui: React.ReactElement) {
+  return render(<PerformanceProvider>{ui}</PerformanceProvider>);
+}
 
 const mockPackage: Package = {
   id: 'flashattention',
@@ -23,7 +27,7 @@ const mockPackage: Package = {
 
 describe('PackageCard', () => {
   it('renders package name and description', () => {
-    render(
+    renderWithProvider(
       <PackageCard
         package={mockPackage}
         pythonVersion={null}
@@ -39,7 +43,7 @@ describe('PackageCard', () => {
   });
 
   it('displays latest version badge', () => {
-    render(
+    renderWithProvider(
       <PackageCard
         package={mockPackage}
         pythonVersion={null}
@@ -54,7 +58,7 @@ describe('PackageCard', () => {
   });
 
   it('displays wheel count', () => {
-    render(
+    renderWithProvider(
       <PackageCard
         package={mockPackage}
         pythonVersion={null}
@@ -69,7 +73,7 @@ describe('PackageCard', () => {
   });
 
   it('has link to official repo', () => {
-    render(
+    renderWithProvider(
       <PackageCard
         package={mockPackage}
         pythonVersion={null}
@@ -80,12 +84,12 @@ describe('PackageCard', () => {
       />,
     );
 
-    const link = screen.getByLabelText('View official repository');
+    const link = screen.getByLabelText('View Flash Attention official repository (opens in new tab)');
     expect(link).toHaveAttribute('href', 'https://github.com/test/repo');
   });
 
   it('renders inactive state when isActive is false', () => {
-    render(
+    renderWithProvider(
       <PackageCard
         package={mockPackage}
         pythonVersion={null}

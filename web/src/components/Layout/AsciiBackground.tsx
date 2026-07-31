@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { usePerformance } from '@/hooks/usePerformance';
+import { createSpatialGrid } from '@/utils/spatialGrid';
 
 interface Particle {
   x: number;
@@ -69,26 +70,36 @@ export function AsciiBackground(): JSX.Element | null {
         ctx.fill();
       });
 
-      // Draw connections between nearby particles
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const p1 = particles[i];
-          const p2 = particles[j];
+      // Draw connections using spatial grid for O(n·k) instead of O(n²)
+      const CONNECTION_DISTANCE = 150;
+      const grid = createSpatialGrid<number>(CONNECTION_DISTANCE);
 
+      particles.forEach((particle, idx) => {
+        grid.insert(idx, particle.x, particle.y);
+      });
+
+      const drawnPairs = new Set<string>();
+      particles.forEach((p1, i) => {
+        const neighbors = grid.query(p1.x, p1.y, CONNECTION_DISTANCE);
+        for (const j of neighbors) {
+          if (j === i) continue;
+          const pairKey = i < j ? `${i}-${j}` : `${j}-${i}`;
+          if (drawnPairs.has(pairKey)) continue;
+          drawnPairs.add(pairKey);
+
+          const p2 = particles[j];
           const dx = p1.x - p2.x;
           const dy = p1.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.2 * (1 - distance / 150)})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = `rgba(6, 182, 212, ${0.2 * (1 - distance / CONNECTION_DISTANCE)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
         }
-      }
+      });
 
       animationRef.current = requestAnimationFrame(animate);
     };

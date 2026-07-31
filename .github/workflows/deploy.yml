@@ -24,11 +24,28 @@ jobs:
           cache: 'npm'
           cache-dependency-path: web/package-lock.json
 
+      - name: Install dependencies
+        working-directory: ./web
+        run: npm ci
+
+      - name: Run linter
+        working-directory: ./web
+        run: npm run lint
+
+      - name: Type check
+        working-directory: ./web
+        run: npm run typecheck
+
+      - name: Run tests
+        working-directory: ./web
+        run: npm test
+
+      - name: Clean old build artifacts
+        run: rm -rf docs/assets/
+
       - name: Build React App (cleans and outputs to docs/)
         working-directory: ./web
-        run: |
-          npm ci
-          npm run build 
+        run: npm run build
 
       - name: Generate version.txt from wheels.json
         run: |

@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Package, ExternalLink, ChevronDown, AlertCircle } from 'lucide-react';
 import { useState, useMemo } from 'react';
-import type { Package as PackageType, Wheel } from '@/types';
+import type { Package as PackageType } from '@/types';
 import { usePerformance } from '@/hooks/usePerformance';
+import { getLatestVersion } from '@/utils/version';
 import { PackageDetails } from './PackageDetails';
 
 interface PackageCardProps {
@@ -73,74 +74,6 @@ function getPackageColor(packageId: string) {
   }
   const index = Math.abs(hash) % packageColors.length;
   return packageColors[index];
-}
-
-function parseVersion(version: string): {
-  major: number;
-  minor: number;
-  patch: number;
-  suffix: string;
-  suffixNum: number;
-} {
-  // Remove 'v' prefix and '>' prefix (for range versions like ">3.9")
-  const cleanVersion = version.replace(/^v/, '').replace(/^>/, '');
-  const parts = cleanVersion.split('.');
-
-  const major = parseInt(parts[0]) || 0;
-  const minor = parseInt(parts[1]) || 0;
-  let patch = parseInt(parts[2]) || 0;
-  let suffix = '';
-  let suffixNum = 0;
-
-  for (let i = 3; i < parts.length; i++) {
-    const part = parts[i].toLowerCase();
-    if (part.includes('post')) {
-      suffix = 'post';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (part.includes('rc')) {
-      suffix = 'rc';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (part.includes('beta') || part.includes('b')) {
-      suffix = 'beta';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (part.includes('alpha') || part.includes('a')) {
-      suffix = 'alpha';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (!isNaN(parseInt(part))) {
-      patch = patch * 1000 + parseInt(part);
-    }
-  }
-
-  return { major, minor, patch, suffix, suffixNum };
-}
-
-function compareVersions(a: string, b: string): number {
-  const va = parseVersion(a);
-  const vb = parseVersion(b);
-
-  if (va.major !== vb.major) return vb.major - va.major;
-  if (va.minor !== vb.minor) return vb.minor - va.minor;
-  if (va.patch !== vb.patch) return vb.patch - va.patch;
-
-  const suffixPriority: Record<string, number> = { post: 5, '': 4, rc: 3, beta: 2, alpha: 1 };
-  const pa = suffixPriority[va.suffix] || 0;
-  const pb = suffixPriority[vb.suffix] || 0;
-
-  if (pa !== pb) return pb - pa;
-
-  if (va.suffix === 'post') {
-    return vb.suffixNum - va.suffixNum;
-  } else {
-    return va.suffixNum - vb.suffixNum;
-  }
-}
-
-function getLatestVersion(wheels: Wheel[]) {
-  if (wheels.length === 0) return '';
-  const sorted = [...wheels].sort((a, b) =>
-    compareVersions(a.package_version || '0.0.0', b.package_version || '0.0.0'),
-  );
-  return sorted[0]?.package_version || '';
 }
 
 export function PackageCard({

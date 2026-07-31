@@ -20,6 +20,7 @@ import {
   formatVersion,
   versionMatchesFilter,
 } from '@/utils';
+import { sortWheelsByLatest } from '@/utils/version';
 
 interface PackageDetailsProps {
   package: PackageType;
@@ -27,111 +28,6 @@ interface PackageDetailsProps {
   initialPython: string | null;
   initialTorch: string | null;
   initialCuda: string | null;
-}
-
-// Parse version string into comparable components
-function parseVersion(version: string): {
-  major: number;
-  minor: number;
-  patch: number;
-  suffix: string;
-  suffixNum: number;
-} {
-  const cleanVersion = version.replace(/^v/, '');
-  const parts = cleanVersion.split('.');
-
-  const major = parseInt(parts[0]) || 0;
-  const minor = parseInt(parts[1]) || 0;
-  let patch = parseInt(parts[2]) || 0;
-  let suffix = '';
-  let suffixNum = 0;
-
-  for (let i = 3; i < parts.length; i++) {
-    const part = parts[i].toLowerCase();
-    if (part.includes('post')) {
-      suffix = 'post';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (part.includes('rc')) {
-      suffix = 'rc';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (part.includes('beta') || part.includes('b')) {
-      suffix = 'beta';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (part.includes('alpha') || part.includes('a')) {
-      suffix = 'alpha';
-      suffixNum = parseInt(part.replace(/\D/g, '')) || 0;
-    } else if (!isNaN(parseInt(part))) {
-      patch = patch * 1000 + parseInt(part);
-    }
-  }
-
-  return { major, minor, patch, suffix, suffixNum };
-}
-
-function compareVersions(a: string, b: string): number {
-  const va = parseVersion(a);
-  const vb = parseVersion(b);
-
-  if (va.major !== vb.major) return vb.major - va.major;
-  if (va.minor !== vb.minor) return vb.minor - va.minor;
-  if (va.patch !== vb.patch) return vb.patch - va.patch;
-
-  const suffixPriority: Record<string, number> = { post: 5, '': 4, rc: 3, beta: 2, alpha: 1 };
-  const pa = suffixPriority[va.suffix] || 0;
-  const pb = suffixPriority[vb.suffix] || 0;
-
-  if (pa !== pb) return pb - pa;
-
-  if (va.suffix === 'post') {
-    return vb.suffixNum - va.suffixNum;
-  } else {
-    return va.suffixNum - vb.suffixNum;
-  }
-}
-
-// Extract a string version from VersionRange for sorting purposes
-function getVersionString(version: VersionRange | null | undefined): string {
-  if (!version) return '0';
-
-  if (typeof version === 'string') {
-    return normalizeVersion(version);
-  }
-
-  if (!Array.isArray(version)) return '0';
-
-  // For ranges, use the minimum version for sorting
-  const [min, max] = version;
-  if (min !== null && min !== undefined) return normalizeVersion(min);
-  if (max !== null && max !== undefined) return normalizeVersion(max);
-  return '0';
-}
-
-function sortWheelsByLatest(wheels: Wheel[]): Wheel[] {
-  return [...wheels].sort((a, b) => {
-    // First compare package version
-    const packageCompare = compareVersions(
-      a.package_version || '0.0.0',
-      b.package_version || '0.0.0',
-    );
-    if (packageCompare !== 0) return packageCompare;
-
-    // If package versions are equal, compare Python version (higher first)
-    const pythonCompare = compareVersions(
-      getVersionString(a.python_version),
-      getVersionString(b.python_version),
-    );
-    if (pythonCompare !== 0) return pythonCompare;
-
-    // If Python versions are equal, compare PyTorch version (higher first)
-    const torchCompare = compareVersions(
-      getVersionString(a.torch_version),
-      getVersionString(b.torch_version),
-    );
-    if (torchCompare !== 0) return torchCompare;
-
-    // If PyTorch versions are equal, compare CUDA version (higher first)
-    return compareVersions(getVersionString(a.cuda_version), getVersionString(b.cuda_version));
-  });
 }
 
 // Extract concrete version numbers from a VersionRange for filter buttons

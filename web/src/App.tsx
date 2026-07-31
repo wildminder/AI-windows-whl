@@ -2,19 +2,24 @@ import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { AlertCircle, RefreshCw, Search, Package } from 'lucide-react';
 import { Background, Header, Footer, AsciiBackground } from '@/components/Layout';
+import { OfflineIndicator } from '@/components/OfflineIndicator';
 import { SearchBar } from '@/components/Search';
 import { PackageCard } from '@/components/Search';
+import { PackageCardSkeleton } from '@/components/Search/PackageCardSkeleton';
 import { ControlPanel } from '@/components/Filters';
+import { ControlPanelSkeleton } from '@/components/Filters/ControlPanelSkeleton';
 import { useWheels, useSearch } from '@/hooks';
-import { extractUniqueVersions } from '@/utils';
+import { useUrlFilters } from '@/hooks/useUrlFilters';
+import { extractUniqueVersions, versionMatchesFilter } from '@/utils';
 
 export function App(): JSX.Element {
   const { data, loading, error, refetch } = useWheels();
-  const { query, setQuery, debouncedQuery } = useSearch();
+  const { filters: urlFilters, updateFilters } = useUrlFilters();
+  const { query, setQuery, debouncedQuery } = useSearch(urlFilters.query);
 
-  const [selectedPython, setSelectedPython] = useState<string | null>(null);
-  const [selectedTorch, setSelectedTorch] = useState<string | null>(null);
-  const [selectedCuda, setSelectedCuda] = useState<string | null>(null);
+  const [selectedPython, setSelectedPython] = useState<string | null>(urlFilters.python);
+  const [selectedTorch, setSelectedTorch] = useState<string | null>(urlFilters.torch);
+  const [selectedCuda, setSelectedCuda] = useState<string | null>(urlFilters.cuda);
 
   const packages = useMemo(() => data?.packages ?? [], [data]);
 
@@ -45,27 +50,55 @@ export function App(): JSX.Element {
     setSelectedTorch(null);
     setSelectedCuda(null);
     setQuery('');
+    updateFilters({ python: null, torch: null, cuda: null, query: '' });
+  };
+
+  const handlePythonChange = (v: string | null) => {
+    setSelectedPython(v);
+    updateFilters({ python: v });
+  };
+
+  const handleTorchChange = (v: string | null) => {
+    setSelectedTorch(v);
+    updateFilters({ torch: v });
+  };
+
+  const handleCudaChange = (v: string | null) => {
+    setSelectedCuda(v);
+    updateFilters({ cuda: v });
   };
 
   if (loading) {
     return (
-      <div
-        className="min-h-screen bg-background flex items-center justify-center"
-        role="status"
-        aria-live="polite"
-        aria-label="Loading application"
-      >
+      <div className="min-h-screen bg-background text-text-primary relative flex flex-col">
         <Background />
         <AsciiBackground />
-        <div className="relative z-10 flex flex-col items-center gap-4">
-          <div
-            className="w-16 h-16 border-2 border-primary/20 border-t-primary rounded-full animate-spin"
-            aria-hidden="true"
-          />
-          <p className="font-mono text-sm text-text-secondary animate-pulse">
-            Loading wheel data...
-          </p>
-        </div>
+        <Header />
+        <main
+          className="relative z-10 flex-1 w-full px-4 sm:px-6 lg:px-8 py-6"
+          role="status"
+          aria-live="polite"
+          aria-label="Loading application"
+        >
+          <div className="max-w-6xl mx-auto space-y-6">
+            {/* Hero skeleton */}
+            <div className="text-center space-y-4 animate-pulse" aria-hidden="true">
+              <div className="h-8 w-64 bg-surface-lighter rounded mx-auto" />
+              <div className="h-4 w-80 bg-surface-lighter rounded mx-auto" />
+              <div className="max-w-xl mx-auto h-12 bg-surface-lighter rounded-xl" />
+            </div>
+            {/* Control panel skeleton */}
+            <ControlPanelSkeleton />
+            {/* Package grid skeleton */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <PackageCardSkeleton key={i} />
+              ))}
+            </div>
+          </div>
+          <p className="sr-only">Loading wheel data...</p>
+        </main>
+        <Footer data={null} />
       </div>
     );
   }
@@ -158,9 +191,9 @@ export function App(): JSX.Element {
               selectedPython={selectedPython}
               selectedTorch={selectedTorch}
               selectedCuda={selectedCuda}
-              onPythonChange={setSelectedPython}
-              onTorchChange={setSelectedTorch}
-              onCudaChange={setSelectedCuda}
+              onPythonChange={handlePythonChange}
+              onTorchChange={handleTorchChange}
+              onCudaChange={handleCudaChange}
               onClear={handleClearFilters}
             />
           </motion.div>
@@ -204,10 +237,12 @@ export function App(): JSX.Element {
                   .map((pkg) => {
                     // Calculate matching wheels for each package
                     const matchingWheels = pkg.wheels.filter((w) => {
-                      if (selectedPython && !w.python_version?.includes(selectedPython))
+                      if (selectedPython && !versionMatchesFilter(w.python_version, selectedPython))
                         return false;
-                      if (selectedTorch && !w.torch_version?.includes(selectedTorch)) return false;
-                      if (selectedCuda && !w.cuda_version?.includes(selectedCuda)) return false;
+                      if (selectedTorch && !versionMatchesFilter(w.torch_version, selectedTorch))
+                        return false;
+                      if (selectedCuda && !versionMatchesFilter(w.cuda_version, selectedCuda))
+                        return false;
                       return true;
                     });
                     return {
@@ -240,6 +275,7 @@ export function App(): JSX.Element {
       </main>
 
       <Footer data={data} />
+      <OfflineIndicator />
     </div>
   );
 }

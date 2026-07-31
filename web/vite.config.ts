@@ -1,11 +1,51 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 import path from 'path';
 
 export default defineConfig({
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
+    include: ['src/**/*.test.{ts,tsx}'],
+  },
   base: '/AI-windows-whl/',
   plugins: [
     react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,json}'],
+        runtimeCaching: [
+          {
+            urlPattern: /wheels\.json/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'wheels-data',
+              expiration: { maxEntries: 1, maxAgeSeconds: 86400 },
+            },
+          },
+          {
+            urlPattern: /version\.txt/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'version-data',
+              expiration: { maxEntries: 1, maxAgeSeconds: 3600 },
+            },
+          },
+        ],
+      },
+      manifest: {
+        name: 'Windows AI Wheels',
+        short_name: 'AI Wheels',
+        description: 'Browse pre-compiled Python wheels for Windows AI/ML',
+        theme_color: '#0a0a0f',
+        background_color: '#0a0a0f',
+        display: 'standalone',
+        icons: [{ src: '/AI-windows-whl/favicon.svg', sizes: 'any', type: 'image/svg+xml' }],
+      },
+    }),
     // Handle inline styles in HTML for Vite 7 compatibility
     {
       name: 'html-inline-css-workaround',

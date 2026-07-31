@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { WheelsData, Package } from '@/types';
-import { loadWheelsData, filterWheels } from '@/utils';
+import type { WheelsData } from '@/types';
+import { loadWheelsData } from '@/utils';
 
 // Re-export usePerformance from separate file
 export { usePerformance, PerformanceProvider } from './usePerformance';
@@ -40,48 +40,6 @@ export function useWheels(): UseWheelsReturn {
   }, [fetchData]);
 
   return { data, loading, error, refetch: fetchData };
-}
-
-interface UseFilterOptions {
-  packages: Package[];
-  searchQuery: string;
-  pythonVersion: string | null;
-  torchVersion: string | null;
-  cudaVersion: string | null;
-  selectedPackage: string | null;
-}
-
-interface UseFilterReturn {
-  filteredPackages: Package[];
-  hasActiveFilters: boolean;
-  clearFilters: () => void;
-}
-
-export function useFilter(options: UseFilterOptions): UseFilterReturn {
-  const { packages, searchQuery, pythonVersion, torchVersion, cudaVersion, selectedPackage } =
-    options;
-
-  const filteredPackages = filterWheels(packages, {
-    searchQuery,
-    pythonVersion: pythonVersion || undefined,
-    torchVersion: torchVersion || undefined,
-    cudaVersion: cudaVersion || undefined,
-    packageId: selectedPackage || undefined,
-  });
-
-  const hasActiveFilters =
-    searchQuery !== '' ||
-    pythonVersion !== null ||
-    torchVersion !== null ||
-    cudaVersion !== null ||
-    selectedPackage !== null;
-
-  const clearFilters = useCallback(() => {
-    // This is a placeholder - actual implementation should be handled by the component state
-    console.log('Clear filters called');
-  }, []);
-
-  return { filteredPackages, hasActiveFilters, clearFilters };
 }
 
 interface UseSearchReturn {

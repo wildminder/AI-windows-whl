@@ -374,7 +374,16 @@ export function sortVersions(versions: string[]): string[] {
 }
 
 export function normalizePythonVersion(version: string): string {
-  return version.replace(/^3\./, '').replace(/^cp/, '3.');
+  // Handle cpXYZ format (e.g., cp310 → 3.10, cp39 → 3.9)
+  if (version.startsWith('cp')) {
+    const num = version.slice(2); // "310" or "39"
+    if (num.length >= 2) {
+      return `${num[0]}.${num.slice(1)}`;
+    }
+    return num;
+  }
+  // Already in X.Y format
+  return version;
 }
 
 export function generateInstallCommand(wheel: Wheel): string {

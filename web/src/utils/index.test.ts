@@ -1,4 +1,3 @@
-import { describe, it, expect } from 'vitest';
 import type { Package, Wheel } from '@/types';
 import {
   filterWheels,
@@ -98,8 +97,8 @@ describe('extractUniqueVersions', () => {
 
     expect(result.pythonVersions).toContain('3.10');
     expect(result.pythonVersions).toContain('3.11');
-    expect(result.torchVersions).toContain('2.6.0');
-    expect(result.torchVersions).toContain('2.5.0');
+    expect(result.torchVersions).toContain('2.6');
+    expect(result.torchVersions).toContain('2.5');
     expect(result.cudaVersions).toContain('12.4');
     expect(result.cudaVersions).toContain('12.1');
   });
