@@ -14,6 +14,12 @@ interface ControlPanelProps {
   onTorchChange: (v: string | null) => void;
   onCudaChange: (v: string | null) => void;
   onClear: () => void;
+  abiPython: boolean;
+  abiTorch: boolean;
+  abiCuda: boolean;
+  onAbiPythonToggle: () => void;
+  onAbiTorchToggle: () => void;
+  onAbiCudaToggle: () => void;
 }
 
 interface VersionSectionProps {
@@ -25,6 +31,8 @@ interface VersionSectionProps {
   accentColor: string;
   glowColor: string;
   visibleCount: number;
+  abiEnabled: boolean;
+  onAbiToggle: () => void;
   'aria-label'?: string;
 }
 
@@ -126,6 +134,8 @@ function VersionSection({
   accentColor,
   glowColor,
   visibleCount,
+  abiEnabled,
+  onAbiToggle,
   'aria-label': ariaLabel,
 }: VersionSectionProps) {
   const { animationsEnabled } = usePerformance();
@@ -152,6 +162,22 @@ function VersionSection({
       >
         <Icon className="w-4 h-4" aria-hidden="true" />
         <span>{label}</span>
+        <motion.button
+          whileHover={animationsEnabled ? { scale: 1.1 } : {}}
+          whileTap={animationsEnabled ? { scale: 0.9 } : {}}
+          onClick={onAbiToggle}
+          className={`select-none px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-widest rounded border transition-all focus:outline-none focus:ring-2 focus:ring-current ${
+            abiEnabled
+              ? `${accentColor} ${glowColor} border-current shadow-[0_0_8px_currentColor]`
+              : 'text-text-muted border-border hover:border-text-muted'
+          }`}
+          role="switch"
+          aria-checked={abiEnabled}
+          aria-label={`Toggle ABI mode for ${label}`}
+          title={`Filter ${label} by ABI compatibility (minimum version)`}
+        >
+          ABI
+        </motion.button>
       </legend>
 
       <div
@@ -252,8 +278,14 @@ export function ControlPanel({
   onTorchChange,
   onCudaChange,
   onClear,
+  abiPython,
+  abiTorch,
+  abiCuda,
+  onAbiPythonToggle,
+  onAbiTorchToggle,
+  onAbiCudaToggle,
 }: ControlPanelProps): JSX.Element {
-  const hasFilters = selectedPython || selectedTorch || selectedCuda;
+  const hasFilters = selectedPython || selectedTorch || selectedCuda || abiPython || abiTorch || abiCuda;
   const { animationsEnabled } = usePerformance();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -292,6 +324,9 @@ export function ControlPanel({
               {selectedPython && (
                 <span className="text-primary">-cp{selectedPython.replace('.', '')}</span>
               )}
+              {(abiPython || abiTorch || abiCuda) && (
+                <span className="text-accent-green"> abi3</span>
+              )}
             </span>
           )}
         </div>
@@ -322,6 +357,8 @@ export function ControlPanel({
           accentColor="text-primary"
           glowColor="bg-primary/10"
           visibleCount={visibleCount}
+          abiEnabled={abiPython}
+          onAbiToggle={onAbiPythonToggle}
           aria-label="Python version filter"
         />
 
@@ -334,6 +371,8 @@ export function ControlPanel({
           accentColor="text-secondary"
           glowColor="bg-secondary/10"
           visibleCount={visibleCount}
+          abiEnabled={abiTorch}
+          onAbiToggle={onAbiTorchToggle}
           aria-label="PyTorch version filter"
         />
 
@@ -346,6 +385,8 @@ export function ControlPanel({
           accentColor="text-accent-yellow"
           glowColor="bg-accent-yellow/10"
           visibleCount={visibleCount}
+          abiEnabled={abiCuda}
+          onAbiToggle={onAbiCudaToggle}
           aria-label="CUDA version filter"
         />
       </div>

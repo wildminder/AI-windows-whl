@@ -38,6 +38,9 @@ export interface FilterOptions {
   torchVersion?: string;
   cudaVersion?: string;
   packageId?: string;
+  abiPython?: boolean;
+  abiTorch?: boolean;
+  abiCuda?: boolean;
 }
 
 export interface FilterState {
@@ -46,4 +49,7 @@ export interface FilterState {
   torchVersion: string | null;
   cudaVersion: string | null;
   selectedPackage: string | null;
+  abiPython: boolean;
+  abiTorch: boolean;
+  abiCuda: boolean;
 }

@@ -11,6 +11,7 @@ import { ControlPanelSkeleton } from '@/components/Filters/ControlPanelSkeleton'
 import { useWheels, useSearch } from '@/hooks';
 import { useUrlFilters } from '@/hooks/useUrlFilters';
 import { extractUniqueVersions, versionMatchesFilter } from '@/utils';
+import { versionMatchesAbiFilter } from '@/utils/abi';
 
 export function App(): JSX.Element {
   const { data, loading, error, refetch } = useWheels();
@@ -20,6 +21,9 @@ export function App(): JSX.Element {
   const [selectedPython, setSelectedPython] = useState<string | null>(urlFilters.python);
   const [selectedTorch, setSelectedTorch] = useState<string | null>(urlFilters.torch);
   const [selectedCuda, setSelectedCuda] = useState<string | null>(urlFilters.cuda);
+  const [abiPython, setAbiPython] = useState<boolean>(urlFilters.abiPython ?? false);
+  const [abiTorch, setAbiTorch] = useState<boolean>(urlFilters.abiTorch ?? false);
+  const [abiCuda, setAbiCuda] = useState<boolean>(urlFilters.abiCuda ?? false);
 
   const packages = useMemo(() => data?.packages ?? [], [data]);
 
@@ -49,8 +53,19 @@ export function App(): JSX.Element {
     setSelectedPython(null);
     setSelectedTorch(null);
     setSelectedCuda(null);
+    setAbiPython(false);
+    setAbiTorch(false);
+    setAbiCuda(false);
     setQuery('');
-    updateFilters({ python: null, torch: null, cuda: null, query: '' });
+    updateFilters({
+      python: null,
+      torch: null,
+      cuda: null,
+      query: '',
+      abiPython: false,
+      abiTorch: false,
+      abiCuda: false,
+    });
   };
 
   const handlePythonChange = (v: string | null) => {
@@ -66,6 +81,24 @@ export function App(): JSX.Element {
   const handleCudaChange = (v: string | null) => {
     setSelectedCuda(v);
     updateFilters({ cuda: v });
+  };
+
+  const handleAbiPythonToggle = () => {
+    const next = !abiPython;
+    setAbiPython(next);
+    updateFilters({ abiPython: next });
+  };
+
+  const handleAbiTorchToggle = () => {
+    const next = !abiTorch;
+    setAbiTorch(next);
+    updateFilters({ abiTorch: next });
+  };
+
+  const handleAbiCudaToggle = () => {
+    const next = !abiCuda;
+    setAbiCuda(next);
+    updateFilters({ abiCuda: next });
   };
 
   if (loading) {
@@ -195,6 +228,12 @@ export function App(): JSX.Element {
               onTorchChange={handleTorchChange}
               onCudaChange={handleCudaChange}
               onClear={handleClearFilters}
+              abiPython={abiPython}
+              abiTorch={abiTorch}
+              abiCuda={abiCuda}
+              onAbiPythonToggle={handleAbiPythonToggle}
+              onAbiTorchToggle={handleAbiTorchToggle}
+              onAbiCudaToggle={handleAbiCudaToggle}
             />
           </motion.div>
 
@@ -237,12 +276,33 @@ export function App(): JSX.Element {
                   .map((pkg) => {
                     // Calculate matching wheels for each package
                     const matchingWheels = pkg.wheels.filter((w) => {
-                      if (selectedPython && !versionMatchesFilter(w.python_version, selectedPython))
+                      // Python: ABI mode takes precedence
+                      if (abiPython) {
+                        if (!versionMatchesAbiFilter(w.python_version, selectedPython)) return false;
+                      } else if (
+                        selectedPython &&
+                        !versionMatchesFilter(w.python_version, selectedPython)
+                      ) {
                         return false;
-                      if (selectedTorch && !versionMatchesFilter(w.torch_version, selectedTorch))
+                      }
+                      // Torch: ABI mode takes precedence
+                      if (abiTorch) {
+                        if (!versionMatchesAbiFilter(w.torch_version, selectedTorch)) return false;
+                      } else if (
+                        selectedTorch &&
+                        !versionMatchesFilter(w.torch_version, selectedTorch)
+                      ) {
                         return false;
-                      if (selectedCuda && !versionMatchesFilter(w.cuda_version, selectedCuda))
+                      }
+                      // CUDA: ABI mode takes precedence
+                      if (abiCuda) {
+                        if (!versionMatchesAbiFilter(w.cuda_version, selectedCuda)) return false;
+                      } else if (
+                        selectedCuda &&
+                        !versionMatchesFilter(w.cuda_version, selectedCuda)
+                      ) {
                         return false;
+                      }
                       return true;
                     });
                     return {
@@ -265,6 +325,9 @@ export function App(): JSX.Element {
                         cudaVersion={selectedCuda}
                         isActive={isActive}
                         matchingCount={matchingCount}
+                        abiPython={abiPython}
+                        abiTorch={abiTorch}
+                        abiCuda={abiCuda}
                       />
                     </motion.li>
                   ))}

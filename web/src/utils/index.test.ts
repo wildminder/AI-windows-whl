@@ -70,6 +70,84 @@ describe('filterWheels', () => {
   });
 });
 
+describe('filterWheels with ABI mode', () => {
+  const abiWheel: Wheel = {
+    package_version: '1.0.0',
+    torch_version: ['2.10', null],
+    python_version: ['3.9', null],
+    cuda_version: ['12.0', '12.0'],
+    cxx11_abi: true,
+    url: 'https://example.com/abi.whl',
+  };
+
+  const exactWheel: Wheel = {
+    package_version: '1.0.0',
+    torch_version: ['2.10', '2.10'],
+    python_version: ['3.12', '3.12'],
+    cuda_version: ['12.0', '12.0'],
+    cxx11_abi: true,
+    url: 'https://example.com/exact.whl',
+  };
+
+  const abiPackage: Package = {
+    id: 'test-abi',
+    name: 'ABI Test Package',
+    description: 'Package with ABI and exact wheels',
+    official_repo: 'https://github.com/test',
+    sources: [],
+    wheels: [abiWheel, exactWheel],
+  };
+
+  it('ABI python filter matches open-ended range with version >= min', () => {
+    const result = filterWheels([abiPackage], { abiPython: true, pythonVersion: '3.12' });
+    expect(result).toHaveLength(1);
+    expect(result[0]?.wheels).toHaveLength(1);
+    expect(result[0]?.wheels[0]?.url).toBe('https://example.com/abi.whl');
+  });
+
+  it('ABI python filter rejects exact version wheels', () => {
+    const result = filterWheels([abiPackage], { abiPython: true, pythonVersion: '3.12' });
+    const urls = result[0]?.wheels.map((w) => w.url);
+    expect(urls).not.toContain('https://example.com/exact.whl');
+  });
+
+  it('ABI torch filter with null version matches all ABI torch wheels', () => {
+    const result = filterWheels([abiPackage], { abiTorch: true });
+    expect(result).toHaveLength(1);
+    expect(result[0]?.wheels).toHaveLength(1);
+    expect(result[0]?.wheels[0]?.url).toBe('https://example.com/abi.whl');
+  });
+
+  it('ABI python filter with version below min returns no wheels', () => {
+    const result = filterWheels([abiPackage], { abiPython: true, pythonVersion: '3.8' });
+    expect(result).toHaveLength(0);
+  });
+
+  it('non-ABI mode unchanged: exact python filter matches exact wheel', () => {
+    const result = filterWheels([abiPackage], { pythonVersion: '3.12' });
+    expect(result).toHaveLength(1);
+    // Both wheels match: ABI [3.9, null] includes 3.12, and exact [3.12, 3.12] matches
+    expect(result[0]?.wheels).toHaveLength(2);
+  });
+
+  it('ABI cuda filter returns no wheels when no ABI cuda ranges exist', () => {
+    const result = filterWheels([abiPackage], { abiCuda: true });
+    expect(result).toHaveLength(0);
+  });
+
+  it('combined ABI python + ABI torch filters match only fully ABI wheel', () => {
+    const result = filterWheels([abiPackage], {
+      abiPython: true,
+      pythonVersion: '3.12',
+      abiTorch: true,
+      torchVersion: '2.11',
+    });
+    expect(result).toHaveLength(1);
+    expect(result[0]?.wheels).toHaveLength(1);
+    expect(result[0]?.wheels[0]?.url).toBe('https://example.com/abi.whl');
+  });
+});
+
 describe('generateInstallCommand', () => {
   it('creates valid pip install command', () => {
     const wheel: Wheel = {

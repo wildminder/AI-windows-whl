@@ -13,6 +13,9 @@ interface PackageCardProps {
   cudaVersion: string | null;
   isActive: boolean;
   matchingCount: number;
+  abiPython?: boolean;
+  abiTorch?: boolean;
+  abiCuda?: boolean;
 }
 
 // Color themes for different packages
@@ -83,6 +86,9 @@ export function PackageCard({
   cudaVersion,
   isActive,
   matchingCount,
+  abiPython,
+  abiTorch,
+  abiCuda,
 }: PackageCardProps): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(false);
   const { animationsEnabled } = usePerformance();
@@ -138,6 +144,9 @@ export function PackageCard({
               initialPython={pythonVersion}
               initialTorch={torchVersion}
               initialCuda={cudaVersion}
+              abiPython={abiPython}
+              abiTorch={abiTorch}
+              abiCuda={abiCuda}
             />
           )}
         </AnimatePresence>
@@ -273,6 +282,9 @@ export function PackageCard({
             initialPython={pythonVersion}
             initialTorch={torchVersion}
             initialCuda={cudaVersion}
+            abiPython={abiPython}
+            abiTorch={abiTorch}
+            abiCuda={abiCuda}
           />
         )}
       </AnimatePresence>

@@ -21,6 +21,7 @@ import {
   versionMatchesFilter,
 } from '@/utils';
 import { sortWheelsByLatest } from '@/utils/version';
+import { isAbiVersion, versionMatchesAbiFilter } from '@/utils/abi';
 
 interface PackageDetailsProps {
   package: PackageType;
@@ -28,6 +29,9 @@ interface PackageDetailsProps {
   initialPython: string | null;
   initialTorch: string | null;
   initialCuda: string | null;
+  abiPython?: boolean;
+  abiTorch?: boolean;
+  abiCuda?: boolean;
 }
 
 // Extract concrete version numbers from a VersionRange for filter buttons
@@ -138,6 +142,9 @@ export function PackageDetails({
   initialPython,
   initialTorch,
   initialCuda,
+  abiPython = false,
+  abiTorch = false,
+  abiCuda = false,
 }: PackageDetailsProps): JSX.Element {
   // Initialize from props (main page filters) - no auto-select
   const [selectedPython, setSelectedPython] = useState<string | null>(
@@ -273,15 +280,30 @@ export function PackageDetails({
   const handleTorchChange = (val: string | null) => setSelectedTorch(val);
   const handleCudaChange = (val: string | null) => setSelectedCuda(val);
 
-  // Filter wheels based on all selections
+  // Filter wheels based on all selections (ABI mode takes precedence)
   const filteredWheels = useMemo(() => {
     return sortedWheels.filter((w) => {
-      if (selectedPython && !versionMatchesFilter(w.python_version, selectedPython)) return false;
-      if (selectedTorch && !versionMatchesFilter(w.torch_version, selectedTorch)) return false;
-      if (selectedCuda && !versionMatchesFilter(w.cuda_version, selectedCuda)) return false;
+      // Python: ABI mode takes precedence
+      if (abiPython) {
+        if (!versionMatchesAbiFilter(w.python_version, selectedPython)) return false;
+      } else if (selectedPython && !versionMatchesFilter(w.python_version, selectedPython)) {
+        return false;
+      }
+      // Torch: ABI mode takes precedence
+      if (abiTorch) {
+        if (!versionMatchesAbiFilter(w.torch_version, selectedTorch)) return false;
+      } else if (selectedTorch && !versionMatchesFilter(w.torch_version, selectedTorch)) {
+        return false;
+      }
+      // CUDA: ABI mode takes precedence
+      if (abiCuda) {
+        if (!versionMatchesAbiFilter(w.cuda_version, selectedCuda)) return false;
+      } else if (selectedCuda && !versionMatchesFilter(w.cuda_version, selectedCuda)) {
+        return false;
+      }
       return true;
     });
-  }, [sortedWheels, selectedPython, selectedTorch, selectedCuda]);
+  }, [sortedWheels, selectedPython, selectedTorch, selectedCuda, abiPython, abiTorch, abiCuda]);
 
   const handleCopy = async (wheel: Wheel) => {
     const cmd = generateInstallCommand(wheel);
@@ -455,18 +477,33 @@ export function PackageDetails({
                         <span className="font-mono text-primary">
                           {formatVersion(wheel.python_version)}
                         </span>
+                        {isAbiVersion(wheel.python_version) && (
+                          <span className="text-[9px] font-mono text-accent-green border border-accent-green/30 rounded px-1 py-0.5 uppercase tracking-wider">
+                            ABI
+                          </span>
+                        )}
                         <span className="text-text-muted" aria-hidden="true">
                           •
                         </span>
                         <span className="font-mono text-secondary">
                           {formatVersion(wheel.torch_version)}
                         </span>
+                        {isAbiVersion(wheel.torch_version) && (
+                          <span className="text-[9px] font-mono text-accent-green border border-accent-green/30 rounded px-1 py-0.5 uppercase tracking-wider">
+                            ABI
+                          </span>
+                        )}
                         <span className="text-text-muted" aria-hidden="true">
                           •
                         </span>
                         <span className="font-mono text-accent-yellow">
                           {formatVersion(wheel.cuda_version)}
                         </span>
+                        {isAbiVersion(wheel.cuda_version) && (
+                          <span className="text-[9px] font-mono text-accent-green border border-accent-green/30 rounded px-1 py-0.5 uppercase tracking-wider">
+                            ABI
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div className="flex items-center gap-2">

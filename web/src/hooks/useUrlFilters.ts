@@ -6,6 +6,9 @@ export interface UrlFilterState {
   cuda: string | null;
   query: string;
   pkg: string | null;
+  abiPython: boolean;
+  abiTorch: boolean;
+  abiCuda: boolean;
 }
 
 function readUrlParams(): UrlFilterState {
@@ -16,6 +19,9 @@ function readUrlParams(): UrlFilterState {
     cuda: params.get('cuda'),
     query: params.get('q') || '',
     pkg: params.get('pkg'),
+    abiPython: params.get('abi_python') === '1',
+    abiTorch: params.get('abi_torch') === '1',
+    abiCuda: params.get('abi_cuda') === '1',
   };
 }
 
@@ -26,6 +32,9 @@ function writeUrlParams(state: UrlFilterState): void {
   if (state.cuda) params.set('cuda', state.cuda);
   if (state.query) params.set('q', state.query);
   if (state.pkg) params.set('pkg', state.pkg);
+  if (state.abiPython) params.set('abi_python', '1');
+  if (state.abiTorch) params.set('abi_torch', '1');
+  if (state.abiCuda) params.set('abi_cuda', '1');
 
   const newUrl = params.toString()
     ? `${window.location.pathname}?${params.toString()}`

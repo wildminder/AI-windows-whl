@@ -1,4 +1,5 @@
 import type { Package, Wheel, WheelsData, FilterOptions, VersionRange } from '@/types';
+import { versionMatchesAbiFilter } from './abi';
 
 const GITHUB_WHEELS_URL =
   'https://raw.githubusercontent.com/wildminder/AI-windows-whl/main/wheels.json';
@@ -119,25 +120,49 @@ export async function loadWheelsData(): Promise<WheelsData> {
 }
 
 export function filterWheels(packages: Package[], options: FilterOptions): Package[] {
-  const { searchQuery, pythonVersion, torchVersion, cudaVersion, packageId } = options;
+  const {
+    searchQuery,
+    pythonVersion,
+    torchVersion,
+    cudaVersion,
+    packageId,
+    abiPython,
+    abiTorch,
+    abiCuda,
+  } = options;
 
   return packages
     .map((pkg) => {
       let filteredWheels = [...pkg.wheels];
 
-      if (pythonVersion) {
+      // Python filter: ABI mode takes precedence
+      if (abiPython) {
+        filteredWheels = filteredWheels.filter((w) =>
+          versionMatchesAbiFilter(w.python_version, pythonVersion ?? null),
+        );
+      } else if (pythonVersion) {
         filteredWheels = filteredWheels.filter((w) =>
           versionMatchesFilter(w.python_version, pythonVersion),
         );
       }
 
-      if (torchVersion) {
+      // Torch filter: ABI mode takes precedence
+      if (abiTorch) {
+        filteredWheels = filteredWheels.filter((w) =>
+          versionMatchesAbiFilter(w.torch_version, torchVersion ?? null),
+        );
+      } else if (torchVersion) {
         filteredWheels = filteredWheels.filter((w) =>
           versionMatchesFilter(w.torch_version, torchVersion),
         );
       }
 
-      if (cudaVersion) {
+      // CUDA filter: ABI mode takes precedence
+      if (abiCuda) {
+        filteredWheels = filteredWheels.filter((w) =>
+          versionMatchesAbiFilter(w.cuda_version, cudaVersion ?? null),
+        );
+      } else if (cudaVersion) {
         filteredWheels = filteredWheels.filter((w) =>
           versionMatchesFilter(w.cuda_version, cudaVersion),
         );

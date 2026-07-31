@@ -17,6 +17,12 @@ const defaultProps = {
   onTorchChange: vi.fn(),
   onCudaChange: vi.fn(),
   onClear: vi.fn(),
+  abiPython: false,
+  abiTorch: false,
+  abiCuda: false,
+  onAbiPythonToggle: vi.fn(),
+  onAbiTorchToggle: vi.fn(),
+  onAbiCudaToggle: vi.fn(),
 };
 
 describe('ControlPanel', () => {
@@ -83,5 +89,57 @@ describe('ControlPanel', () => {
     render(<ControlPanel {...defaultProps} selectedPython="3.12" />);
     const button = screen.getByText('3.12');
     expect(button.getAttribute('aria-checked')).toBe('true');
+  });
+});
+
+describe('ControlPanel ABI toggles', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it('renders three ABI toggle buttons', () => {
+    render(<ControlPanel {...defaultProps} />);
+    const abiButtons = screen.getAllByRole('switch');
+    expect(abiButtons).toHaveLength(3);
+  });
+
+  it('calls onAbiPythonToggle when Python ABI clicked', () => {
+    render(<ControlPanel {...defaultProps} />);
+    fireEvent.click(screen.getByLabelText('Toggle ABI mode for Python'));
+    expect(defaultProps.onAbiPythonToggle).toHaveBeenCalled();
+  });
+
+  it('calls onAbiTorchToggle when PyTorch ABI clicked', () => {
+    render(<ControlPanel {...defaultProps} />);
+    fireEvent.click(screen.getByLabelText('Toggle ABI mode for PyTorch'));
+    expect(defaultProps.onAbiTorchToggle).toHaveBeenCalled();
+  });
+
+  it('calls onAbiCudaToggle when CUDA ABI clicked', () => {
+    render(<ControlPanel {...defaultProps} />);
+    fireEvent.click(screen.getByLabelText('Toggle ABI mode for CUDA'));
+    expect(defaultProps.onAbiCudaToggle).toHaveBeenCalled();
+  });
+
+  it('shows ABI toggle as active when abiPython is true', () => {
+    render(<ControlPanel {...defaultProps} abiPython={true} />);
+    const abiButton = screen.getByLabelText('Toggle ABI mode for Python');
+    expect(abiButton.getAttribute('aria-checked')).toBe('true');
+  });
+
+  it('shows ABI toggle as inactive when abiPython is false', () => {
+    render(<ControlPanel {...defaultProps} abiPython={false} />);
+    const abiButton = screen.getByLabelText('Toggle ABI mode for Python');
+    expect(abiButton.getAttribute('aria-checked')).toBe('false');
+  });
+
+  it('shows abi3 in PEP header when ABI is active', () => {
+    render(<ControlPanel {...defaultProps} selectedPython="3.12" abiPython={true} />);
+    expect(screen.getByText('abi3')).toBeInTheDocument();
+  });
+
+  it('shows clear button when only ABI is active', () => {
+    render(<ControlPanel {...defaultProps} abiPython={true} />);
+    expect(screen.getByLabelText('Clear all version filters')).toBeInTheDocument();
   });
 });
