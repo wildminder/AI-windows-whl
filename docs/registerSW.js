@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/AI-windows-whl/sw.js', { scope: '/AI-windows-whl/' })})}
