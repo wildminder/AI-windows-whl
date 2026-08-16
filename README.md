@@ -383,6 +383,10 @@ ABI3 version, any Python 3.9-3.12
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
+| `2.2.0.post6` | `2.10.0+` | `3.10+` | `13.0` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu130torch2.10.0andhigher.post6-cp310-abi3-win_amd64.whl) |
+| `2.2.0.post6` | `2.10.0+` | `3.10+` | `12.8` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu128torch2.10.0andhigher.post6-cp310-abi3-win_amd64.whl) |
+| `2.2.0.post6` | `2.9.1` | `3.10+` | `13.0` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu130torch2.9.1.post6-cp310-abi3-win_amd64.whl) |
+| `2.2.0.post6` | `2.9.1` | `3.10+` | `12.8` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post6/sageattention-2.2.0+cu128torch2.9.1.post6-cp310-abi3-win_amd64.whl) |
 | `2.2.0.post4` | `2.9.0+` | `3.9+` | `13.0` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu130torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl) |
 | `2.2.0.post4` | `2.9.0+` | `3.9+` | `12.8` | [Link](https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post4/sageattention-2.2.0+cu128torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl) |
 | `2.2.0.post3` | `2.10.0` | `3.12` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattention-2.2.0.post3+cu130torch2.10.0-cp312-cp312-win_amd64.whl) |
@@ -424,6 +428,14 @@ ABI3 version, any Python 3.9-3.12
 <!-- This table is auto-generated. Do not edit manually. -->
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
+| `1.0.0` | `2.13.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.13.0-cp314-cp314-win_amd64.whl) |
+| `1.0.0` | `2.13.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.13.0-cp314-cp314-win_amd64.whl) |
+| `1.0.0` | `2.12.1` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.12.1-cp314-cp314-win_amd64.whl) |
+| `1.0.0` | `2.12.1` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.12.1-cp313-cp313-win_amd64.whl) |
+| `1.0.0` | `2.12.1` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.12.1-cp314-cp314-win_amd64.whl) |
+| `1.0.0` | `2.10.0` | `3.12` | `13.1` | [Link](https://github.com/munder-sa/SageAttention_win_blackwell/releases/download/v2.2.0-win/sageattn3-1.0.0+cu131torch2.10.0-cp312-cp312-win_amd64.whl) |
+| `1.0.0` | `2.10.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.10.0-cp313-cp313-win_amd64.whl) |
+| `1.0.0` | `2.10.0` | `3.12` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.10.0-cp312-cp312-win_amd64.whl) |
 | `1.0.0` | `2.9.1` | `3.13` | `13.0` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp313-cp313-win_amd64.whl) |
 | `1.0.0` | `2.9.1` | `3.12` | `13.0` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu130torch291-cp312-cp312-win_amd64.whl) |
 | `1.0.0` | `2.8.0` | `3.13` | `12.8` | [Link](https://github.com/mengqin/SageAttention/releases/download/20251229/sageattn3-1.0.0+cu128torch280-cp313-cp313-win_amd64.whl) |
