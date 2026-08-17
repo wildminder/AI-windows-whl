@@ -199,6 +199,7 @@ Use these for access to the latest features, but expect potential instability.
 | `2.11.0a0` | `2.13.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `2.11.0a0` | `2.13.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.13.0cxx11abi1-cp314-cp314-win_amd64.whl) |
 | `2.11.0a0` | `2.13.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `2.11.0a0` | `2.13.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.13.0cxx11abitrue-cp313-cp313-win_amd64.whl) |
 | `2.11.0a0` | `2.12.1` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `2.11.0a0` | `2.12.1` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu132torch2.12.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `2.11.0a0` | `2.12.1` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/torchaudio/torchaudio-2.11.0a0+d20260331.cu130torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
@@ -429,7 +430,9 @@ ABI3 version, any Python 3.9-3.12
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
 |:---:|:---:|:---:|:---:|:---:|
 | `1.0.0` | `2.13.0` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.13.0-cp314-cp314-win_amd64.whl) |
+| `1.0.0` | `2.13.0` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.13.0-cp313-cp313-win_amd64.whl) |
 | `1.0.0` | `2.13.0` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.13.0-cp314-cp314-win_amd64.whl) |
+| `1.0.0` | `2.13.0` | `3.13` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.13.0-cp313-cp313-win_amd64.whl) |
 | `1.0.0` | `2.12.1` | `3.14` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.12.1-cp314-cp314-win_amd64.whl) |
 | `1.0.0` | `2.12.1` | `3.13` | `13.2` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu132torch2.12.1-cp313-cp313-win_amd64.whl) |
 | `1.0.0` | `2.12.1` | `3.14` | `13.0` | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/sageattn/sageattn3-1.0.0+cu130torch2.12.1-cp314-cp314-win_amd64.whl) |
@@ -695,7 +698,9 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | `0.0.2.post2` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.0.2.post2` | `2.13.0` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.13.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `0.0.2.post2` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu130torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.0.2.post2` | `2.13.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu130torch2.13.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `0.0.2.post2` | `2.12.1` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `0.0.2.post2` | `2.12.1` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu132torch2.12.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `0.0.2.post2` | `2.12.1` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/block_sparse_attn/block_sparse_attn-0.0.2.post2+d20260117.cu130torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
@@ -721,7 +726,9 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | `0.19.3` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu132torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.19.3` | `2.13.0` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu132torch2.13.0cxx11abitrue-cp313-cp313-win_amd64.whl) |
 | `0.19.3` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu130torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `0.19.3` | `2.13.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu130torch2.13.0cxx11abitrue-cp313-cp313-win_amd64.whl) |
 | `0.19.3` | `2.12.1` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu132torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `0.19.3` | `2.12.1` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu132torch2.12.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `0.19.3` | `2.12.1` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/deepspeed/deepspeed-0.19.3+d20260714.cu130torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
@@ -754,7 +761,9 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 | Package Version | PyTorch Ver | Python Ver | CUDA Ver | CXX11 ABI | Download Link |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | `1.6.2.post1` | `2.13.0` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `1.6.2.post1` | `2.13.0` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.13.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `1.6.2.post1` | `2.13.0` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.13.0cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
+| `1.6.2.post1` | `2.13.0` | `3.13` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.13.0cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `1.6.2.post1` | `2.12.1` | `3.14` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
 | `1.6.2.post1` | `2.12.1` | `3.13` | `13.2` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu132torch2.12.1cxx11abiTRUE-cp313-cp313-win_amd64.whl) |
 | `1.6.2.post1` | `2.12.1` | `3.14` | `13.0` | ✓ | [Link](https://huggingface.co/Wildminder/AI-windows-whl/resolve/main/causal_conv1d/causal_conv1d-1.6.2.post1+d20260509.cu130torch2.12.1cxx11abiTRUE-cp314-cp314-win_amd64.whl) |
