@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-08-17T11:56:59.180994+00:00",
+  "last_updated_utc": "2026-08-18T13:53:55.653250+00:00",
   "packages": [
     {
       "id": "blocksparseattn",
@@ -4457,6 +4457,38 @@
             "12.8"
           ],
           "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post4",
+          "torch_version": [
+            "2.9.0",
+            null
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.8",
+            "12.8"
+          ],
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post4/spas_sage_attn-0.1.0+cu128torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post4",
+          "torch_version": [
+            "2.9.0",
+            null
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "13.0",
+            "13.0"
+          ],
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post4/spas_sage_attn-0.1.0+cu130torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl"
         }
       ]
     },
