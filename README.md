@@ -681,10 +681,12 @@ A lightweight wrapper around CUDA custom functions, particularly for 8-bit optim
 [![GitHub](https://img.shields.io/badge/woct0rdho-Wheels-green?style=flat)](https://github.com/woct0rdho/SpargeAttn/releases)
 <!-- START_SPARGEATTN_TABLE -->
 <!-- This table is auto-generated. Do not edit manually. -->
-| Package Version | PyTorch Ver | CUDA Ver | Download Link |
-|:---:|:---:|:---:|:---:|
-| `0.1.0.post1` | `2.8.0` | `12.8` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl) |
-| `0.1.0.post1` | `2.7.1` | `12.8` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl) |
+| Package Version | PyTorch Ver | Python Ver | CUDA Ver | Download Link |
+|:---:|:---:|:---:|:---:|:---:|
+| `0.1.0.post4` | `2.9.0+` | `3.9+` | `13.0` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post4/spas_sage_attn-0.1.0+cu130torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl) |
+| `0.1.0.post4` | `2.9.0+` | `3.9+` | `12.8` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post4/spas_sage_attn-0.1.0+cu128torch2.9.0andhigher.post4-cp39-abi3-win_amd64.whl) |
+| `0.1.0.post1` | `2.8.0` | `N/A` | `12.8` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl) |
+| `0.1.0.post1` | `2.7.1` | `N/A` | `12.8` | [Link](https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.7.1.post1-cp39-abi3-win_amd64.whl) |
 <!-- END_SPARGEATTN_TABLE -->
 
 <p id="block_sparse_attn" align="center">■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■</p>
