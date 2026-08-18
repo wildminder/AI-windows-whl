@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-08-18T13:53:55.653250+00:00",
+  "last_updated_utc": "2026-08-18T14:27:42.099605+00:00",
   "packages": [
     {
       "id": "blocksparseattn",
@@ -4457,6 +4457,70 @@
             "12.8"
           ],
           "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post1/spas_sage_attn-0.1.0+cu128torch2.8.0.post1-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post3",
+          "torch_version": [
+            "2.5.1",
+            "2.5.1"
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.4",
+            "12.4"
+          ],
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post3/spas_sage_attn-0.1.0+cu124torch2.5.1.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post3",
+          "torch_version": [
+            "2.6.0",
+            "2.6.0"
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.6",
+            "12.6"
+          ],
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post3/spas_sage_attn-0.1.0+cu126torch2.6.0.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post3",
+          "torch_version": [
+            "2.7.1",
+            "2.7.1"
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.8",
+            "12.8"
+          ],
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post3/spas_sage_attn-0.1.0+cu128torch2.7.1.post3-cp39-abi3-win_amd64.whl"
+        },
+        {
+          "package_version": "0.1.0.post3",
+          "torch_version": [
+            "2.8.0",
+            "2.8.0"
+          ],
+          "python_version": [
+            "3.9",
+            null
+          ],
+          "cuda_version": [
+            "12.8",
+            "12.8"
+          ],
+          "url": "https://github.com/woct0rdho/SpargeAttn/releases/download/v0.1.0-windows.post3/spas_sage_attn-0.1.0+cu128torch2.8.0.post3-cp39-abi3-win_amd64.whl"
         },
         {
           "package_version": "0.1.0.post4",
